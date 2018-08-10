@@ -440,7 +440,7 @@ extern unsigned primary_module_id;
 #define PRIMARY_MODULE_EXPORTED                                         \
   (MODULE_EXPORTED_FLAG (module_infos[0])                               \
    && !((module_infos[0]->lang & GCOV_MODULE_ASM_STMTS)                 \
-        && flag_ripa_disallow_asm-generic_modules))
+        && flag_ripa_disallow_asm_modules))
 
 #if !defined(inhibit_libc)
 

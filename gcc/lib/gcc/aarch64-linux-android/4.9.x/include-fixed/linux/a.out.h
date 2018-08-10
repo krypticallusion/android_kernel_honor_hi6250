@@ -30,7 +30,7 @@
 #define __GNU_EXEC_MACROS__
 #ifndef __STRUCT_EXEC_OVERRIDE__
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
-#include <asm-generic/a.out.h>
+#include <asm/a.out.h>
 #endif
 #ifndef __ASSEMBLY__
 enum machine_type {

@@ -4142,13 +4142,13 @@ vcombine_p16 (poly16x4_t __a, poly16x4_t __b)
 						     (int16x4_t) __b);
 }
 
-/* Start of temporary inline asm-generic implementations.  */
+/* Start of temporary inline asm implementations.  */
 
 __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vaba_s8 (int8x8_t a, int8x8_t b, int8x8_t c)
 {
   int8x8_t result;
-  __asm-generic__ ("saba %0.8b,%2.8b,%3.8b"
+  __asm__ ("saba %0.8b,%2.8b,%3.8b"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -4159,7 +4159,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vaba_s16 (int16x4_t a, int16x4_t b, int16x4_t c)
 {
   int16x4_t result;
-  __asm-generic__ ("saba %0.4h,%2.4h,%3.4h"
+  __asm__ ("saba %0.4h,%2.4h,%3.4h"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -4170,7 +4170,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vaba_s32 (int32x2_t a, int32x2_t b, int32x2_t c)
 {
   int32x2_t result;
-  __asm-generic__ ("saba %0.2s,%2.2s,%3.2s"
+  __asm__ ("saba %0.2s,%2.2s,%3.2s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -4181,7 +4181,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vaba_u8 (uint8x8_t a, uint8x8_t b, uint8x8_t c)
 {
   uint8x8_t result;
-  __asm-generic__ ("uaba %0.8b,%2.8b,%3.8b"
+  __asm__ ("uaba %0.8b,%2.8b,%3.8b"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -4192,7 +4192,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vaba_u16 (uint16x4_t a, uint16x4_t b, uint16x4_t c)
 {
   uint16x4_t result;
-  __asm-generic__ ("uaba %0.4h,%2.4h,%3.4h"
+  __asm__ ("uaba %0.4h,%2.4h,%3.4h"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -4203,7 +4203,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vaba_u32 (uint32x2_t a, uint32x2_t b, uint32x2_t c)
 {
   uint32x2_t result;
-  __asm-generic__ ("uaba %0.2s,%2.2s,%3.2s"
+  __asm__ ("uaba %0.2s,%2.2s,%3.2s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -4214,7 +4214,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vabal_high_s8 (int16x8_t a, int8x16_t b, int8x16_t c)
 {
   int16x8_t result;
-  __asm-generic__ ("sabal2 %0.8h,%2.16b,%3.16b"
+  __asm__ ("sabal2 %0.8h,%2.16b,%3.16b"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -4225,7 +4225,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vabal_high_s16 (int32x4_t a, int16x8_t b, int16x8_t c)
 {
   int32x4_t result;
-  __asm-generic__ ("sabal2 %0.4s,%2.8h,%3.8h"
+  __asm__ ("sabal2 %0.4s,%2.8h,%3.8h"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -4236,7 +4236,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vabal_high_s32 (int64x2_t a, int32x4_t b, int32x4_t c)
 {
   int64x2_t result;
-  __asm-generic__ ("sabal2 %0.2d,%2.4s,%3.4s"
+  __asm__ ("sabal2 %0.2d,%2.4s,%3.4s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -4247,7 +4247,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vabal_high_u8 (uint16x8_t a, uint8x16_t b, uint8x16_t c)
 {
   uint16x8_t result;
-  __asm-generic__ ("uabal2 %0.8h,%2.16b,%3.16b"
+  __asm__ ("uabal2 %0.8h,%2.16b,%3.16b"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -4258,7 +4258,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vabal_high_u16 (uint32x4_t a, uint16x8_t b, uint16x8_t c)
 {
   uint32x4_t result;
-  __asm-generic__ ("uabal2 %0.4s,%2.8h,%3.8h"
+  __asm__ ("uabal2 %0.4s,%2.8h,%3.8h"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -4269,7 +4269,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vabal_high_u32 (uint64x2_t a, uint32x4_t b, uint32x4_t c)
 {
   uint64x2_t result;
-  __asm-generic__ ("uabal2 %0.2d,%2.4s,%3.4s"
+  __asm__ ("uabal2 %0.2d,%2.4s,%3.4s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -4280,7 +4280,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vabal_s8 (int16x8_t a, int8x8_t b, int8x8_t c)
 {
   int16x8_t result;
-  __asm-generic__ ("sabal %0.8h,%2.8b,%3.8b"
+  __asm__ ("sabal %0.8h,%2.8b,%3.8b"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -4291,7 +4291,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vabal_s16 (int32x4_t a, int16x4_t b, int16x4_t c)
 {
   int32x4_t result;
-  __asm-generic__ ("sabal %0.4s,%2.4h,%3.4h"
+  __asm__ ("sabal %0.4s,%2.4h,%3.4h"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -4302,7 +4302,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vabal_s32 (int64x2_t a, int32x2_t b, int32x2_t c)
 {
   int64x2_t result;
-  __asm-generic__ ("sabal %0.2d,%2.2s,%3.2s"
+  __asm__ ("sabal %0.2d,%2.2s,%3.2s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -4313,7 +4313,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vabal_u8 (uint16x8_t a, uint8x8_t b, uint8x8_t c)
 {
   uint16x8_t result;
-  __asm-generic__ ("uabal %0.8h,%2.8b,%3.8b"
+  __asm__ ("uabal %0.8h,%2.8b,%3.8b"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -4324,7 +4324,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vabal_u16 (uint32x4_t a, uint16x4_t b, uint16x4_t c)
 {
   uint32x4_t result;
-  __asm-generic__ ("uabal %0.4s,%2.4h,%3.4h"
+  __asm__ ("uabal %0.4s,%2.4h,%3.4h"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -4335,7 +4335,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vabal_u32 (uint64x2_t a, uint32x2_t b, uint32x2_t c)
 {
   uint64x2_t result;
-  __asm-generic__ ("uabal %0.2d,%2.2s,%3.2s"
+  __asm__ ("uabal %0.2d,%2.2s,%3.2s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -4346,7 +4346,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vabaq_s8 (int8x16_t a, int8x16_t b, int8x16_t c)
 {
   int8x16_t result;
-  __asm-generic__ ("saba %0.16b,%2.16b,%3.16b"
+  __asm__ ("saba %0.16b,%2.16b,%3.16b"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -4357,7 +4357,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vabaq_s16 (int16x8_t a, int16x8_t b, int16x8_t c)
 {
   int16x8_t result;
-  __asm-generic__ ("saba %0.8h,%2.8h,%3.8h"
+  __asm__ ("saba %0.8h,%2.8h,%3.8h"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -4368,7 +4368,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vabaq_s32 (int32x4_t a, int32x4_t b, int32x4_t c)
 {
   int32x4_t result;
-  __asm-generic__ ("saba %0.4s,%2.4s,%3.4s"
+  __asm__ ("saba %0.4s,%2.4s,%3.4s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -4379,7 +4379,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vabaq_u8 (uint8x16_t a, uint8x16_t b, uint8x16_t c)
 {
   uint8x16_t result;
-  __asm-generic__ ("uaba %0.16b,%2.16b,%3.16b"
+  __asm__ ("uaba %0.16b,%2.16b,%3.16b"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -4390,7 +4390,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vabaq_u16 (uint16x8_t a, uint16x8_t b, uint16x8_t c)
 {
   uint16x8_t result;
-  __asm-generic__ ("uaba %0.8h,%2.8h,%3.8h"
+  __asm__ ("uaba %0.8h,%2.8h,%3.8h"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -4401,7 +4401,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vabaq_u32 (uint32x4_t a, uint32x4_t b, uint32x4_t c)
 {
   uint32x4_t result;
-  __asm-generic__ ("uaba %0.4s,%2.4s,%3.4s"
+  __asm__ ("uaba %0.4s,%2.4s,%3.4s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -4412,7 +4412,7 @@ __extension__ static __inline float32x2_t __attribute__ ((__always_inline__))
 vabd_f32 (float32x2_t a, float32x2_t b)
 {
   float32x2_t result;
-  __asm-generic__ ("fabd %0.2s, %1.2s, %2.2s"
+  __asm__ ("fabd %0.2s, %1.2s, %2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4423,7 +4423,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vabd_s8 (int8x8_t a, int8x8_t b)
 {
   int8x8_t result;
-  __asm-generic__ ("sabd %0.8b, %1.8b, %2.8b"
+  __asm__ ("sabd %0.8b, %1.8b, %2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4434,7 +4434,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vabd_s16 (int16x4_t a, int16x4_t b)
 {
   int16x4_t result;
-  __asm-generic__ ("sabd %0.4h, %1.4h, %2.4h"
+  __asm__ ("sabd %0.4h, %1.4h, %2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4445,7 +4445,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vabd_s32 (int32x2_t a, int32x2_t b)
 {
   int32x2_t result;
-  __asm-generic__ ("sabd %0.2s, %1.2s, %2.2s"
+  __asm__ ("sabd %0.2s, %1.2s, %2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4456,7 +4456,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vabd_u8 (uint8x8_t a, uint8x8_t b)
 {
   uint8x8_t result;
-  __asm-generic__ ("uabd %0.8b, %1.8b, %2.8b"
+  __asm__ ("uabd %0.8b, %1.8b, %2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4467,7 +4467,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vabd_u16 (uint16x4_t a, uint16x4_t b)
 {
   uint16x4_t result;
-  __asm-generic__ ("uabd %0.4h, %1.4h, %2.4h"
+  __asm__ ("uabd %0.4h, %1.4h, %2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4478,7 +4478,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vabd_u32 (uint32x2_t a, uint32x2_t b)
 {
   uint32x2_t result;
-  __asm-generic__ ("uabd %0.2s, %1.2s, %2.2s"
+  __asm__ ("uabd %0.2s, %1.2s, %2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4489,7 +4489,7 @@ __extension__ static __inline float64_t __attribute__ ((__always_inline__))
 vabdd_f64 (float64_t a, float64_t b)
 {
   float64_t result;
-  __asm-generic__ ("fabd %d0, %d1, %d2"
+  __asm__ ("fabd %d0, %d1, %d2"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4500,7 +4500,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vabdl_high_s8 (int8x16_t a, int8x16_t b)
 {
   int16x8_t result;
-  __asm-generic__ ("sabdl2 %0.8h,%1.16b,%2.16b"
+  __asm__ ("sabdl2 %0.8h,%1.16b,%2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4511,7 +4511,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vabdl_high_s16 (int16x8_t a, int16x8_t b)
 {
   int32x4_t result;
-  __asm-generic__ ("sabdl2 %0.4s,%1.8h,%2.8h"
+  __asm__ ("sabdl2 %0.4s,%1.8h,%2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4522,7 +4522,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vabdl_high_s32 (int32x4_t a, int32x4_t b)
 {
   int64x2_t result;
-  __asm-generic__ ("sabdl2 %0.2d,%1.4s,%2.4s"
+  __asm__ ("sabdl2 %0.2d,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4533,7 +4533,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vabdl_high_u8 (uint8x16_t a, uint8x16_t b)
 {
   uint16x8_t result;
-  __asm-generic__ ("uabdl2 %0.8h,%1.16b,%2.16b"
+  __asm__ ("uabdl2 %0.8h,%1.16b,%2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4544,7 +4544,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vabdl_high_u16 (uint16x8_t a, uint16x8_t b)
 {
   uint32x4_t result;
-  __asm-generic__ ("uabdl2 %0.4s,%1.8h,%2.8h"
+  __asm__ ("uabdl2 %0.4s,%1.8h,%2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4555,7 +4555,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vabdl_high_u32 (uint32x4_t a, uint32x4_t b)
 {
   uint64x2_t result;
-  __asm-generic__ ("uabdl2 %0.2d,%1.4s,%2.4s"
+  __asm__ ("uabdl2 %0.2d,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4566,7 +4566,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vabdl_s8 (int8x8_t a, int8x8_t b)
 {
   int16x8_t result;
-  __asm-generic__ ("sabdl %0.8h, %1.8b, %2.8b"
+  __asm__ ("sabdl %0.8h, %1.8b, %2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4577,7 +4577,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vabdl_s16 (int16x4_t a, int16x4_t b)
 {
   int32x4_t result;
-  __asm-generic__ ("sabdl %0.4s, %1.4h, %2.4h"
+  __asm__ ("sabdl %0.4s, %1.4h, %2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4588,7 +4588,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vabdl_s32 (int32x2_t a, int32x2_t b)
 {
   int64x2_t result;
-  __asm-generic__ ("sabdl %0.2d, %1.2s, %2.2s"
+  __asm__ ("sabdl %0.2d, %1.2s, %2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4599,7 +4599,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vabdl_u8 (uint8x8_t a, uint8x8_t b)
 {
   uint16x8_t result;
-  __asm-generic__ ("uabdl %0.8h, %1.8b, %2.8b"
+  __asm__ ("uabdl %0.8h, %1.8b, %2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4610,7 +4610,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vabdl_u16 (uint16x4_t a, uint16x4_t b)
 {
   uint32x4_t result;
-  __asm-generic__ ("uabdl %0.4s, %1.4h, %2.4h"
+  __asm__ ("uabdl %0.4s, %1.4h, %2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4621,7 +4621,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vabdl_u32 (uint32x2_t a, uint32x2_t b)
 {
   uint64x2_t result;
-  __asm-generic__ ("uabdl %0.2d, %1.2s, %2.2s"
+  __asm__ ("uabdl %0.2d, %1.2s, %2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4632,7 +4632,7 @@ __extension__ static __inline float32x4_t __attribute__ ((__always_inline__))
 vabdq_f32 (float32x4_t a, float32x4_t b)
 {
   float32x4_t result;
-  __asm-generic__ ("fabd %0.4s, %1.4s, %2.4s"
+  __asm__ ("fabd %0.4s, %1.4s, %2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4643,7 +4643,7 @@ __extension__ static __inline float64x2_t __attribute__ ((__always_inline__))
 vabdq_f64 (float64x2_t a, float64x2_t b)
 {
   float64x2_t result;
-  __asm-generic__ ("fabd %0.2d, %1.2d, %2.2d"
+  __asm__ ("fabd %0.2d, %1.2d, %2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4654,7 +4654,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vabdq_s8 (int8x16_t a, int8x16_t b)
 {
   int8x16_t result;
-  __asm-generic__ ("sabd %0.16b, %1.16b, %2.16b"
+  __asm__ ("sabd %0.16b, %1.16b, %2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4665,7 +4665,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vabdq_s16 (int16x8_t a, int16x8_t b)
 {
   int16x8_t result;
-  __asm-generic__ ("sabd %0.8h, %1.8h, %2.8h"
+  __asm__ ("sabd %0.8h, %1.8h, %2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4676,7 +4676,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vabdq_s32 (int32x4_t a, int32x4_t b)
 {
   int32x4_t result;
-  __asm-generic__ ("sabd %0.4s, %1.4s, %2.4s"
+  __asm__ ("sabd %0.4s, %1.4s, %2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4687,7 +4687,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vabdq_u8 (uint8x16_t a, uint8x16_t b)
 {
   uint8x16_t result;
-  __asm-generic__ ("uabd %0.16b, %1.16b, %2.16b"
+  __asm__ ("uabd %0.16b, %1.16b, %2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4698,7 +4698,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vabdq_u16 (uint16x8_t a, uint16x8_t b)
 {
   uint16x8_t result;
-  __asm-generic__ ("uabd %0.8h, %1.8h, %2.8h"
+  __asm__ ("uabd %0.8h, %1.8h, %2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4709,7 +4709,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vabdq_u32 (uint32x4_t a, uint32x4_t b)
 {
   uint32x4_t result;
-  __asm-generic__ ("uabd %0.4s, %1.4s, %2.4s"
+  __asm__ ("uabd %0.4s, %1.4s, %2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4720,7 +4720,7 @@ __extension__ static __inline float32_t __attribute__ ((__always_inline__))
 vabds_f32 (float32_t a, float32_t b)
 {
   float32_t result;
-  __asm-generic__ ("fabd %s0, %s1, %s2"
+  __asm__ ("fabd %s0, %s1, %s2"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -4731,7 +4731,7 @@ __extension__ static __inline int16_t __attribute__ ((__always_inline__))
 vaddlv_s8 (int8x8_t a)
 {
   int16_t result;
-  __asm-generic__ ("saddlv %h0,%1.8b"
+  __asm__ ("saddlv %h0,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -4742,7 +4742,7 @@ __extension__ static __inline int32_t __attribute__ ((__always_inline__))
 vaddlv_s16 (int16x4_t a)
 {
   int32_t result;
-  __asm-generic__ ("saddlv %s0,%1.4h"
+  __asm__ ("saddlv %s0,%1.4h"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -4753,7 +4753,7 @@ __extension__ static __inline uint16_t __attribute__ ((__always_inline__))
 vaddlv_u8 (uint8x8_t a)
 {
   uint16_t result;
-  __asm-generic__ ("uaddlv %h0,%1.8b"
+  __asm__ ("uaddlv %h0,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -4764,7 +4764,7 @@ __extension__ static __inline uint32_t __attribute__ ((__always_inline__))
 vaddlv_u16 (uint16x4_t a)
 {
   uint32_t result;
-  __asm-generic__ ("uaddlv %s0,%1.4h"
+  __asm__ ("uaddlv %s0,%1.4h"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -4775,7 +4775,7 @@ __extension__ static __inline int16_t __attribute__ ((__always_inline__))
 vaddlvq_s8 (int8x16_t a)
 {
   int16_t result;
-  __asm-generic__ ("saddlv %h0,%1.16b"
+  __asm__ ("saddlv %h0,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -4786,7 +4786,7 @@ __extension__ static __inline int32_t __attribute__ ((__always_inline__))
 vaddlvq_s16 (int16x8_t a)
 {
   int32_t result;
-  __asm-generic__ ("saddlv %s0,%1.8h"
+  __asm__ ("saddlv %s0,%1.8h"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -4797,7 +4797,7 @@ __extension__ static __inline int64_t __attribute__ ((__always_inline__))
 vaddlvq_s32 (int32x4_t a)
 {
   int64_t result;
-  __asm-generic__ ("saddlv %d0,%1.4s"
+  __asm__ ("saddlv %d0,%1.4s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -4808,7 +4808,7 @@ __extension__ static __inline uint16_t __attribute__ ((__always_inline__))
 vaddlvq_u8 (uint8x16_t a)
 {
   uint16_t result;
-  __asm-generic__ ("uaddlv %h0,%1.16b"
+  __asm__ ("uaddlv %h0,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -4819,7 +4819,7 @@ __extension__ static __inline uint32_t __attribute__ ((__always_inline__))
 vaddlvq_u16 (uint16x8_t a)
 {
   uint32_t result;
-  __asm-generic__ ("uaddlv %s0,%1.8h"
+  __asm__ ("uaddlv %s0,%1.8h"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -4830,7 +4830,7 @@ __extension__ static __inline uint64_t __attribute__ ((__always_inline__))
 vaddlvq_u32 (uint32x4_t a)
 {
   uint64_t result;
-  __asm-generic__ ("uaddlv %d0,%1.4s"
+  __asm__ ("uaddlv %d0,%1.4s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -4841,7 +4841,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vcls_s8 (int8x8_t a)
 {
   int8x8_t result;
-  __asm-generic__ ("cls %0.8b,%1.8b"
+  __asm__ ("cls %0.8b,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -4852,7 +4852,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vcls_s16 (int16x4_t a)
 {
   int16x4_t result;
-  __asm-generic__ ("cls %0.4h,%1.4h"
+  __asm__ ("cls %0.4h,%1.4h"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -4863,7 +4863,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vcls_s32 (int32x2_t a)
 {
   int32x2_t result;
-  __asm-generic__ ("cls %0.2s,%1.2s"
+  __asm__ ("cls %0.2s,%1.2s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -4874,7 +4874,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vclsq_s8 (int8x16_t a)
 {
   int8x16_t result;
-  __asm-generic__ ("cls %0.16b,%1.16b"
+  __asm__ ("cls %0.16b,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -4885,7 +4885,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vclsq_s16 (int16x8_t a)
 {
   int16x8_t result;
-  __asm-generic__ ("cls %0.8h,%1.8h"
+  __asm__ ("cls %0.8h,%1.8h"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -4896,7 +4896,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vclsq_s32 (int32x4_t a)
 {
   int32x4_t result;
-  __asm-generic__ ("cls %0.4s,%1.4s"
+  __asm__ ("cls %0.4s,%1.4s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -4907,7 +4907,7 @@ __extension__ static __inline poly8x8_t __attribute__ ((__always_inline__))
 vcnt_p8 (poly8x8_t a)
 {
   poly8x8_t result;
-  __asm-generic__ ("cnt %0.8b,%1.8b"
+  __asm__ ("cnt %0.8b,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -4918,7 +4918,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vcnt_s8 (int8x8_t a)
 {
   int8x8_t result;
-  __asm-generic__ ("cnt %0.8b,%1.8b"
+  __asm__ ("cnt %0.8b,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -4929,7 +4929,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vcnt_u8 (uint8x8_t a)
 {
   uint8x8_t result;
-  __asm-generic__ ("cnt %0.8b,%1.8b"
+  __asm__ ("cnt %0.8b,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -4940,7 +4940,7 @@ __extension__ static __inline poly8x16_t __attribute__ ((__always_inline__))
 vcntq_p8 (poly8x16_t a)
 {
   poly8x16_t result;
-  __asm-generic__ ("cnt %0.16b,%1.16b"
+  __asm__ ("cnt %0.16b,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -4951,7 +4951,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vcntq_s8 (int8x16_t a)
 {
   int8x16_t result;
-  __asm-generic__ ("cnt %0.16b,%1.16b"
+  __asm__ ("cnt %0.16b,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -4962,7 +4962,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vcntq_u8 (uint8x16_t a)
 {
   uint8x16_t result;
-  __asm-generic__ ("cnt %0.16b,%1.16b"
+  __asm__ ("cnt %0.16b,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -4975,7 +4975,7 @@ vcntq_u8 (uint8x16_t a)
        float32x4_t c_ = (c);                                            \
        float32x4_t a_ = (a);                                            \
        float32x4_t result;                                              \
-       __asm-generic__ ("ins %0.s[%2], %3.s[%4]"                                \
+       __asm__ ("ins %0.s[%2], %3.s[%4]"                                \
                 : "=w"(result)                                          \
                 : "0"(a_), "i"(b), "w"(c_), "i"(d)                      \
                 : /* No clobbers */);                                   \
@@ -4988,7 +4988,7 @@ vcntq_u8 (uint8x16_t a)
        float64x2_t c_ = (c);                                            \
        float64x2_t a_ = (a);                                            \
        float64x2_t result;                                              \
-       __asm-generic__ ("ins %0.d[%2], %3.d[%4]"                                \
+       __asm__ ("ins %0.d[%2], %3.d[%4]"                                \
                 : "=w"(result)                                          \
                 : "0"(a_), "i"(b), "w"(c_), "i"(d)                      \
                 : /* No clobbers */);                                   \
@@ -5001,7 +5001,7 @@ vcntq_u8 (uint8x16_t a)
        poly8x16_t c_ = (c);                                             \
        poly8x16_t a_ = (a);                                             \
        poly8x16_t result;                                               \
-       __asm-generic__ ("ins %0.b[%2], %3.b[%4]"                                \
+       __asm__ ("ins %0.b[%2], %3.b[%4]"                                \
                 : "=w"(result)                                          \
                 : "0"(a_), "i"(b), "w"(c_), "i"(d)                      \
                 : /* No clobbers */);                                   \
@@ -5014,7 +5014,7 @@ vcntq_u8 (uint8x16_t a)
        poly16x8_t c_ = (c);                                             \
        poly16x8_t a_ = (a);                                             \
        poly16x8_t result;                                               \
-       __asm-generic__ ("ins %0.h[%2], %3.h[%4]"                                \
+       __asm__ ("ins %0.h[%2], %3.h[%4]"                                \
                 : "=w"(result)                                          \
                 : "0"(a_), "i"(b), "w"(c_), "i"(d)                      \
                 : /* No clobbers */);                                   \
@@ -5027,7 +5027,7 @@ vcntq_u8 (uint8x16_t a)
        int8x16_t c_ = (c);                                              \
        int8x16_t a_ = (a);                                              \
        int8x16_t result;                                                \
-       __asm-generic__ ("ins %0.b[%2], %3.b[%4]"                                \
+       __asm__ ("ins %0.b[%2], %3.b[%4]"                                \
                 : "=w"(result)                                          \
                 : "0"(a_), "i"(b), "w"(c_), "i"(d)                      \
                 : /* No clobbers */);                                   \
@@ -5040,7 +5040,7 @@ vcntq_u8 (uint8x16_t a)
        int16x8_t c_ = (c);                                              \
        int16x8_t a_ = (a);                                              \
        int16x8_t result;                                                \
-       __asm-generic__ ("ins %0.h[%2], %3.h[%4]"                                \
+       __asm__ ("ins %0.h[%2], %3.h[%4]"                                \
                 : "=w"(result)                                          \
                 : "0"(a_), "i"(b), "w"(c_), "i"(d)                      \
                 : /* No clobbers */);                                   \
@@ -5053,7 +5053,7 @@ vcntq_u8 (uint8x16_t a)
        int32x4_t c_ = (c);                                              \
        int32x4_t a_ = (a);                                              \
        int32x4_t result;                                                \
-       __asm-generic__ ("ins %0.s[%2], %3.s[%4]"                                \
+       __asm__ ("ins %0.s[%2], %3.s[%4]"                                \
                 : "=w"(result)                                          \
                 : "0"(a_), "i"(b), "w"(c_), "i"(d)                      \
                 : /* No clobbers */);                                   \
@@ -5066,7 +5066,7 @@ vcntq_u8 (uint8x16_t a)
        int64x2_t c_ = (c);                                              \
        int64x2_t a_ = (a);                                              \
        int64x2_t result;                                                \
-       __asm-generic__ ("ins %0.d[%2], %3.d[%4]"                                \
+       __asm__ ("ins %0.d[%2], %3.d[%4]"                                \
                 : "=w"(result)                                          \
                 : "0"(a_), "i"(b), "w"(c_), "i"(d)                      \
                 : /* No clobbers */);                                   \
@@ -5079,7 +5079,7 @@ vcntq_u8 (uint8x16_t a)
        uint8x16_t c_ = (c);                                             \
        uint8x16_t a_ = (a);                                             \
        uint8x16_t result;                                               \
-       __asm-generic__ ("ins %0.b[%2], %3.b[%4]"                                \
+       __asm__ ("ins %0.b[%2], %3.b[%4]"                                \
                 : "=w"(result)                                          \
                 : "0"(a_), "i"(b), "w"(c_), "i"(d)                      \
                 : /* No clobbers */);                                   \
@@ -5092,7 +5092,7 @@ vcntq_u8 (uint8x16_t a)
        uint16x8_t c_ = (c);                                             \
        uint16x8_t a_ = (a);                                             \
        uint16x8_t result;                                               \
-       __asm-generic__ ("ins %0.h[%2], %3.h[%4]"                                \
+       __asm__ ("ins %0.h[%2], %3.h[%4]"                                \
                 : "=w"(result)                                          \
                 : "0"(a_), "i"(b), "w"(c_), "i"(d)                      \
                 : /* No clobbers */);                                   \
@@ -5105,7 +5105,7 @@ vcntq_u8 (uint8x16_t a)
        uint32x4_t c_ = (c);                                             \
        uint32x4_t a_ = (a);                                             \
        uint32x4_t result;                                               \
-       __asm-generic__ ("ins %0.s[%2], %3.s[%4]"                                \
+       __asm__ ("ins %0.s[%2], %3.s[%4]"                                \
                 : "=w"(result)                                          \
                 : "0"(a_), "i"(b), "w"(c_), "i"(d)                      \
                 : /* No clobbers */);                                   \
@@ -5118,7 +5118,7 @@ vcntq_u8 (uint8x16_t a)
        uint64x2_t c_ = (c);                                             \
        uint64x2_t a_ = (a);                                             \
        uint64x2_t result;                                               \
-       __asm-generic__ ("ins %0.d[%2], %3.d[%4]"                                \
+       __asm__ ("ins %0.d[%2], %3.d[%4]"                                \
                 : "=w"(result)                                          \
                 : "0"(a_), "i"(b), "w"(c_), "i"(d)                      \
                 : /* No clobbers */);                                   \
@@ -5140,7 +5140,7 @@ static float32x2_t vdup_n_f32 (float32_t);
     ({                                                                  \
        int32x2_t a_ = (a);                                              \
        float32x2_t result;                                              \
-       __asm-generic__ ("scvtf %0.2s, %1.2s, #%2"                               \
+       __asm__ ("scvtf %0.2s, %1.2s, #%2"                               \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -5152,7 +5152,7 @@ static float32x2_t vdup_n_f32 (float32_t);
     ({                                                                  \
        uint32x2_t a_ = (a);                                             \
        float32x2_t result;                                              \
-       __asm-generic__ ("ucvtf %0.2s, %1.2s, #%2"                               \
+       __asm__ ("ucvtf %0.2s, %1.2s, #%2"                               \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -5164,7 +5164,7 @@ static float32x2_t vdup_n_f32 (float32_t);
     ({                                                                  \
        float32x2_t a_ = (a);                                            \
        int32x2_t result;                                                \
-       __asm-generic__ ("fcvtzs %0.2s, %1.2s, #%2"                              \
+       __asm__ ("fcvtzs %0.2s, %1.2s, #%2"                              \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -5176,7 +5176,7 @@ static float32x2_t vdup_n_f32 (float32_t);
     ({                                                                  \
        float32x2_t a_ = (a);                                            \
        uint32x2_t result;                                               \
-       __asm-generic__ ("fcvtzu %0.2s, %1.2s, #%2"                              \
+       __asm__ ("fcvtzu %0.2s, %1.2s, #%2"                              \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -5188,7 +5188,7 @@ static float32x2_t vdup_n_f32 (float32_t);
     ({                                                                  \
        int64_t a_ = (a);                                                \
        float64_t result;                                                \
-       __asm-generic__ ("scvtf %d0,%d1,%2"                                      \
+       __asm__ ("scvtf %d0,%d1,%2"                                      \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -5200,7 +5200,7 @@ static float32x2_t vdup_n_f32 (float32_t);
     ({                                                                  \
        uint64_t a_ = (a);                                               \
        float64_t result;                                                \
-       __asm-generic__ ("ucvtf %d0,%d1,%2"                                      \
+       __asm__ ("ucvtf %d0,%d1,%2"                                      \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -5212,7 +5212,7 @@ static float32x2_t vdup_n_f32 (float32_t);
     ({                                                                  \
        float64_t a_ = (a);                                              \
        int64_t result;                                                  \
-       __asm-generic__ ("fcvtzs %d0,%d1,%2"                                     \
+       __asm__ ("fcvtzs %d0,%d1,%2"                                     \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -5224,7 +5224,7 @@ static float32x2_t vdup_n_f32 (float32_t);
     ({                                                                  \
        float64_t a_ = (a);                                              \
        uint64_t result;                                                 \
-       __asm-generic__ ("fcvtzu %d0,%d1,%2"                                     \
+       __asm__ ("fcvtzu %d0,%d1,%2"                                     \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -5236,7 +5236,7 @@ static float32x2_t vdup_n_f32 (float32_t);
     ({                                                                  \
        int32x4_t a_ = (a);                                              \
        float32x4_t result;                                              \
-       __asm-generic__ ("scvtf %0.4s, %1.4s, #%2"                               \
+       __asm__ ("scvtf %0.4s, %1.4s, #%2"                               \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -5248,7 +5248,7 @@ static float32x2_t vdup_n_f32 (float32_t);
     ({                                                                  \
        uint32x4_t a_ = (a);                                             \
        float32x4_t result;                                              \
-       __asm-generic__ ("ucvtf %0.4s, %1.4s, #%2"                               \
+       __asm__ ("ucvtf %0.4s, %1.4s, #%2"                               \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -5260,7 +5260,7 @@ static float32x2_t vdup_n_f32 (float32_t);
     ({                                                                  \
        int64x2_t a_ = (a);                                              \
        float64x2_t result;                                              \
-       __asm-generic__ ("scvtf %0.2d, %1.2d, #%2"                               \
+       __asm__ ("scvtf %0.2d, %1.2d, #%2"                               \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -5272,7 +5272,7 @@ static float32x2_t vdup_n_f32 (float32_t);
     ({                                                                  \
        uint64x2_t a_ = (a);                                             \
        float64x2_t result;                                              \
-       __asm-generic__ ("ucvtf %0.2d, %1.2d, #%2"                               \
+       __asm__ ("ucvtf %0.2d, %1.2d, #%2"                               \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -5284,7 +5284,7 @@ static float32x2_t vdup_n_f32 (float32_t);
     ({                                                                  \
        float32x4_t a_ = (a);                                            \
        int32x4_t result;                                                \
-       __asm-generic__ ("fcvtzs %0.4s, %1.4s, #%2"                              \
+       __asm__ ("fcvtzs %0.4s, %1.4s, #%2"                              \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -5296,7 +5296,7 @@ static float32x2_t vdup_n_f32 (float32_t);
     ({                                                                  \
        float64x2_t a_ = (a);                                            \
        int64x2_t result;                                                \
-       __asm-generic__ ("fcvtzs %0.2d, %1.2d, #%2"                              \
+       __asm__ ("fcvtzs %0.2d, %1.2d, #%2"                              \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -5308,7 +5308,7 @@ static float32x2_t vdup_n_f32 (float32_t);
     ({                                                                  \
        float32x4_t a_ = (a);                                            \
        uint32x4_t result;                                               \
-       __asm-generic__ ("fcvtzu %0.4s, %1.4s, #%2"                              \
+       __asm__ ("fcvtzu %0.4s, %1.4s, #%2"                              \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -5320,7 +5320,7 @@ static float32x2_t vdup_n_f32 (float32_t);
     ({                                                                  \
        float64x2_t a_ = (a);                                            \
        uint64x2_t result;                                               \
-       __asm-generic__ ("fcvtzu %0.2d, %1.2d, #%2"                              \
+       __asm__ ("fcvtzu %0.2d, %1.2d, #%2"                              \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -5332,7 +5332,7 @@ static float32x2_t vdup_n_f32 (float32_t);
     ({                                                                  \
        int32_t a_ = (a);                                                \
        float32_t result;                                                \
-       __asm-generic__ ("scvtf %s0,%s1,%2"                                      \
+       __asm__ ("scvtf %s0,%s1,%2"                                      \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -5344,7 +5344,7 @@ static float32x2_t vdup_n_f32 (float32_t);
     ({                                                                  \
        uint32_t a_ = (a);                                               \
        float32_t result;                                                \
-       __asm-generic__ ("ucvtf %s0,%s1,%2"                                      \
+       __asm__ ("ucvtf %s0,%s1,%2"                                      \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -5356,7 +5356,7 @@ static float32x2_t vdup_n_f32 (float32_t);
     ({                                                                  \
        float32_t a_ = (a);                                              \
        int32_t result;                                                  \
-       __asm-generic__ ("fcvtzs %s0,%s1,%2"                                     \
+       __asm__ ("fcvtzs %s0,%s1,%2"                                     \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -5368,7 +5368,7 @@ static float32x2_t vdup_n_f32 (float32_t);
     ({                                                                  \
        float32_t a_ = (a);                                              \
        uint32_t result;                                                 \
-       __asm-generic__ ("fcvtzu %s0,%s1,%2"                                     \
+       __asm__ ("fcvtzu %s0,%s1,%2"                                     \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -5379,7 +5379,7 @@ __extension__ static __inline float32x2_t __attribute__ ((__always_inline__))
 vcvtx_f32_f64 (float64x2_t a)
 {
   float32x2_t result;
-  __asm-generic__ ("fcvtxn %0.2s,%1.2d"
+  __asm__ ("fcvtxn %0.2s,%1.2d"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -5390,7 +5390,7 @@ __extension__ static __inline float32x4_t __attribute__ ((__always_inline__))
 vcvtx_high_f32_f64 (float32x2_t a, float64x2_t b)
 {
   float32x4_t result;
-  __asm-generic__ ("fcvtxn2 %0.4s,%1.2d"
+  __asm__ ("fcvtxn2 %0.4s,%1.2d"
            : "=w"(result)
            : "w" (b), "0"(a)
            : /* No clobbers */);
@@ -5401,7 +5401,7 @@ __extension__ static __inline float32_t __attribute__ ((__always_inline__))
 vcvtxd_f32_f64 (float64_t a)
 {
   float32_t result;
-  __asm-generic__ ("fcvtxn %s0,%d1"
+  __asm__ ("fcvtxn %s0,%d1"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -5414,7 +5414,7 @@ vcvtxd_f32_f64 (float64_t a)
        float32x2_t b_ = (b);                                            \
        float32x2_t a_ = (a);                                            \
        float32x2_t result;                                              \
-       __asm-generic__ ("ext %0.8b, %1.8b, %2.8b, #%3*4"                        \
+       __asm__ ("ext %0.8b, %1.8b, %2.8b, #%3*4"                        \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -5427,7 +5427,7 @@ vcvtxd_f32_f64 (float64_t a)
        float64x1_t b_ = (b);                                            \
        float64x1_t a_ = (a);                                            \
        float64x1_t result;                                              \
-       __asm-generic__ ("ext %0.8b, %1.8b, %2.8b, #%3*8"                        \
+       __asm__ ("ext %0.8b, %1.8b, %2.8b, #%3*8"                        \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -5440,7 +5440,7 @@ vcvtxd_f32_f64 (float64_t a)
        poly8x8_t b_ = (b);                                              \
        poly8x8_t a_ = (a);                                              \
        poly8x8_t result;                                                \
-       __asm-generic__ ("ext %0.8b,%1.8b,%2.8b,%3"                              \
+       __asm__ ("ext %0.8b,%1.8b,%2.8b,%3"                              \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -5453,7 +5453,7 @@ vcvtxd_f32_f64 (float64_t a)
        poly16x4_t b_ = (b);                                             \
        poly16x4_t a_ = (a);                                             \
        poly16x4_t result;                                               \
-       __asm-generic__ ("ext %0.8b, %1.8b, %2.8b, #%3*2"                        \
+       __asm__ ("ext %0.8b, %1.8b, %2.8b, #%3*2"                        \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -5466,7 +5466,7 @@ vcvtxd_f32_f64 (float64_t a)
        int8x8_t b_ = (b);                                               \
        int8x8_t a_ = (a);                                               \
        int8x8_t result;                                                 \
-       __asm-generic__ ("ext %0.8b,%1.8b,%2.8b,%3"                              \
+       __asm__ ("ext %0.8b,%1.8b,%2.8b,%3"                              \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -5479,7 +5479,7 @@ vcvtxd_f32_f64 (float64_t a)
        int16x4_t b_ = (b);                                              \
        int16x4_t a_ = (a);                                              \
        int16x4_t result;                                                \
-       __asm-generic__ ("ext %0.8b, %1.8b, %2.8b, #%3*2"                        \
+       __asm__ ("ext %0.8b, %1.8b, %2.8b, #%3*2"                        \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -5492,7 +5492,7 @@ vcvtxd_f32_f64 (float64_t a)
        int32x2_t b_ = (b);                                              \
        int32x2_t a_ = (a);                                              \
        int32x2_t result;                                                \
-       __asm-generic__ ("ext %0.8b, %1.8b, %2.8b, #%3*4"                        \
+       __asm__ ("ext %0.8b, %1.8b, %2.8b, #%3*4"                        \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -5505,7 +5505,7 @@ vcvtxd_f32_f64 (float64_t a)
        int64x1_t b_ = (b);                                              \
        int64x1_t a_ = (a);                                              \
        int64x1_t result;                                                \
-       __asm-generic__ ("ext %0.8b, %1.8b, %2.8b, #%3*8"                        \
+       __asm__ ("ext %0.8b, %1.8b, %2.8b, #%3*8"                        \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -5518,7 +5518,7 @@ vcvtxd_f32_f64 (float64_t a)
        uint8x8_t b_ = (b);                                              \
        uint8x8_t a_ = (a);                                              \
        uint8x8_t result;                                                \
-       __asm-generic__ ("ext %0.8b,%1.8b,%2.8b,%3"                              \
+       __asm__ ("ext %0.8b,%1.8b,%2.8b,%3"                              \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -5531,7 +5531,7 @@ vcvtxd_f32_f64 (float64_t a)
        uint16x4_t b_ = (b);                                             \
        uint16x4_t a_ = (a);                                             \
        uint16x4_t result;                                               \
-       __asm-generic__ ("ext %0.8b, %1.8b, %2.8b, #%3*2"                        \
+       __asm__ ("ext %0.8b, %1.8b, %2.8b, #%3*2"                        \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -5544,7 +5544,7 @@ vcvtxd_f32_f64 (float64_t a)
        uint32x2_t b_ = (b);                                             \
        uint32x2_t a_ = (a);                                             \
        uint32x2_t result;                                               \
-       __asm-generic__ ("ext %0.8b, %1.8b, %2.8b, #%3*4"                        \
+       __asm__ ("ext %0.8b, %1.8b, %2.8b, #%3*4"                        \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -5557,7 +5557,7 @@ vcvtxd_f32_f64 (float64_t a)
        uint64x1_t b_ = (b);                                             \
        uint64x1_t a_ = (a);                                             \
        uint64x1_t result;                                               \
-       __asm-generic__ ("ext %0.8b, %1.8b, %2.8b, #%3*8"                        \
+       __asm__ ("ext %0.8b, %1.8b, %2.8b, #%3*8"                        \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -5570,7 +5570,7 @@ vcvtxd_f32_f64 (float64_t a)
        float32x4_t b_ = (b);                                            \
        float32x4_t a_ = (a);                                            \
        float32x4_t result;                                              \
-       __asm-generic__ ("ext %0.16b, %1.16b, %2.16b, #%3*4"                     \
+       __asm__ ("ext %0.16b, %1.16b, %2.16b, #%3*4"                     \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -5583,7 +5583,7 @@ vcvtxd_f32_f64 (float64_t a)
        float64x2_t b_ = (b);                                            \
        float64x2_t a_ = (a);                                            \
        float64x2_t result;                                              \
-       __asm-generic__ ("ext %0.16b, %1.16b, %2.16b, #%3*8"                     \
+       __asm__ ("ext %0.16b, %1.16b, %2.16b, #%3*8"                     \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -5596,7 +5596,7 @@ vcvtxd_f32_f64 (float64_t a)
        poly8x16_t b_ = (b);                                             \
        poly8x16_t a_ = (a);                                             \
        poly8x16_t result;                                               \
-       __asm-generic__ ("ext %0.16b, %1.16b, %2.16b, #%3"                       \
+       __asm__ ("ext %0.16b, %1.16b, %2.16b, #%3"                       \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -5609,7 +5609,7 @@ vcvtxd_f32_f64 (float64_t a)
        poly16x8_t b_ = (b);                                             \
        poly16x8_t a_ = (a);                                             \
        poly16x8_t result;                                               \
-       __asm-generic__ ("ext %0.16b, %1.16b, %2.16b, #%3*2"                     \
+       __asm__ ("ext %0.16b, %1.16b, %2.16b, #%3*2"                     \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -5622,7 +5622,7 @@ vcvtxd_f32_f64 (float64_t a)
        int8x16_t b_ = (b);                                              \
        int8x16_t a_ = (a);                                              \
        int8x16_t result;                                                \
-       __asm-generic__ ("ext %0.16b, %1.16b, %2.16b, #%3"                       \
+       __asm__ ("ext %0.16b, %1.16b, %2.16b, #%3"                       \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -5635,7 +5635,7 @@ vcvtxd_f32_f64 (float64_t a)
        int16x8_t b_ = (b);                                              \
        int16x8_t a_ = (a);                                              \
        int16x8_t result;                                                \
-       __asm-generic__ ("ext %0.16b, %1.16b, %2.16b, #%3*2"                     \
+       __asm__ ("ext %0.16b, %1.16b, %2.16b, #%3*2"                     \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -5648,7 +5648,7 @@ vcvtxd_f32_f64 (float64_t a)
        int32x4_t b_ = (b);                                              \
        int32x4_t a_ = (a);                                              \
        int32x4_t result;                                                \
-       __asm-generic__ ("ext %0.16b, %1.16b, %2.16b, #%3*4"                     \
+       __asm__ ("ext %0.16b, %1.16b, %2.16b, #%3*4"                     \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -5661,7 +5661,7 @@ vcvtxd_f32_f64 (float64_t a)
        int64x2_t b_ = (b);                                              \
        int64x2_t a_ = (a);                                              \
        int64x2_t result;                                                \
-       __asm-generic__ ("ext %0.16b, %1.16b, %2.16b, #%3*8"                     \
+       __asm__ ("ext %0.16b, %1.16b, %2.16b, #%3*8"                     \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -5674,7 +5674,7 @@ vcvtxd_f32_f64 (float64_t a)
        uint8x16_t b_ = (b);                                             \
        uint8x16_t a_ = (a);                                             \
        uint8x16_t result;                                               \
-       __asm-generic__ ("ext %0.16b, %1.16b, %2.16b, #%3"                       \
+       __asm__ ("ext %0.16b, %1.16b, %2.16b, #%3"                       \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -5687,7 +5687,7 @@ vcvtxd_f32_f64 (float64_t a)
        uint16x8_t b_ = (b);                                             \
        uint16x8_t a_ = (a);                                             \
        uint16x8_t result;                                               \
-       __asm-generic__ ("ext %0.16b, %1.16b, %2.16b, #%3*2"                     \
+       __asm__ ("ext %0.16b, %1.16b, %2.16b, #%3*2"                     \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -5700,7 +5700,7 @@ vcvtxd_f32_f64 (float64_t a)
        uint32x4_t b_ = (b);                                             \
        uint32x4_t a_ = (a);                                             \
        uint32x4_t result;                                               \
-       __asm-generic__ ("ext %0.16b, %1.16b, %2.16b, #%3*4"                     \
+       __asm__ ("ext %0.16b, %1.16b, %2.16b, #%3*4"                     \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -5713,7 +5713,7 @@ vcvtxd_f32_f64 (float64_t a)
        uint64x2_t b_ = (b);                                             \
        uint64x2_t a_ = (a);                                             \
        uint64x2_t result;                                               \
-       __asm-generic__ ("ext %0.16b, %1.16b, %2.16b, #%3*8"                     \
+       __asm__ ("ext %0.16b, %1.16b, %2.16b, #%3*8"                     \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -5724,7 +5724,7 @@ __extension__ static __inline float32x2_t __attribute__ ((__always_inline__))
 vfma_f32 (float32x2_t a, float32x2_t b, float32x2_t c)
 {
   float32x2_t result;
-  __asm-generic__ ("fmla %0.2s,%2.2s,%3.2s"
+  __asm__ ("fmla %0.2s,%2.2s,%3.2s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -5735,7 +5735,7 @@ __extension__ static __inline float32x4_t __attribute__ ((__always_inline__))
 vfmaq_f32 (float32x4_t a, float32x4_t b, float32x4_t c)
 {
   float32x4_t result;
-  __asm-generic__ ("fmla %0.4s,%2.4s,%3.4s"
+  __asm__ ("fmla %0.4s,%2.4s,%3.4s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -5746,7 +5746,7 @@ __extension__ static __inline float64x2_t __attribute__ ((__always_inline__))
 vfmaq_f64 (float64x2_t a, float64x2_t b, float64x2_t c)
 {
   float64x2_t result;
-  __asm-generic__ ("fmla %0.2d,%2.2d,%3.2d"
+  __asm__ ("fmla %0.2d,%2.2d,%3.2d"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -5757,7 +5757,7 @@ __extension__ static __inline float32x2_t __attribute__ ((__always_inline__))
 vfma_n_f32 (float32x2_t a, float32x2_t b, float32_t c)
 {
   float32x2_t result;
-  __asm-generic__ ("fmla %0.2s, %2.2s, %3.s[0]"
+  __asm__ ("fmla %0.2s, %2.2s, %3.s[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -5768,7 +5768,7 @@ __extension__ static __inline float32x4_t __attribute__ ((__always_inline__))
 vfmaq_n_f32 (float32x4_t a, float32x4_t b, float32_t c)
 {
   float32x4_t result;
-  __asm-generic__ ("fmla %0.4s, %2.4s, %3.s[0]"
+  __asm__ ("fmla %0.4s, %2.4s, %3.s[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -5779,7 +5779,7 @@ __extension__ static __inline float64x2_t __attribute__ ((__always_inline__))
 vfmaq_n_f64 (float64x2_t a, float64x2_t b, float64_t c)
 {
   float64x2_t result;
-  __asm-generic__ ("fmla %0.2d, %2.2d, %3.d[0]"
+  __asm__ ("fmla %0.2d, %2.2d, %3.d[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -5790,7 +5790,7 @@ __extension__ static __inline float32x2_t __attribute__ ((__always_inline__))
 vfms_f32 (float32x2_t a, float32x2_t b, float32x2_t c)
 {
   float32x2_t result;
-  __asm-generic__ ("fmls %0.2s,%2.2s,%3.2s"
+  __asm__ ("fmls %0.2s,%2.2s,%3.2s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -5801,7 +5801,7 @@ __extension__ static __inline float32x4_t __attribute__ ((__always_inline__))
 vfmsq_f32 (float32x4_t a, float32x4_t b, float32x4_t c)
 {
   float32x4_t result;
-  __asm-generic__ ("fmls %0.4s,%2.4s,%3.4s"
+  __asm__ ("fmls %0.4s,%2.4s,%3.4s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -5812,7 +5812,7 @@ __extension__ static __inline float64x2_t __attribute__ ((__always_inline__))
 vfmsq_f64 (float64x2_t a, float64x2_t b, float64x2_t c)
 {
   float64x2_t result;
-  __asm-generic__ ("fmls %0.2d,%2.2d,%3.2d"
+  __asm__ ("fmls %0.2d,%2.2d,%3.2d"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -5823,7 +5823,7 @@ __extension__ static __inline float32x2_t __attribute__ ((__always_inline__))
 vget_high_f32 (float32x4_t a)
 {
   float32x2_t result;
-  __asm-generic__ ("ins %0.d[0], %1.d[1]"
+  __asm__ ("ins %0.d[0], %1.d[1]"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -5834,7 +5834,7 @@ __extension__ static __inline float64x1_t __attribute__ ((__always_inline__))
 vget_high_f64 (float64x2_t a)
 {
   float64x1_t result;
-  __asm-generic__ ("ins %0.d[0], %1.d[1]"
+  __asm__ ("ins %0.d[0], %1.d[1]"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -5845,7 +5845,7 @@ __extension__ static __inline poly8x8_t __attribute__ ((__always_inline__))
 vget_high_p8 (poly8x16_t a)
 {
   poly8x8_t result;
-  __asm-generic__ ("ins %0.d[0], %1.d[1]"
+  __asm__ ("ins %0.d[0], %1.d[1]"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -5856,7 +5856,7 @@ __extension__ static __inline poly16x4_t __attribute__ ((__always_inline__))
 vget_high_p16 (poly16x8_t a)
 {
   poly16x4_t result;
-  __asm-generic__ ("ins %0.d[0], %1.d[1]"
+  __asm__ ("ins %0.d[0], %1.d[1]"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -5867,7 +5867,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vget_high_s8 (int8x16_t a)
 {
   int8x8_t result;
-  __asm-generic__ ("ins %0.d[0], %1.d[1]"
+  __asm__ ("ins %0.d[0], %1.d[1]"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -5878,7 +5878,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vget_high_s16 (int16x8_t a)
 {
   int16x4_t result;
-  __asm-generic__ ("ins %0.d[0], %1.d[1]"
+  __asm__ ("ins %0.d[0], %1.d[1]"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -5889,7 +5889,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vget_high_s32 (int32x4_t a)
 {
   int32x2_t result;
-  __asm-generic__ ("ins %0.d[0], %1.d[1]"
+  __asm__ ("ins %0.d[0], %1.d[1]"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -5900,7 +5900,7 @@ __extension__ static __inline int64x1_t __attribute__ ((__always_inline__))
 vget_high_s64 (int64x2_t a)
 {
   int64x1_t result;
-  __asm-generic__ ("ins %0.d[0], %1.d[1]"
+  __asm__ ("ins %0.d[0], %1.d[1]"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -5911,7 +5911,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vget_high_u8 (uint8x16_t a)
 {
   uint8x8_t result;
-  __asm-generic__ ("ins %0.d[0], %1.d[1]"
+  __asm__ ("ins %0.d[0], %1.d[1]"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -5922,7 +5922,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vget_high_u16 (uint16x8_t a)
 {
   uint16x4_t result;
-  __asm-generic__ ("ins %0.d[0], %1.d[1]"
+  __asm__ ("ins %0.d[0], %1.d[1]"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -5933,7 +5933,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vget_high_u32 (uint32x4_t a)
 {
   uint32x2_t result;
-  __asm-generic__ ("ins %0.d[0], %1.d[1]"
+  __asm__ ("ins %0.d[0], %1.d[1]"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -5944,7 +5944,7 @@ __extension__ static __inline uint64x1_t __attribute__ ((__always_inline__))
 vget_high_u64 (uint64x2_t a)
 {
   uint64x1_t result;
-  __asm-generic__ ("ins %0.d[0], %1.d[1]"
+  __asm__ ("ins %0.d[0], %1.d[1]"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -5955,7 +5955,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vhsub_s8 (int8x8_t a, int8x8_t b)
 {
   int8x8_t result;
-  __asm-generic__ ("shsub %0.8b, %1.8b, %2.8b"
+  __asm__ ("shsub %0.8b, %1.8b, %2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -5966,7 +5966,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vhsub_s16 (int16x4_t a, int16x4_t b)
 {
   int16x4_t result;
-  __asm-generic__ ("shsub %0.4h, %1.4h, %2.4h"
+  __asm__ ("shsub %0.4h, %1.4h, %2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -5977,7 +5977,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vhsub_s32 (int32x2_t a, int32x2_t b)
 {
   int32x2_t result;
-  __asm-generic__ ("shsub %0.2s, %1.2s, %2.2s"
+  __asm__ ("shsub %0.2s, %1.2s, %2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -5988,7 +5988,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vhsub_u8 (uint8x8_t a, uint8x8_t b)
 {
   uint8x8_t result;
-  __asm-generic__ ("uhsub %0.8b, %1.8b, %2.8b"
+  __asm__ ("uhsub %0.8b, %1.8b, %2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -5999,7 +5999,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vhsub_u16 (uint16x4_t a, uint16x4_t b)
 {
   uint16x4_t result;
-  __asm-generic__ ("uhsub %0.4h, %1.4h, %2.4h"
+  __asm__ ("uhsub %0.4h, %1.4h, %2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -6010,7 +6010,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vhsub_u32 (uint32x2_t a, uint32x2_t b)
 {
   uint32x2_t result;
-  __asm-generic__ ("uhsub %0.2s, %1.2s, %2.2s"
+  __asm__ ("uhsub %0.2s, %1.2s, %2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -6021,7 +6021,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vhsubq_s8 (int8x16_t a, int8x16_t b)
 {
   int8x16_t result;
-  __asm-generic__ ("shsub %0.16b, %1.16b, %2.16b"
+  __asm__ ("shsub %0.16b, %1.16b, %2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -6032,7 +6032,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vhsubq_s16 (int16x8_t a, int16x8_t b)
 {
   int16x8_t result;
-  __asm-generic__ ("shsub %0.8h, %1.8h, %2.8h"
+  __asm__ ("shsub %0.8h, %1.8h, %2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -6043,7 +6043,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vhsubq_s32 (int32x4_t a, int32x4_t b)
 {
   int32x4_t result;
-  __asm-generic__ ("shsub %0.4s, %1.4s, %2.4s"
+  __asm__ ("shsub %0.4s, %1.4s, %2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -6054,7 +6054,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vhsubq_u8 (uint8x16_t a, uint8x16_t b)
 {
   uint8x16_t result;
-  __asm-generic__ ("uhsub %0.16b, %1.16b, %2.16b"
+  __asm__ ("uhsub %0.16b, %1.16b, %2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -6065,7 +6065,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vhsubq_u16 (uint16x8_t a, uint16x8_t b)
 {
   uint16x8_t result;
-  __asm-generic__ ("uhsub %0.8h, %1.8h, %2.8h"
+  __asm__ ("uhsub %0.8h, %1.8h, %2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -6076,7 +6076,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vhsubq_u32 (uint32x4_t a, uint32x4_t b)
 {
   uint32x4_t result;
-  __asm-generic__ ("uhsub %0.4s, %1.4s, %2.4s"
+  __asm__ ("uhsub %0.4s, %1.4s, %2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -6087,7 +6087,7 @@ __extension__ static __inline float32x2_t __attribute__ ((__always_inline__))
 vld1_dup_f32 (const float32_t * a)
 {
   float32x2_t result;
-  __asm-generic__ ("ld1r {%0.2s}, %1"
+  __asm__ ("ld1r {%0.2s}, %1"
 	   : "=w"(result)
 	   : "Utv"(*a)
 	   : /* No clobbers */);
@@ -6098,7 +6098,7 @@ __extension__ static __inline float64x1_t __attribute__ ((__always_inline__))
 vld1_dup_f64 (const float64_t * a)
 {
   float64x1_t result;
-  __asm-generic__ ("ld1r {%0.1d}, %1"
+  __asm__ ("ld1r {%0.1d}, %1"
 	   : "=w"(result)
 	   : "Utv"(*a)
 	   : /* No clobbers */);
@@ -6109,7 +6109,7 @@ __extension__ static __inline poly8x8_t __attribute__ ((__always_inline__))
 vld1_dup_p8 (const poly8_t * a)
 {
   poly8x8_t result;
-  __asm-generic__ ("ld1r {%0.8b}, %1"
+  __asm__ ("ld1r {%0.8b}, %1"
 	   : "=w"(result)
 	   : "Utv"(*a)
 	   : /* No clobbers */);
@@ -6120,7 +6120,7 @@ __extension__ static __inline poly16x4_t __attribute__ ((__always_inline__))
 vld1_dup_p16 (const poly16_t * a)
 {
   poly16x4_t result;
-  __asm-generic__ ("ld1r {%0.4h}, %1"
+  __asm__ ("ld1r {%0.4h}, %1"
 	   : "=w"(result)
 	   : "Utv"(*a)
 	   : /* No clobbers */);
@@ -6131,7 +6131,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vld1_dup_s8 (const int8_t * a)
 {
   int8x8_t result;
-  __asm-generic__ ("ld1r {%0.8b}, %1"
+  __asm__ ("ld1r {%0.8b}, %1"
 	   : "=w"(result)
 	   : "Utv"(*a)
 	   : /* No clobbers */);
@@ -6142,7 +6142,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vld1_dup_s16 (const int16_t * a)
 {
   int16x4_t result;
-  __asm-generic__ ("ld1r {%0.4h}, %1"
+  __asm__ ("ld1r {%0.4h}, %1"
 	   : "=w"(result)
 	   : "Utv"(*a)
 	   : /* No clobbers */);
@@ -6153,7 +6153,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vld1_dup_s32 (const int32_t * a)
 {
   int32x2_t result;
-  __asm-generic__ ("ld1r {%0.2s}, %1"
+  __asm__ ("ld1r {%0.2s}, %1"
 	   : "=w"(result)
 	   : "Utv"(*a)
 	   : /* No clobbers */);
@@ -6164,7 +6164,7 @@ __extension__ static __inline int64x1_t __attribute__ ((__always_inline__))
 vld1_dup_s64 (const int64_t * a)
 {
   int64x1_t result;
-  __asm-generic__ ("ld1r {%0.1d}, %1"
+  __asm__ ("ld1r {%0.1d}, %1"
 	   : "=w"(result)
 	   : "Utv"(*a)
 	   : /* No clobbers */);
@@ -6175,7 +6175,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vld1_dup_u8 (const uint8_t * a)
 {
   uint8x8_t result;
-  __asm-generic__ ("ld1r {%0.8b}, %1"
+  __asm__ ("ld1r {%0.8b}, %1"
 	   : "=w"(result)
 	   : "Utv"(*a)
 	   : /* No clobbers */);
@@ -6186,7 +6186,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vld1_dup_u16 (const uint16_t * a)
 {
   uint16x4_t result;
-  __asm-generic__ ("ld1r {%0.4h}, %1"
+  __asm__ ("ld1r {%0.4h}, %1"
 	   : "=w"(result)
 	   : "Utv"(*a)
 	   : /* No clobbers */);
@@ -6197,7 +6197,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vld1_dup_u32 (const uint32_t * a)
 {
   uint32x2_t result;
-  __asm-generic__ ("ld1r {%0.2s}, %1"
+  __asm__ ("ld1r {%0.2s}, %1"
 	   : "=w"(result)
 	   : "Utv"(*a)
 	   : /* No clobbers */);
@@ -6208,7 +6208,7 @@ __extension__ static __inline uint64x1_t __attribute__ ((__always_inline__))
 vld1_dup_u64 (const uint64_t * a)
 {
   uint64x1_t result;
-  __asm-generic__ ("ld1r {%0.1d}, %1"
+  __asm__ ("ld1r {%0.1d}, %1"
 	   : "=w"(result)
 	   : "Utv"(*a)
 	   : /* No clobbers */);
@@ -6221,7 +6221,7 @@ vld1_dup_u64 (const uint64_t * a)
        float32x2_t b_ = (b);                                            \
        const float32_t * a_ = (a);                                      \
        float32x2_t result;                                              \
-       __asm-generic__ ("ld1 {%0.s}[%1], %2"                                    \
+       __asm__ ("ld1 {%0.s}[%1], %2"                                    \
                 : "=w"(result)                                          \
                 : "i" (c), "Utv"(*a_), "0"(b_)                          \
                 : /* No clobbers */);                                   \
@@ -6234,7 +6234,7 @@ vld1_dup_u64 (const uint64_t * a)
        float64x1_t b_ = (b);                                            \
        const float64_t * a_ = (a);                                      \
        float64x1_t result;                                              \
-       __asm-generic__ ("ld1 {%0.d}[%1], %2"                                    \
+       __asm__ ("ld1 {%0.d}[%1], %2"                                    \
                 : "=w"(result)                                          \
                 : "i" (c), "Utv"(*a_), "0"(b_)                          \
                 : /* No clobbers */);                                   \
@@ -6247,7 +6247,7 @@ vld1_dup_u64 (const uint64_t * a)
        poly8x8_t b_ = (b);                                              \
        const poly8_t * a_ = (a);                                        \
        poly8x8_t result;                                                \
-       __asm-generic__ ("ld1 {%0.b}[%1], %2"                                    \
+       __asm__ ("ld1 {%0.b}[%1], %2"                                    \
                 : "=w"(result)                                          \
                 : "i" (c), "Utv"(*a_), "0"(b_)                          \
                 : /* No clobbers */);                                   \
@@ -6260,7 +6260,7 @@ vld1_dup_u64 (const uint64_t * a)
        poly16x4_t b_ = (b);                                             \
        const poly16_t * a_ = (a);                                       \
        poly16x4_t result;                                               \
-       __asm-generic__ ("ld1 {%0.h}[%1], %2"                                    \
+       __asm__ ("ld1 {%0.h}[%1], %2"                                    \
                 : "=w"(result)                                          \
                 : "i" (c), "Utv"(*a_), "0"(b_)                          \
                 : /* No clobbers */);                                   \
@@ -6273,7 +6273,7 @@ vld1_dup_u64 (const uint64_t * a)
        int8x8_t b_ = (b);                                               \
        const int8_t * a_ = (a);                                         \
        int8x8_t result;                                                 \
-       __asm-generic__ ("ld1 {%0.b}[%1], %2"                                    \
+       __asm__ ("ld1 {%0.b}[%1], %2"                                    \
                 : "=w"(result)                                          \
                 : "i" (c), "Utv"(*a_), "0"(b_)                          \
                 : /* No clobbers */);                                   \
@@ -6286,7 +6286,7 @@ vld1_dup_u64 (const uint64_t * a)
        int16x4_t b_ = (b);                                              \
        const int16_t * a_ = (a);                                        \
        int16x4_t result;                                                \
-       __asm-generic__ ("ld1 {%0.h}[%1], %2"                                    \
+       __asm__ ("ld1 {%0.h}[%1], %2"                                    \
                 : "=w"(result)                                          \
                 : "i" (c), "Utv"(*a_), "0"(b_)                          \
                 : /* No clobbers */);                                   \
@@ -6299,7 +6299,7 @@ vld1_dup_u64 (const uint64_t * a)
        int32x2_t b_ = (b);                                              \
        const int32_t * a_ = (a);                                        \
        int32x2_t result;                                                \
-       __asm-generic__ ("ld1 {%0.s}[%1], %2"                                    \
+       __asm__ ("ld1 {%0.s}[%1], %2"                                    \
                 : "=w"(result)                                          \
                 : "i" (c), "Utv"(*a_), "0"(b_)                          \
                 : /* No clobbers */);                                   \
@@ -6312,7 +6312,7 @@ vld1_dup_u64 (const uint64_t * a)
        int64x1_t b_ = (b);                                              \
        const int64_t * a_ = (a);                                        \
        int64x1_t result;                                                \
-       __asm-generic__ ("ld1 {%0.d}[%1], %2"                                    \
+       __asm__ ("ld1 {%0.d}[%1], %2"                                    \
                 : "=w"(result)                                          \
                 : "i" (c), "Utv"(*a_), "0"(b_)                          \
                 : /* No clobbers */);                                   \
@@ -6325,7 +6325,7 @@ vld1_dup_u64 (const uint64_t * a)
        uint8x8_t b_ = (b);                                              \
        const uint8_t * a_ = (a);                                        \
        uint8x8_t result;                                                \
-       __asm-generic__ ("ld1 {%0.b}[%1], %2"                                    \
+       __asm__ ("ld1 {%0.b}[%1], %2"                                    \
                 : "=w"(result)                                          \
                 : "i" (c), "Utv"(*a_), "0"(b_)                          \
                 : /* No clobbers */);                                   \
@@ -6338,7 +6338,7 @@ vld1_dup_u64 (const uint64_t * a)
        uint16x4_t b_ = (b);                                             \
        const uint16_t * a_ = (a);                                       \
        uint16x4_t result;                                               \
-       __asm-generic__ ("ld1 {%0.h}[%1], %2"                                    \
+       __asm__ ("ld1 {%0.h}[%1], %2"                                    \
                 : "=w"(result)                                          \
                 : "i" (c), "Utv"(*a_), "0"(b_)                          \
                 : /* No clobbers */);                                   \
@@ -6351,7 +6351,7 @@ vld1_dup_u64 (const uint64_t * a)
        uint32x2_t b_ = (b);                                             \
        const uint32_t * a_ = (a);                                       \
        uint32x2_t result;                                               \
-       __asm-generic__ ("ld1 {%0.s}[%1], %2"                                    \
+       __asm__ ("ld1 {%0.s}[%1], %2"                                    \
                 : "=w"(result)                                          \
                 : "i" (c), "Utv"(*a_), "0"(b_)                          \
                 : /* No clobbers */);                                   \
@@ -6364,7 +6364,7 @@ vld1_dup_u64 (const uint64_t * a)
        uint64x1_t b_ = (b);                                             \
        const uint64_t * a_ = (a);                                       \
        uint64x1_t result;                                               \
-       __asm-generic__ ("ld1 {%0.d}[%1], %2"                                    \
+       __asm__ ("ld1 {%0.d}[%1], %2"                                    \
                 : "=w"(result)                                          \
                 : "i" (c), "Utv"(*a_), "0"(b_)                          \
                 : /* No clobbers */);                                   \
@@ -6375,7 +6375,7 @@ __extension__ static __inline float32x4_t __attribute__ ((__always_inline__))
 vld1q_dup_f32 (const float32_t * a)
 {
   float32x4_t result;
-  __asm-generic__ ("ld1r {%0.4s}, %1"
+  __asm__ ("ld1r {%0.4s}, %1"
 	   : "=w"(result)
 	   : "Utv"(*a)
 	   : /* No clobbers */);
@@ -6386,7 +6386,7 @@ __extension__ static __inline float64x2_t __attribute__ ((__always_inline__))
 vld1q_dup_f64 (const float64_t * a)
 {
   float64x2_t result;
-  __asm-generic__ ("ld1r {%0.2d}, %1"
+  __asm__ ("ld1r {%0.2d}, %1"
 	   : "=w"(result)
 	   : "Utv"(*a)
 	   : /* No clobbers */);
@@ -6397,7 +6397,7 @@ __extension__ static __inline poly8x16_t __attribute__ ((__always_inline__))
 vld1q_dup_p8 (const poly8_t * a)
 {
   poly8x16_t result;
-  __asm-generic__ ("ld1r {%0.16b}, %1"
+  __asm__ ("ld1r {%0.16b}, %1"
 	   : "=w"(result)
 	   : "Utv"(*a)
 	   : /* No clobbers */);
@@ -6408,7 +6408,7 @@ __extension__ static __inline poly16x8_t __attribute__ ((__always_inline__))
 vld1q_dup_p16 (const poly16_t * a)
 {
   poly16x8_t result;
-  __asm-generic__ ("ld1r {%0.8h}, %1"
+  __asm__ ("ld1r {%0.8h}, %1"
 	   : "=w"(result)
 	   : "Utv"(*a)
 	   : /* No clobbers */);
@@ -6419,7 +6419,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vld1q_dup_s8 (const int8_t * a)
 {
   int8x16_t result;
-  __asm-generic__ ("ld1r {%0.16b}, %1"
+  __asm__ ("ld1r {%0.16b}, %1"
 	   : "=w"(result)
 	   : "Utv"(*a)
 	   : /* No clobbers */);
@@ -6430,7 +6430,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vld1q_dup_s16 (const int16_t * a)
 {
   int16x8_t result;
-  __asm-generic__ ("ld1r {%0.8h}, %1"
+  __asm__ ("ld1r {%0.8h}, %1"
 	   : "=w"(result)
 	   : "Utv"(*a)
 	   : /* No clobbers */);
@@ -6441,7 +6441,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vld1q_dup_s32 (const int32_t * a)
 {
   int32x4_t result;
-  __asm-generic__ ("ld1r {%0.4s}, %1"
+  __asm__ ("ld1r {%0.4s}, %1"
 	   : "=w"(result)
 	   : "Utv"(*a)
 	   : /* No clobbers */);
@@ -6452,7 +6452,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vld1q_dup_s64 (const int64_t * a)
 {
   int64x2_t result;
-  __asm-generic__ ("ld1r {%0.2d}, %1"
+  __asm__ ("ld1r {%0.2d}, %1"
 	   : "=w"(result)
 	   : "Utv"(*a)
 	   : /* No clobbers */);
@@ -6463,7 +6463,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vld1q_dup_u8 (const uint8_t * a)
 {
   uint8x16_t result;
-  __asm-generic__ ("ld1r {%0.16b}, %1"
+  __asm__ ("ld1r {%0.16b}, %1"
 	   : "=w"(result)
 	   : "Utv"(*a)
 	   : /* No clobbers */);
@@ -6474,7 +6474,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vld1q_dup_u16 (const uint16_t * a)
 {
   uint16x8_t result;
-  __asm-generic__ ("ld1r {%0.8h}, %1"
+  __asm__ ("ld1r {%0.8h}, %1"
 	   : "=w"(result)
 	   : "Utv"(*a)
 	   : /* No clobbers */);
@@ -6485,7 +6485,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vld1q_dup_u32 (const uint32_t * a)
 {
   uint32x4_t result;
-  __asm-generic__ ("ld1r {%0.4s}, %1"
+  __asm__ ("ld1r {%0.4s}, %1"
 	   : "=w"(result)
 	   : "Utv"(*a)
 	   : /* No clobbers */);
@@ -6496,7 +6496,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vld1q_dup_u64 (const uint64_t * a)
 {
   uint64x2_t result;
-  __asm-generic__ ("ld1r {%0.2d}, %1"
+  __asm__ ("ld1r {%0.2d}, %1"
 	   : "=w"(result)
 	   : "Utv"(*a)
 	   : /* No clobbers */);
@@ -6509,7 +6509,7 @@ vld1q_dup_u64 (const uint64_t * a)
        float32x4_t b_ = (b);                                            \
        const float32_t * a_ = (a);                                      \
        float32x4_t result;                                              \
-       __asm-generic__ ("ld1 {%0.s}[%1], %2"                                    \
+       __asm__ ("ld1 {%0.s}[%1], %2"                                    \
                 : "=w"(result)                                          \
                 : "i"(c), "Utv"(*a_), "0"(b_)                           \
                 : /* No clobbers */);                                   \
@@ -6522,7 +6522,7 @@ vld1q_dup_u64 (const uint64_t * a)
        float64x2_t b_ = (b);                                            \
        const float64_t * a_ = (a);                                      \
        float64x2_t result;                                              \
-       __asm-generic__ ("ld1 {%0.d}[%1], %2"                                    \
+       __asm__ ("ld1 {%0.d}[%1], %2"                                    \
                 : "=w"(result)                                          \
                 : "i"(c), "Utv"(*a_), "0"(b_)                           \
                 : /* No clobbers */);                                   \
@@ -6535,7 +6535,7 @@ vld1q_dup_u64 (const uint64_t * a)
        poly8x16_t b_ = (b);                                             \
        const poly8_t * a_ = (a);                                        \
        poly8x16_t result;                                               \
-       __asm-generic__ ("ld1 {%0.b}[%1], %2"                                    \
+       __asm__ ("ld1 {%0.b}[%1], %2"                                    \
                 : "=w"(result)                                          \
                 : "i"(c), "Utv"(*a_), "0"(b_)                           \
                 : /* No clobbers */);                                   \
@@ -6548,7 +6548,7 @@ vld1q_dup_u64 (const uint64_t * a)
        poly16x8_t b_ = (b);                                             \
        const poly16_t * a_ = (a);                                       \
        poly16x8_t result;                                               \
-       __asm-generic__ ("ld1 {%0.h}[%1], %2"                                    \
+       __asm__ ("ld1 {%0.h}[%1], %2"                                    \
                 : "=w"(result)                                          \
                 : "i"(c), "Utv"(*a_), "0"(b_)                           \
                 : /* No clobbers */);                                   \
@@ -6561,7 +6561,7 @@ vld1q_dup_u64 (const uint64_t * a)
        int8x16_t b_ = (b);                                              \
        const int8_t * a_ = (a);                                         \
        int8x16_t result;                                                \
-       __asm-generic__ ("ld1 {%0.b}[%1], %2"                                    \
+       __asm__ ("ld1 {%0.b}[%1], %2"                                    \
                 : "=w"(result)                                          \
                 : "i"(c), "Utv"(*a_), "0"(b_)                           \
                 : /* No clobbers */);                                   \
@@ -6574,7 +6574,7 @@ vld1q_dup_u64 (const uint64_t * a)
        int16x8_t b_ = (b);                                              \
        const int16_t * a_ = (a);                                        \
        int16x8_t result;                                                \
-       __asm-generic__ ("ld1 {%0.h}[%1], %2"                                    \
+       __asm__ ("ld1 {%0.h}[%1], %2"                                    \
                 : "=w"(result)                                          \
                 : "i"(c), "Utv"(*a_), "0"(b_)                           \
                 : /* No clobbers */);                                   \
@@ -6587,7 +6587,7 @@ vld1q_dup_u64 (const uint64_t * a)
        int32x4_t b_ = (b);                                              \
        const int32_t * a_ = (a);                                        \
        int32x4_t result;                                                \
-       __asm-generic__ ("ld1 {%0.s}[%1], %2"                                    \
+       __asm__ ("ld1 {%0.s}[%1], %2"                                    \
                 : "=w"(result)                                          \
                 : "i"(c), "Utv"(*a_), "0"(b_)                           \
                 : /* No clobbers */);                                   \
@@ -6600,7 +6600,7 @@ vld1q_dup_u64 (const uint64_t * a)
        int64x2_t b_ = (b);                                              \
        const int64_t * a_ = (a);                                        \
        int64x2_t result;                                                \
-       __asm-generic__ ("ld1 {%0.d}[%1], %2"                                    \
+       __asm__ ("ld1 {%0.d}[%1], %2"                                    \
                 : "=w"(result)                                          \
                 : "i"(c), "Utv"(*a_), "0"(b_)                           \
                 : /* No clobbers */);                                   \
@@ -6613,7 +6613,7 @@ vld1q_dup_u64 (const uint64_t * a)
        uint8x16_t b_ = (b);                                             \
        const uint8_t * a_ = (a);                                        \
        uint8x16_t result;                                               \
-       __asm-generic__ ("ld1 {%0.b}[%1], %2"                                    \
+       __asm__ ("ld1 {%0.b}[%1], %2"                                    \
                 : "=w"(result)                                          \
                 : "i"(c), "Utv"(*a_), "0"(b_)                           \
                 : /* No clobbers */);                                   \
@@ -6626,7 +6626,7 @@ vld1q_dup_u64 (const uint64_t * a)
        uint16x8_t b_ = (b);                                             \
        const uint16_t * a_ = (a);                                       \
        uint16x8_t result;                                               \
-       __asm-generic__ ("ld1 {%0.h}[%1], %2"                                    \
+       __asm__ ("ld1 {%0.h}[%1], %2"                                    \
                 : "=w"(result)                                          \
                 : "i"(c), "Utv"(*a_), "0"(b_)                           \
                 : /* No clobbers */);                                   \
@@ -6639,7 +6639,7 @@ vld1q_dup_u64 (const uint64_t * a)
        uint32x4_t b_ = (b);                                             \
        const uint32_t * a_ = (a);                                       \
        uint32x4_t result;                                               \
-       __asm-generic__ ("ld1 {%0.s}[%1], %2"                                    \
+       __asm__ ("ld1 {%0.s}[%1], %2"                                    \
                 : "=w"(result)                                          \
                 : "i"(c), "Utv"(*a_), "0"(b_)                           \
                 : /* No clobbers */);                                   \
@@ -6652,7 +6652,7 @@ vld1q_dup_u64 (const uint64_t * a)
        uint64x2_t b_ = (b);                                             \
        const uint64_t * a_ = (a);                                       \
        uint64x2_t result;                                               \
-       __asm-generic__ ("ld1 {%0.d}[%1], %2"                                    \
+       __asm__ ("ld1 {%0.d}[%1], %2"                                    \
                 : "=w"(result)                                          \
                 : "i"(c), "Utv"(*a_), "0"(b_)                           \
                 : /* No clobbers */);                                   \
@@ -6664,7 +6664,7 @@ vmla_n_f32 (float32x2_t a, float32x2_t b, float32_t c)
 {
   float32x2_t result;
   float32x2_t t1;
-  __asm-generic__ ("fmul %1.2s, %3.2s, %4.s[0]; fadd %0.2s, %0.2s, %1.2s"
+  __asm__ ("fmul %1.2s, %3.2s, %4.s[0]; fadd %0.2s, %0.2s, %1.2s"
            : "=w"(result), "=w"(t1)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -6675,7 +6675,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vmla_n_s16 (int16x4_t a, int16x4_t b, int16_t c)
 {
   int16x4_t result;
-  __asm-generic__ ("mla %0.4h,%2.4h,%3.h[0]"
+  __asm__ ("mla %0.4h,%2.4h,%3.h[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "x"(c)
            : /* No clobbers */);
@@ -6686,7 +6686,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vmla_n_s32 (int32x2_t a, int32x2_t b, int32_t c)
 {
   int32x2_t result;
-  __asm-generic__ ("mla %0.2s,%2.2s,%3.s[0]"
+  __asm__ ("mla %0.2s,%2.2s,%3.s[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -6697,7 +6697,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vmla_n_u16 (uint16x4_t a, uint16x4_t b, uint16_t c)
 {
   uint16x4_t result;
-  __asm-generic__ ("mla %0.4h,%2.4h,%3.h[0]"
+  __asm__ ("mla %0.4h,%2.4h,%3.h[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "x"(c)
            : /* No clobbers */);
@@ -6708,7 +6708,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vmla_n_u32 (uint32x2_t a, uint32x2_t b, uint32_t c)
 {
   uint32x2_t result;
-  __asm-generic__ ("mla %0.2s,%2.2s,%3.s[0]"
+  __asm__ ("mla %0.2s,%2.2s,%3.s[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -6719,7 +6719,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vmla_s8 (int8x8_t a, int8x8_t b, int8x8_t c)
 {
   int8x8_t result;
-  __asm-generic__ ("mla %0.8b, %2.8b, %3.8b"
+  __asm__ ("mla %0.8b, %2.8b, %3.8b"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -6730,7 +6730,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vmla_s16 (int16x4_t a, int16x4_t b, int16x4_t c)
 {
   int16x4_t result;
-  __asm-generic__ ("mla %0.4h, %2.4h, %3.4h"
+  __asm__ ("mla %0.4h, %2.4h, %3.4h"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -6741,7 +6741,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vmla_s32 (int32x2_t a, int32x2_t b, int32x2_t c)
 {
   int32x2_t result;
-  __asm-generic__ ("mla %0.2s, %2.2s, %3.2s"
+  __asm__ ("mla %0.2s, %2.2s, %3.2s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -6752,7 +6752,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vmla_u8 (uint8x8_t a, uint8x8_t b, uint8x8_t c)
 {
   uint8x8_t result;
-  __asm-generic__ ("mla %0.8b, %2.8b, %3.8b"
+  __asm__ ("mla %0.8b, %2.8b, %3.8b"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -6763,7 +6763,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vmla_u16 (uint16x4_t a, uint16x4_t b, uint16x4_t c)
 {
   uint16x4_t result;
-  __asm-generic__ ("mla %0.4h, %2.4h, %3.4h"
+  __asm__ ("mla %0.4h, %2.4h, %3.4h"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -6774,7 +6774,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vmla_u32 (uint32x2_t a, uint32x2_t b, uint32x2_t c)
 {
   uint32x2_t result;
-  __asm-generic__ ("mla %0.2s, %2.2s, %3.2s"
+  __asm__ ("mla %0.2s, %2.2s, %3.2s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -6788,7 +6788,7 @@ vmla_u32 (uint32x2_t a, uint32x2_t b, uint32x2_t c)
        int16x8_t b_ = (b);                                              \
        int32x4_t a_ = (a);                                              \
        int32x4_t result;                                                \
-       __asm-generic__ ("smlal2 %0.4s, %2.8h, %3.h[%4]"                         \
+       __asm__ ("smlal2 %0.4s, %2.8h, %3.h[%4]"                         \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "x"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -6802,7 +6802,7 @@ vmla_u32 (uint32x2_t a, uint32x2_t b, uint32x2_t c)
        int32x4_t b_ = (b);                                              \
        int64x2_t a_ = (a);                                              \
        int64x2_t result;                                                \
-       __asm-generic__ ("smlal2 %0.2d, %2.4s, %3.s[%4]"                         \
+       __asm__ ("smlal2 %0.2d, %2.4s, %3.s[%4]"                         \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "w"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -6816,7 +6816,7 @@ vmla_u32 (uint32x2_t a, uint32x2_t b, uint32x2_t c)
        uint16x8_t b_ = (b);                                             \
        uint32x4_t a_ = (a);                                             \
        uint32x4_t result;                                               \
-       __asm-generic__ ("umlal2 %0.4s, %2.8h, %3.h[%4]"                         \
+       __asm__ ("umlal2 %0.4s, %2.8h, %3.h[%4]"                         \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "x"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -6830,7 +6830,7 @@ vmla_u32 (uint32x2_t a, uint32x2_t b, uint32x2_t c)
        uint32x4_t b_ = (b);                                             \
        uint64x2_t a_ = (a);                                             \
        uint64x2_t result;                                               \
-       __asm-generic__ ("umlal2 %0.2d, %2.4s, %3.s[%4]"                         \
+       __asm__ ("umlal2 %0.2d, %2.4s, %3.s[%4]"                         \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "w"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -6844,7 +6844,7 @@ vmla_u32 (uint32x2_t a, uint32x2_t b, uint32x2_t c)
        int16x8_t b_ = (b);                                              \
        int32x4_t a_ = (a);                                              \
        int32x4_t result;                                                \
-       __asm-generic__ ("smlal2 %0.4s, %2.8h, %3.h[%4]"                         \
+       __asm__ ("smlal2 %0.4s, %2.8h, %3.h[%4]"                         \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "x"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -6858,7 +6858,7 @@ vmla_u32 (uint32x2_t a, uint32x2_t b, uint32x2_t c)
        int32x4_t b_ = (b);                                              \
        int64x2_t a_ = (a);                                              \
        int64x2_t result;                                                \
-       __asm-generic__ ("smlal2 %0.2d, %2.4s, %3.s[%4]"                         \
+       __asm__ ("smlal2 %0.2d, %2.4s, %3.s[%4]"                         \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "w"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -6872,7 +6872,7 @@ vmla_u32 (uint32x2_t a, uint32x2_t b, uint32x2_t c)
        uint16x8_t b_ = (b);                                             \
        uint32x4_t a_ = (a);                                             \
        uint32x4_t result;                                               \
-       __asm-generic__ ("umlal2 %0.4s, %2.8h, %3.h[%4]"                         \
+       __asm__ ("umlal2 %0.4s, %2.8h, %3.h[%4]"                         \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "x"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -6886,7 +6886,7 @@ vmla_u32 (uint32x2_t a, uint32x2_t b, uint32x2_t c)
        uint32x4_t b_ = (b);                                             \
        uint64x2_t a_ = (a);                                             \
        uint64x2_t result;                                               \
-       __asm-generic__ ("umlal2 %0.2d, %2.4s, %3.s[%4]"                         \
+       __asm__ ("umlal2 %0.2d, %2.4s, %3.s[%4]"                         \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "w"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -6897,7 +6897,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vmlal_high_n_s16 (int32x4_t a, int16x8_t b, int16_t c)
 {
   int32x4_t result;
-  __asm-generic__ ("smlal2 %0.4s,%2.8h,%3.h[0]"
+  __asm__ ("smlal2 %0.4s,%2.8h,%3.h[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "x"(c)
            : /* No clobbers */);
@@ -6908,7 +6908,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vmlal_high_n_s32 (int64x2_t a, int32x4_t b, int32_t c)
 {
   int64x2_t result;
-  __asm-generic__ ("smlal2 %0.2d,%2.4s,%3.s[0]"
+  __asm__ ("smlal2 %0.2d,%2.4s,%3.s[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -6919,7 +6919,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vmlal_high_n_u16 (uint32x4_t a, uint16x8_t b, uint16_t c)
 {
   uint32x4_t result;
-  __asm-generic__ ("umlal2 %0.4s,%2.8h,%3.h[0]"
+  __asm__ ("umlal2 %0.4s,%2.8h,%3.h[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "x"(c)
            : /* No clobbers */);
@@ -6930,7 +6930,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vmlal_high_n_u32 (uint64x2_t a, uint32x4_t b, uint32_t c)
 {
   uint64x2_t result;
-  __asm-generic__ ("umlal2 %0.2d,%2.4s,%3.s[0]"
+  __asm__ ("umlal2 %0.2d,%2.4s,%3.s[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -6941,7 +6941,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vmlal_high_s8 (int16x8_t a, int8x16_t b, int8x16_t c)
 {
   int16x8_t result;
-  __asm-generic__ ("smlal2 %0.8h,%2.16b,%3.16b"
+  __asm__ ("smlal2 %0.8h,%2.16b,%3.16b"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -6952,7 +6952,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vmlal_high_s16 (int32x4_t a, int16x8_t b, int16x8_t c)
 {
   int32x4_t result;
-  __asm-generic__ ("smlal2 %0.4s,%2.8h,%3.8h"
+  __asm__ ("smlal2 %0.4s,%2.8h,%3.8h"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -6963,7 +6963,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vmlal_high_s32 (int64x2_t a, int32x4_t b, int32x4_t c)
 {
   int64x2_t result;
-  __asm-generic__ ("smlal2 %0.2d,%2.4s,%3.4s"
+  __asm__ ("smlal2 %0.2d,%2.4s,%3.4s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -6974,7 +6974,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vmlal_high_u8 (uint16x8_t a, uint8x16_t b, uint8x16_t c)
 {
   uint16x8_t result;
-  __asm-generic__ ("umlal2 %0.8h,%2.16b,%3.16b"
+  __asm__ ("umlal2 %0.8h,%2.16b,%3.16b"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -6985,7 +6985,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vmlal_high_u16 (uint32x4_t a, uint16x8_t b, uint16x8_t c)
 {
   uint32x4_t result;
-  __asm-generic__ ("umlal2 %0.4s,%2.8h,%3.8h"
+  __asm__ ("umlal2 %0.4s,%2.8h,%3.8h"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -6996,7 +6996,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vmlal_high_u32 (uint64x2_t a, uint32x4_t b, uint32x4_t c)
 {
   uint64x2_t result;
-  __asm-generic__ ("umlal2 %0.2d,%2.4s,%3.4s"
+  __asm__ ("umlal2 %0.2d,%2.4s,%3.4s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7010,7 +7010,7 @@ vmlal_high_u32 (uint64x2_t a, uint32x4_t b, uint32x4_t c)
        int16x4_t b_ = (b);                                              \
        int32x4_t a_ = (a);                                              \
        int32x4_t result;                                                \
-       __asm-generic__ ("smlal %0.4s,%2.4h,%3.h[%4]"                            \
+       __asm__ ("smlal %0.4s,%2.4h,%3.h[%4]"                            \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "x"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -7024,7 +7024,7 @@ vmlal_high_u32 (uint64x2_t a, uint32x4_t b, uint32x4_t c)
        int32x2_t b_ = (b);                                              \
        int64x2_t a_ = (a);                                              \
        int64x2_t result;                                                \
-       __asm-generic__ ("smlal %0.2d,%2.2s,%3.s[%4]"                            \
+       __asm__ ("smlal %0.2d,%2.2s,%3.s[%4]"                            \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "w"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -7038,7 +7038,7 @@ vmlal_high_u32 (uint64x2_t a, uint32x4_t b, uint32x4_t c)
        uint16x4_t b_ = (b);                                             \
        uint32x4_t a_ = (a);                                             \
        uint32x4_t result;                                               \
-       __asm-generic__ ("umlal %0.4s,%2.4h,%3.h[%4]"                            \
+       __asm__ ("umlal %0.4s,%2.4h,%3.h[%4]"                            \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "x"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -7052,7 +7052,7 @@ vmlal_high_u32 (uint64x2_t a, uint32x4_t b, uint32x4_t c)
        uint32x2_t b_ = (b);                                             \
        uint64x2_t a_ = (a);                                             \
        uint64x2_t result;                                               \
-       __asm-generic__ ("umlal %0.2d, %2.2s, %3.s[%4]"                          \
+       __asm__ ("umlal %0.2d, %2.2s, %3.s[%4]"                          \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "w"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -7066,7 +7066,7 @@ vmlal_high_u32 (uint64x2_t a, uint32x4_t b, uint32x4_t c)
        int16x4_t b_ = (b);                                              \
        int32x4_t a_ = (a);                                              \
        int32x4_t result;                                                \
-       __asm-generic__ ("smlal %0.4s, %2.4h, %3.h[%4]"                          \
+       __asm__ ("smlal %0.4s, %2.4h, %3.h[%4]"                          \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "x"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -7080,7 +7080,7 @@ vmlal_high_u32 (uint64x2_t a, uint32x4_t b, uint32x4_t c)
        int32x2_t b_ = (b);                                              \
        int64x2_t a_ = (a);                                              \
        int64x2_t result;                                                \
-       __asm-generic__ ("smlal %0.2d, %2.2s, %3.s[%4]"                          \
+       __asm__ ("smlal %0.2d, %2.2s, %3.s[%4]"                          \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "w"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -7094,7 +7094,7 @@ vmlal_high_u32 (uint64x2_t a, uint32x4_t b, uint32x4_t c)
        uint16x4_t b_ = (b);                                             \
        uint32x4_t a_ = (a);                                             \
        uint32x4_t result;                                               \
-       __asm-generic__ ("umlal %0.4s, %2.4h, %3.h[%4]"                          \
+       __asm__ ("umlal %0.4s, %2.4h, %3.h[%4]"                          \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "x"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -7108,7 +7108,7 @@ vmlal_high_u32 (uint64x2_t a, uint32x4_t b, uint32x4_t c)
        uint32x2_t b_ = (b);                                             \
        uint64x2_t a_ = (a);                                             \
        uint64x2_t result;                                               \
-       __asm-generic__ ("umlal %0.2d, %2.2s, %3.s[%4]"                          \
+       __asm__ ("umlal %0.2d, %2.2s, %3.s[%4]"                          \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "w"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -7119,7 +7119,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vmlal_n_s16 (int32x4_t a, int16x4_t b, int16_t c)
 {
   int32x4_t result;
-  __asm-generic__ ("smlal %0.4s,%2.4h,%3.h[0]"
+  __asm__ ("smlal %0.4s,%2.4h,%3.h[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "x"(c)
            : /* No clobbers */);
@@ -7130,7 +7130,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vmlal_n_s32 (int64x2_t a, int32x2_t b, int32_t c)
 {
   int64x2_t result;
-  __asm-generic__ ("smlal %0.2d,%2.2s,%3.s[0]"
+  __asm__ ("smlal %0.2d,%2.2s,%3.s[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7141,7 +7141,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vmlal_n_u16 (uint32x4_t a, uint16x4_t b, uint16_t c)
 {
   uint32x4_t result;
-  __asm-generic__ ("umlal %0.4s,%2.4h,%3.h[0]"
+  __asm__ ("umlal %0.4s,%2.4h,%3.h[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "x"(c)
            : /* No clobbers */);
@@ -7152,7 +7152,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vmlal_n_u32 (uint64x2_t a, uint32x2_t b, uint32_t c)
 {
   uint64x2_t result;
-  __asm-generic__ ("umlal %0.2d,%2.2s,%3.s[0]"
+  __asm__ ("umlal %0.2d,%2.2s,%3.s[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7163,7 +7163,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vmlal_s8 (int16x8_t a, int8x8_t b, int8x8_t c)
 {
   int16x8_t result;
-  __asm-generic__ ("smlal %0.8h,%2.8b,%3.8b"
+  __asm__ ("smlal %0.8h,%2.8b,%3.8b"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7174,7 +7174,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vmlal_s16 (int32x4_t a, int16x4_t b, int16x4_t c)
 {
   int32x4_t result;
-  __asm-generic__ ("smlal %0.4s,%2.4h,%3.4h"
+  __asm__ ("smlal %0.4s,%2.4h,%3.4h"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7185,7 +7185,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vmlal_s32 (int64x2_t a, int32x2_t b, int32x2_t c)
 {
   int64x2_t result;
-  __asm-generic__ ("smlal %0.2d,%2.2s,%3.2s"
+  __asm__ ("smlal %0.2d,%2.2s,%3.2s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7196,7 +7196,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vmlal_u8 (uint16x8_t a, uint8x8_t b, uint8x8_t c)
 {
   uint16x8_t result;
-  __asm-generic__ ("umlal %0.8h,%2.8b,%3.8b"
+  __asm__ ("umlal %0.8h,%2.8b,%3.8b"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7207,7 +7207,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vmlal_u16 (uint32x4_t a, uint16x4_t b, uint16x4_t c)
 {
   uint32x4_t result;
-  __asm-generic__ ("umlal %0.4s,%2.4h,%3.4h"
+  __asm__ ("umlal %0.4s,%2.4h,%3.4h"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7218,7 +7218,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vmlal_u32 (uint64x2_t a, uint32x2_t b, uint32x2_t c)
 {
   uint64x2_t result;
-  __asm-generic__ ("umlal %0.2d,%2.2s,%3.2s"
+  __asm__ ("umlal %0.2d,%2.2s,%3.2s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7230,7 +7230,7 @@ vmlaq_n_f32 (float32x4_t a, float32x4_t b, float32_t c)
 {
   float32x4_t result;
   float32x4_t t1;
-  __asm-generic__ ("fmul %1.4s, %3.4s, %4.s[0]; fadd %0.4s, %0.4s, %1.4s"
+  __asm__ ("fmul %1.4s, %3.4s, %4.s[0]; fadd %0.4s, %0.4s, %1.4s"
            : "=w"(result), "=w"(t1)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7242,7 +7242,7 @@ vmlaq_n_f64 (float64x2_t a, float64x2_t b, float64_t c)
 {
   float64x2_t result;
   float64x2_t t1;
-  __asm-generic__ ("fmul %1.2d, %3.2d, %4.d[0]; fadd %0.2d, %0.2d, %1.2d"
+  __asm__ ("fmul %1.2d, %3.2d, %4.d[0]; fadd %0.2d, %0.2d, %1.2d"
            : "=w"(result), "=w"(t1)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7253,7 +7253,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vmlaq_n_s16 (int16x8_t a, int16x8_t b, int16_t c)
 {
   int16x8_t result;
-  __asm-generic__ ("mla %0.8h,%2.8h,%3.h[0]"
+  __asm__ ("mla %0.8h,%2.8h,%3.h[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "x"(c)
            : /* No clobbers */);
@@ -7264,7 +7264,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vmlaq_n_s32 (int32x4_t a, int32x4_t b, int32_t c)
 {
   int32x4_t result;
-  __asm-generic__ ("mla %0.4s,%2.4s,%3.s[0]"
+  __asm__ ("mla %0.4s,%2.4s,%3.s[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7275,7 +7275,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vmlaq_n_u16 (uint16x8_t a, uint16x8_t b, uint16_t c)
 {
   uint16x8_t result;
-  __asm-generic__ ("mla %0.8h,%2.8h,%3.h[0]"
+  __asm__ ("mla %0.8h,%2.8h,%3.h[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "x"(c)
            : /* No clobbers */);
@@ -7286,7 +7286,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vmlaq_n_u32 (uint32x4_t a, uint32x4_t b, uint32_t c)
 {
   uint32x4_t result;
-  __asm-generic__ ("mla %0.4s,%2.4s,%3.s[0]"
+  __asm__ ("mla %0.4s,%2.4s,%3.s[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7297,7 +7297,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vmlaq_s8 (int8x16_t a, int8x16_t b, int8x16_t c)
 {
   int8x16_t result;
-  __asm-generic__ ("mla %0.16b, %2.16b, %3.16b"
+  __asm__ ("mla %0.16b, %2.16b, %3.16b"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7308,7 +7308,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vmlaq_s16 (int16x8_t a, int16x8_t b, int16x8_t c)
 {
   int16x8_t result;
-  __asm-generic__ ("mla %0.8h, %2.8h, %3.8h"
+  __asm__ ("mla %0.8h, %2.8h, %3.8h"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7319,7 +7319,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vmlaq_s32 (int32x4_t a, int32x4_t b, int32x4_t c)
 {
   int32x4_t result;
-  __asm-generic__ ("mla %0.4s, %2.4s, %3.4s"
+  __asm__ ("mla %0.4s, %2.4s, %3.4s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7330,7 +7330,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vmlaq_u8 (uint8x16_t a, uint8x16_t b, uint8x16_t c)
 {
   uint8x16_t result;
-  __asm-generic__ ("mla %0.16b, %2.16b, %3.16b"
+  __asm__ ("mla %0.16b, %2.16b, %3.16b"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7341,7 +7341,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vmlaq_u16 (uint16x8_t a, uint16x8_t b, uint16x8_t c)
 {
   uint16x8_t result;
-  __asm-generic__ ("mla %0.8h, %2.8h, %3.8h"
+  __asm__ ("mla %0.8h, %2.8h, %3.8h"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7352,7 +7352,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vmlaq_u32 (uint32x4_t a, uint32x4_t b, uint32x4_t c)
 {
   uint32x4_t result;
-  __asm-generic__ ("mla %0.4s, %2.4s, %3.4s"
+  __asm__ ("mla %0.4s, %2.4s, %3.4s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7364,7 +7364,7 @@ vmls_n_f32 (float32x2_t a, float32x2_t b, float32_t c)
 {
   float32x2_t result;
   float32x2_t t1;
-  __asm-generic__ ("fmul %1.2s, %3.2s, %4.s[0]; fsub %0.2s, %0.2s, %1.2s"
+  __asm__ ("fmul %1.2s, %3.2s, %4.s[0]; fsub %0.2s, %0.2s, %1.2s"
            : "=w"(result), "=w"(t1)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7375,7 +7375,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vmls_n_s16 (int16x4_t a, int16x4_t b, int16_t c)
 {
   int16x4_t result;
-  __asm-generic__ ("mls %0.4h, %2.4h, %3.h[0]"
+  __asm__ ("mls %0.4h, %2.4h, %3.h[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "x"(c)
            : /* No clobbers */);
@@ -7386,7 +7386,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vmls_n_s32 (int32x2_t a, int32x2_t b, int32_t c)
 {
   int32x2_t result;
-  __asm-generic__ ("mls %0.2s, %2.2s, %3.s[0]"
+  __asm__ ("mls %0.2s, %2.2s, %3.s[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7397,7 +7397,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vmls_n_u16 (uint16x4_t a, uint16x4_t b, uint16_t c)
 {
   uint16x4_t result;
-  __asm-generic__ ("mls %0.4h, %2.4h, %3.h[0]"
+  __asm__ ("mls %0.4h, %2.4h, %3.h[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "x"(c)
            : /* No clobbers */);
@@ -7408,7 +7408,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vmls_n_u32 (uint32x2_t a, uint32x2_t b, uint32_t c)
 {
   uint32x2_t result;
-  __asm-generic__ ("mls %0.2s, %2.2s, %3.s[0]"
+  __asm__ ("mls %0.2s, %2.2s, %3.s[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7419,7 +7419,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vmls_s8 (int8x8_t a, int8x8_t b, int8x8_t c)
 {
   int8x8_t result;
-  __asm-generic__ ("mls %0.8b,%2.8b,%3.8b"
+  __asm__ ("mls %0.8b,%2.8b,%3.8b"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7430,7 +7430,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vmls_s16 (int16x4_t a, int16x4_t b, int16x4_t c)
 {
   int16x4_t result;
-  __asm-generic__ ("mls %0.4h,%2.4h,%3.4h"
+  __asm__ ("mls %0.4h,%2.4h,%3.4h"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7441,7 +7441,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vmls_s32 (int32x2_t a, int32x2_t b, int32x2_t c)
 {
   int32x2_t result;
-  __asm-generic__ ("mls %0.2s,%2.2s,%3.2s"
+  __asm__ ("mls %0.2s,%2.2s,%3.2s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7452,7 +7452,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vmls_u8 (uint8x8_t a, uint8x8_t b, uint8x8_t c)
 {
   uint8x8_t result;
-  __asm-generic__ ("mls %0.8b,%2.8b,%3.8b"
+  __asm__ ("mls %0.8b,%2.8b,%3.8b"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7463,7 +7463,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vmls_u16 (uint16x4_t a, uint16x4_t b, uint16x4_t c)
 {
   uint16x4_t result;
-  __asm-generic__ ("mls %0.4h,%2.4h,%3.4h"
+  __asm__ ("mls %0.4h,%2.4h,%3.4h"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7474,7 +7474,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vmls_u32 (uint32x2_t a, uint32x2_t b, uint32x2_t c)
 {
   uint32x2_t result;
-  __asm-generic__ ("mls %0.2s,%2.2s,%3.2s"
+  __asm__ ("mls %0.2s,%2.2s,%3.2s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7488,7 +7488,7 @@ vmls_u32 (uint32x2_t a, uint32x2_t b, uint32x2_t c)
        int16x8_t b_ = (b);                                              \
        int32x4_t a_ = (a);                                              \
        int32x4_t result;                                                \
-       __asm-generic__ ("smlsl2 %0.4s, %2.8h, %3.h[%4]"                         \
+       __asm__ ("smlsl2 %0.4s, %2.8h, %3.h[%4]"                         \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "x"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -7502,7 +7502,7 @@ vmls_u32 (uint32x2_t a, uint32x2_t b, uint32x2_t c)
        int32x4_t b_ = (b);                                              \
        int64x2_t a_ = (a);                                              \
        int64x2_t result;                                                \
-       __asm-generic__ ("smlsl2 %0.2d, %2.4s, %3.s[%4]"                         \
+       __asm__ ("smlsl2 %0.2d, %2.4s, %3.s[%4]"                         \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "w"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -7516,7 +7516,7 @@ vmls_u32 (uint32x2_t a, uint32x2_t b, uint32x2_t c)
        uint16x8_t b_ = (b);                                             \
        uint32x4_t a_ = (a);                                             \
        uint32x4_t result;                                               \
-       __asm-generic__ ("umlsl2 %0.4s, %2.8h, %3.h[%4]"                         \
+       __asm__ ("umlsl2 %0.4s, %2.8h, %3.h[%4]"                         \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "x"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -7530,7 +7530,7 @@ vmls_u32 (uint32x2_t a, uint32x2_t b, uint32x2_t c)
        uint32x4_t b_ = (b);                                             \
        uint64x2_t a_ = (a);                                             \
        uint64x2_t result;                                               \
-       __asm-generic__ ("umlsl2 %0.2d, %2.4s, %3.s[%4]"                         \
+       __asm__ ("umlsl2 %0.2d, %2.4s, %3.s[%4]"                         \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "w"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -7544,7 +7544,7 @@ vmls_u32 (uint32x2_t a, uint32x2_t b, uint32x2_t c)
        int16x8_t b_ = (b);                                              \
        int32x4_t a_ = (a);                                              \
        int32x4_t result;                                                \
-       __asm-generic__ ("smlsl2 %0.4s, %2.8h, %3.h[%4]"                         \
+       __asm__ ("smlsl2 %0.4s, %2.8h, %3.h[%4]"                         \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "x"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -7558,7 +7558,7 @@ vmls_u32 (uint32x2_t a, uint32x2_t b, uint32x2_t c)
        int32x4_t b_ = (b);                                              \
        int64x2_t a_ = (a);                                              \
        int64x2_t result;                                                \
-       __asm-generic__ ("smlsl2 %0.2d, %2.4s, %3.s[%4]"                         \
+       __asm__ ("smlsl2 %0.2d, %2.4s, %3.s[%4]"                         \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "w"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -7572,7 +7572,7 @@ vmls_u32 (uint32x2_t a, uint32x2_t b, uint32x2_t c)
        uint16x8_t b_ = (b);                                             \
        uint32x4_t a_ = (a);                                             \
        uint32x4_t result;                                               \
-       __asm-generic__ ("umlsl2 %0.4s, %2.8h, %3.h[%4]"                         \
+       __asm__ ("umlsl2 %0.4s, %2.8h, %3.h[%4]"                         \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "x"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -7586,7 +7586,7 @@ vmls_u32 (uint32x2_t a, uint32x2_t b, uint32x2_t c)
        uint32x4_t b_ = (b);                                             \
        uint64x2_t a_ = (a);                                             \
        uint64x2_t result;                                               \
-       __asm-generic__ ("umlsl2 %0.2d, %2.4s, %3.s[%4]"                         \
+       __asm__ ("umlsl2 %0.2d, %2.4s, %3.s[%4]"                         \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "w"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -7597,7 +7597,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vmlsl_high_n_s16 (int32x4_t a, int16x8_t b, int16_t c)
 {
   int32x4_t result;
-  __asm-generic__ ("smlsl2 %0.4s, %2.8h, %3.h[0]"
+  __asm__ ("smlsl2 %0.4s, %2.8h, %3.h[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "x"(c)
            : /* No clobbers */);
@@ -7608,7 +7608,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vmlsl_high_n_s32 (int64x2_t a, int32x4_t b, int32_t c)
 {
   int64x2_t result;
-  __asm-generic__ ("smlsl2 %0.2d, %2.4s, %3.s[0]"
+  __asm__ ("smlsl2 %0.2d, %2.4s, %3.s[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7619,7 +7619,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vmlsl_high_n_u16 (uint32x4_t a, uint16x8_t b, uint16_t c)
 {
   uint32x4_t result;
-  __asm-generic__ ("umlsl2 %0.4s, %2.8h, %3.h[0]"
+  __asm__ ("umlsl2 %0.4s, %2.8h, %3.h[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "x"(c)
            : /* No clobbers */);
@@ -7630,7 +7630,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vmlsl_high_n_u32 (uint64x2_t a, uint32x4_t b, uint32_t c)
 {
   uint64x2_t result;
-  __asm-generic__ ("umlsl2 %0.2d, %2.4s, %3.s[0]"
+  __asm__ ("umlsl2 %0.2d, %2.4s, %3.s[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7641,7 +7641,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vmlsl_high_s8 (int16x8_t a, int8x16_t b, int8x16_t c)
 {
   int16x8_t result;
-  __asm-generic__ ("smlsl2 %0.8h,%2.16b,%3.16b"
+  __asm__ ("smlsl2 %0.8h,%2.16b,%3.16b"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7652,7 +7652,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vmlsl_high_s16 (int32x4_t a, int16x8_t b, int16x8_t c)
 {
   int32x4_t result;
-  __asm-generic__ ("smlsl2 %0.4s,%2.8h,%3.8h"
+  __asm__ ("smlsl2 %0.4s,%2.8h,%3.8h"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7663,7 +7663,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vmlsl_high_s32 (int64x2_t a, int32x4_t b, int32x4_t c)
 {
   int64x2_t result;
-  __asm-generic__ ("smlsl2 %0.2d,%2.4s,%3.4s"
+  __asm__ ("smlsl2 %0.2d,%2.4s,%3.4s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7674,7 +7674,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vmlsl_high_u8 (uint16x8_t a, uint8x16_t b, uint8x16_t c)
 {
   uint16x8_t result;
-  __asm-generic__ ("umlsl2 %0.8h,%2.16b,%3.16b"
+  __asm__ ("umlsl2 %0.8h,%2.16b,%3.16b"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7685,7 +7685,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vmlsl_high_u16 (uint32x4_t a, uint16x8_t b, uint16x8_t c)
 {
   uint32x4_t result;
-  __asm-generic__ ("umlsl2 %0.4s,%2.8h,%3.8h"
+  __asm__ ("umlsl2 %0.4s,%2.8h,%3.8h"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7696,7 +7696,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vmlsl_high_u32 (uint64x2_t a, uint32x4_t b, uint32x4_t c)
 {
   uint64x2_t result;
-  __asm-generic__ ("umlsl2 %0.2d,%2.4s,%3.4s"
+  __asm__ ("umlsl2 %0.2d,%2.4s,%3.4s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7710,7 +7710,7 @@ vmlsl_high_u32 (uint64x2_t a, uint32x4_t b, uint32x4_t c)
        int16x4_t b_ = (b);                                              \
        int32x4_t a_ = (a);                                              \
        int32x4_t result;                                                \
-       __asm-generic__ ("smlsl %0.4s, %2.4h, %3.h[%4]"                          \
+       __asm__ ("smlsl %0.4s, %2.4h, %3.h[%4]"                          \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "x"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -7724,7 +7724,7 @@ vmlsl_high_u32 (uint64x2_t a, uint32x4_t b, uint32x4_t c)
        int32x2_t b_ = (b);                                              \
        int64x2_t a_ = (a);                                              \
        int64x2_t result;                                                \
-       __asm-generic__ ("smlsl %0.2d, %2.2s, %3.s[%4]"                          \
+       __asm__ ("smlsl %0.2d, %2.2s, %3.s[%4]"                          \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "w"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -7738,7 +7738,7 @@ vmlsl_high_u32 (uint64x2_t a, uint32x4_t b, uint32x4_t c)
        uint16x4_t b_ = (b);                                             \
        uint32x4_t a_ = (a);                                             \
        uint32x4_t result;                                               \
-       __asm-generic__ ("umlsl %0.4s, %2.4h, %3.h[%4]"                          \
+       __asm__ ("umlsl %0.4s, %2.4h, %3.h[%4]"                          \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "x"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -7752,7 +7752,7 @@ vmlsl_high_u32 (uint64x2_t a, uint32x4_t b, uint32x4_t c)
        uint32x2_t b_ = (b);                                             \
        uint64x2_t a_ = (a);                                             \
        uint64x2_t result;                                               \
-       __asm-generic__ ("umlsl %0.2d, %2.2s, %3.s[%4]"                          \
+       __asm__ ("umlsl %0.2d, %2.2s, %3.s[%4]"                          \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "w"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -7766,7 +7766,7 @@ vmlsl_high_u32 (uint64x2_t a, uint32x4_t b, uint32x4_t c)
        int16x4_t b_ = (b);                                              \
        int32x4_t a_ = (a);                                              \
        int32x4_t result;                                                \
-       __asm-generic__ ("smlsl %0.4s, %2.4h, %3.h[%4]"                          \
+       __asm__ ("smlsl %0.4s, %2.4h, %3.h[%4]"                          \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "x"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -7780,7 +7780,7 @@ vmlsl_high_u32 (uint64x2_t a, uint32x4_t b, uint32x4_t c)
        int32x2_t b_ = (b);                                              \
        int64x2_t a_ = (a);                                              \
        int64x2_t result;                                                \
-       __asm-generic__ ("smlsl %0.2d, %2.2s, %3.s[%4]"                          \
+       __asm__ ("smlsl %0.2d, %2.2s, %3.s[%4]"                          \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "w"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -7794,7 +7794,7 @@ vmlsl_high_u32 (uint64x2_t a, uint32x4_t b, uint32x4_t c)
        uint16x4_t b_ = (b);                                             \
        uint32x4_t a_ = (a);                                             \
        uint32x4_t result;                                               \
-       __asm-generic__ ("umlsl %0.4s, %2.4h, %3.h[%4]"                          \
+       __asm__ ("umlsl %0.4s, %2.4h, %3.h[%4]"                          \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "x"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -7808,7 +7808,7 @@ vmlsl_high_u32 (uint64x2_t a, uint32x4_t b, uint32x4_t c)
        uint32x2_t b_ = (b);                                             \
        uint64x2_t a_ = (a);                                             \
        uint64x2_t result;                                               \
-       __asm-generic__ ("umlsl %0.2d, %2.2s, %3.s[%4]"                          \
+       __asm__ ("umlsl %0.2d, %2.2s, %3.s[%4]"                          \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "w"(c_), "i"(d)                     \
                 : /* No clobbers */);                                   \
@@ -7819,7 +7819,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vmlsl_n_s16 (int32x4_t a, int16x4_t b, int16_t c)
 {
   int32x4_t result;
-  __asm-generic__ ("smlsl %0.4s, %2.4h, %3.h[0]"
+  __asm__ ("smlsl %0.4s, %2.4h, %3.h[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "x"(c)
            : /* No clobbers */);
@@ -7830,7 +7830,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vmlsl_n_s32 (int64x2_t a, int32x2_t b, int32_t c)
 {
   int64x2_t result;
-  __asm-generic__ ("smlsl %0.2d, %2.2s, %3.s[0]"
+  __asm__ ("smlsl %0.2d, %2.2s, %3.s[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7841,7 +7841,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vmlsl_n_u16 (uint32x4_t a, uint16x4_t b, uint16_t c)
 {
   uint32x4_t result;
-  __asm-generic__ ("umlsl %0.4s, %2.4h, %3.h[0]"
+  __asm__ ("umlsl %0.4s, %2.4h, %3.h[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "x"(c)
            : /* No clobbers */);
@@ -7852,7 +7852,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vmlsl_n_u32 (uint64x2_t a, uint32x2_t b, uint32_t c)
 {
   uint64x2_t result;
-  __asm-generic__ ("umlsl %0.2d, %2.2s, %3.s[0]"
+  __asm__ ("umlsl %0.2d, %2.2s, %3.s[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7863,7 +7863,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vmlsl_s8 (int16x8_t a, int8x8_t b, int8x8_t c)
 {
   int16x8_t result;
-  __asm-generic__ ("smlsl %0.8h, %2.8b, %3.8b"
+  __asm__ ("smlsl %0.8h, %2.8b, %3.8b"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7874,7 +7874,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vmlsl_s16 (int32x4_t a, int16x4_t b, int16x4_t c)
 {
   int32x4_t result;
-  __asm-generic__ ("smlsl %0.4s, %2.4h, %3.4h"
+  __asm__ ("smlsl %0.4s, %2.4h, %3.4h"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7885,7 +7885,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vmlsl_s32 (int64x2_t a, int32x2_t b, int32x2_t c)
 {
   int64x2_t result;
-  __asm-generic__ ("smlsl %0.2d, %2.2s, %3.2s"
+  __asm__ ("smlsl %0.2d, %2.2s, %3.2s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7896,7 +7896,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vmlsl_u8 (uint16x8_t a, uint8x8_t b, uint8x8_t c)
 {
   uint16x8_t result;
-  __asm-generic__ ("umlsl %0.8h, %2.8b, %3.8b"
+  __asm__ ("umlsl %0.8h, %2.8b, %3.8b"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7907,7 +7907,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vmlsl_u16 (uint32x4_t a, uint16x4_t b, uint16x4_t c)
 {
   uint32x4_t result;
-  __asm-generic__ ("umlsl %0.4s, %2.4h, %3.4h"
+  __asm__ ("umlsl %0.4s, %2.4h, %3.4h"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7918,7 +7918,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vmlsl_u32 (uint64x2_t a, uint32x2_t b, uint32x2_t c)
 {
   uint64x2_t result;
-  __asm-generic__ ("umlsl %0.2d, %2.2s, %3.2s"
+  __asm__ ("umlsl %0.2d, %2.2s, %3.2s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7930,7 +7930,7 @@ vmlsq_n_f32 (float32x4_t a, float32x4_t b, float32_t c)
 {
   float32x4_t result;
   float32x4_t t1;
-  __asm-generic__ ("fmul %1.4s, %3.4s, %4.s[0]; fsub %0.4s, %0.4s, %1.4s"
+  __asm__ ("fmul %1.4s, %3.4s, %4.s[0]; fsub %0.4s, %0.4s, %1.4s"
            : "=w"(result), "=w"(t1)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7942,7 +7942,7 @@ vmlsq_n_f64 (float64x2_t a, float64x2_t b, float64_t c)
 {
   float64x2_t result;
   float64x2_t t1;
-  __asm-generic__ ("fmul %1.2d, %3.2d, %4.d[0]; fsub %0.2d, %0.2d, %1.2d"
+  __asm__ ("fmul %1.2d, %3.2d, %4.d[0]; fsub %0.2d, %0.2d, %1.2d"
            : "=w"(result), "=w"(t1)
            : "0"(a), "w"(b), "x"(c)
            : /* No clobbers */);
@@ -7953,7 +7953,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vmlsq_n_s16 (int16x8_t a, int16x8_t b, int16_t c)
 {
   int16x8_t result;
-  __asm-generic__ ("mls %0.8h, %2.8h, %3.h[0]"
+  __asm__ ("mls %0.8h, %2.8h, %3.h[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "x"(c)
            : /* No clobbers */);
@@ -7964,7 +7964,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vmlsq_n_s32 (int32x4_t a, int32x4_t b, int32_t c)
 {
   int32x4_t result;
-  __asm-generic__ ("mls %0.4s, %2.4s, %3.s[0]"
+  __asm__ ("mls %0.4s, %2.4s, %3.s[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7975,7 +7975,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vmlsq_n_u16 (uint16x8_t a, uint16x8_t b, uint16_t c)
 {
   uint16x8_t result;
-  __asm-generic__ ("mls %0.8h, %2.8h, %3.h[0]"
+  __asm__ ("mls %0.8h, %2.8h, %3.h[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "x"(c)
            : /* No clobbers */);
@@ -7986,7 +7986,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vmlsq_n_u32 (uint32x4_t a, uint32x4_t b, uint32_t c)
 {
   uint32x4_t result;
-  __asm-generic__ ("mls %0.4s, %2.4s, %3.s[0]"
+  __asm__ ("mls %0.4s, %2.4s, %3.s[0]"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -7997,7 +7997,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vmlsq_s8 (int8x16_t a, int8x16_t b, int8x16_t c)
 {
   int8x16_t result;
-  __asm-generic__ ("mls %0.16b,%2.16b,%3.16b"
+  __asm__ ("mls %0.16b,%2.16b,%3.16b"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -8008,7 +8008,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vmlsq_s16 (int16x8_t a, int16x8_t b, int16x8_t c)
 {
   int16x8_t result;
-  __asm-generic__ ("mls %0.8h,%2.8h,%3.8h"
+  __asm__ ("mls %0.8h,%2.8h,%3.8h"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -8019,7 +8019,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vmlsq_s32 (int32x4_t a, int32x4_t b, int32x4_t c)
 {
   int32x4_t result;
-  __asm-generic__ ("mls %0.4s,%2.4s,%3.4s"
+  __asm__ ("mls %0.4s,%2.4s,%3.4s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -8030,7 +8030,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vmlsq_u8 (uint8x16_t a, uint8x16_t b, uint8x16_t c)
 {
   uint8x16_t result;
-  __asm-generic__ ("mls %0.16b,%2.16b,%3.16b"
+  __asm__ ("mls %0.16b,%2.16b,%3.16b"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -8041,7 +8041,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vmlsq_u16 (uint16x8_t a, uint16x8_t b, uint16x8_t c)
 {
   uint16x8_t result;
-  __asm-generic__ ("mls %0.8h,%2.8h,%3.8h"
+  __asm__ ("mls %0.8h,%2.8h,%3.8h"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -8052,7 +8052,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vmlsq_u32 (uint32x4_t a, uint32x4_t b, uint32x4_t c)
 {
   uint32x4_t result;
-  __asm-generic__ ("mls %0.4s,%2.4s,%3.4s"
+  __asm__ ("mls %0.4s,%2.4s,%3.4s"
            : "=w"(result)
            : "0"(a), "w"(b), "w"(c)
            : /* No clobbers */);
@@ -8063,7 +8063,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vmovl_high_s8 (int8x16_t a)
 {
   int16x8_t result;
-  __asm-generic__ ("sshll2 %0.8h,%1.16b,#0"
+  __asm__ ("sshll2 %0.8h,%1.16b,#0"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -8074,7 +8074,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vmovl_high_s16 (int16x8_t a)
 {
   int32x4_t result;
-  __asm-generic__ ("sshll2 %0.4s,%1.8h,#0"
+  __asm__ ("sshll2 %0.4s,%1.8h,#0"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -8085,7 +8085,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vmovl_high_s32 (int32x4_t a)
 {
   int64x2_t result;
-  __asm-generic__ ("sshll2 %0.2d,%1.4s,#0"
+  __asm__ ("sshll2 %0.2d,%1.4s,#0"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -8096,7 +8096,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vmovl_high_u8 (uint8x16_t a)
 {
   uint16x8_t result;
-  __asm-generic__ ("ushll2 %0.8h,%1.16b,#0"
+  __asm__ ("ushll2 %0.8h,%1.16b,#0"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -8107,7 +8107,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vmovl_high_u16 (uint16x8_t a)
 {
   uint32x4_t result;
-  __asm-generic__ ("ushll2 %0.4s,%1.8h,#0"
+  __asm__ ("ushll2 %0.4s,%1.8h,#0"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -8118,7 +8118,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vmovl_high_u32 (uint32x4_t a)
 {
   uint64x2_t result;
-  __asm-generic__ ("ushll2 %0.2d,%1.4s,#0"
+  __asm__ ("ushll2 %0.2d,%1.4s,#0"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -8129,7 +8129,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vmovl_s8 (int8x8_t a)
 {
   int16x8_t result;
-  __asm-generic__ ("sshll %0.8h,%1.8b,#0"
+  __asm__ ("sshll %0.8h,%1.8b,#0"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -8140,7 +8140,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vmovl_s16 (int16x4_t a)
 {
   int32x4_t result;
-  __asm-generic__ ("sshll %0.4s,%1.4h,#0"
+  __asm__ ("sshll %0.4s,%1.4h,#0"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -8151,7 +8151,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vmovl_s32 (int32x2_t a)
 {
   int64x2_t result;
-  __asm-generic__ ("sshll %0.2d,%1.2s,#0"
+  __asm__ ("sshll %0.2d,%1.2s,#0"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -8162,7 +8162,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vmovl_u8 (uint8x8_t a)
 {
   uint16x8_t result;
-  __asm-generic__ ("ushll %0.8h,%1.8b,#0"
+  __asm__ ("ushll %0.8h,%1.8b,#0"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -8173,7 +8173,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vmovl_u16 (uint16x4_t a)
 {
   uint32x4_t result;
-  __asm-generic__ ("ushll %0.4s,%1.4h,#0"
+  __asm__ ("ushll %0.4s,%1.4h,#0"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -8184,7 +8184,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vmovl_u32 (uint32x2_t a)
 {
   uint64x2_t result;
-  __asm-generic__ ("ushll %0.2d,%1.2s,#0"
+  __asm__ ("ushll %0.2d,%1.2s,#0"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -8195,7 +8195,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vmovn_high_s16 (int8x8_t a, int16x8_t b)
 {
   int8x16_t result = vcombine_s8 (a, vcreate_s8 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("xtn2 %0.16b,%1.8h"
+  __asm__ ("xtn2 %0.16b,%1.8h"
            : "+w"(result)
            : "w"(b)
            : /* No clobbers */);
@@ -8206,7 +8206,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vmovn_high_s32 (int16x4_t a, int32x4_t b)
 {
   int16x8_t result = vcombine_s16 (a, vcreate_s16 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("xtn2 %0.8h,%1.4s"
+  __asm__ ("xtn2 %0.8h,%1.4s"
            : "+w"(result)
            : "w"(b)
            : /* No clobbers */);
@@ -8217,7 +8217,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vmovn_high_s64 (int32x2_t a, int64x2_t b)
 {
   int32x4_t result = vcombine_s32 (a, vcreate_s32 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("xtn2 %0.4s,%1.2d"
+  __asm__ ("xtn2 %0.4s,%1.2d"
            : "+w"(result)
            : "w"(b)
            : /* No clobbers */);
@@ -8228,7 +8228,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vmovn_high_u16 (uint8x8_t a, uint16x8_t b)
 {
   uint8x16_t result = vcombine_u8 (a, vcreate_u8 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("xtn2 %0.16b,%1.8h"
+  __asm__ ("xtn2 %0.16b,%1.8h"
            : "+w"(result)
            : "w"(b)
            : /* No clobbers */);
@@ -8239,7 +8239,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vmovn_high_u32 (uint16x4_t a, uint32x4_t b)
 {
   uint16x8_t result = vcombine_u16 (a, vcreate_u16 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("xtn2 %0.8h,%1.4s"
+  __asm__ ("xtn2 %0.8h,%1.4s"
            : "+w"(result)
            : "w"(b)
            : /* No clobbers */);
@@ -8250,7 +8250,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vmovn_high_u64 (uint32x2_t a, uint64x2_t b)
 {
   uint32x4_t result = vcombine_u32 (a, vcreate_u32 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("xtn2 %0.4s,%1.2d"
+  __asm__ ("xtn2 %0.4s,%1.2d"
            : "+w"(result)
            : "w"(b)
            : /* No clobbers */);
@@ -8261,7 +8261,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vmovn_s16 (int16x8_t a)
 {
   int8x8_t result;
-  __asm-generic__ ("xtn %0.8b,%1.8h"
+  __asm__ ("xtn %0.8b,%1.8h"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -8272,7 +8272,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vmovn_s32 (int32x4_t a)
 {
   int16x4_t result;
-  __asm-generic__ ("xtn %0.4h,%1.4s"
+  __asm__ ("xtn %0.4h,%1.4s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -8283,7 +8283,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vmovn_s64 (int64x2_t a)
 {
   int32x2_t result;
-  __asm-generic__ ("xtn %0.2s,%1.2d"
+  __asm__ ("xtn %0.2s,%1.2d"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -8294,7 +8294,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vmovn_u16 (uint16x8_t a)
 {
   uint8x8_t result;
-  __asm-generic__ ("xtn %0.8b,%1.8h"
+  __asm__ ("xtn %0.8b,%1.8h"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -8305,7 +8305,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vmovn_u32 (uint32x4_t a)
 {
   uint16x4_t result;
-  __asm-generic__ ("xtn %0.4h,%1.4s"
+  __asm__ ("xtn %0.4h,%1.4s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -8316,7 +8316,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vmovn_u64 (uint64x2_t a)
 {
   uint32x2_t result;
-  __asm-generic__ ("xtn %0.2s,%1.2d"
+  __asm__ ("xtn %0.2s,%1.2d"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -8327,7 +8327,7 @@ __extension__ static __inline float32x2_t __attribute__ ((__always_inline__))
 vmul_n_f32 (float32x2_t a, float32_t b)
 {
   float32x2_t result;
-  __asm-generic__ ("fmul %0.2s,%1.2s,%2.s[0]"
+  __asm__ ("fmul %0.2s,%1.2s,%2.s[0]"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8338,7 +8338,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vmul_n_s16 (int16x4_t a, int16_t b)
 {
   int16x4_t result;
-  __asm-generic__ ("mul %0.4h,%1.4h,%2.h[0]"
+  __asm__ ("mul %0.4h,%1.4h,%2.h[0]"
            : "=w"(result)
            : "w"(a), "x"(b)
            : /* No clobbers */);
@@ -8349,7 +8349,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vmul_n_s32 (int32x2_t a, int32_t b)
 {
   int32x2_t result;
-  __asm-generic__ ("mul %0.2s,%1.2s,%2.s[0]"
+  __asm__ ("mul %0.2s,%1.2s,%2.s[0]"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8360,7 +8360,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vmul_n_u16 (uint16x4_t a, uint16_t b)
 {
   uint16x4_t result;
-  __asm-generic__ ("mul %0.4h,%1.4h,%2.h[0]"
+  __asm__ ("mul %0.4h,%1.4h,%2.h[0]"
            : "=w"(result)
            : "w"(a), "x"(b)
            : /* No clobbers */);
@@ -8371,7 +8371,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vmul_n_u32 (uint32x2_t a, uint32_t b)
 {
   uint32x2_t result;
-  __asm-generic__ ("mul %0.2s,%1.2s,%2.s[0]"
+  __asm__ ("mul %0.2s,%1.2s,%2.s[0]"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8384,7 +8384,7 @@ vmul_n_u32 (uint32x2_t a, uint32_t b)
        float64x2_t b_ = (b);                                            \
        float64_t a_ = (a);                                              \
        float64_t result;                                                \
-       __asm-generic__ ("fmul %d0,%d1,%2.d[%3]"                                 \
+       __asm__ ("fmul %d0,%d1,%2.d[%3]"                                 \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -8397,7 +8397,7 @@ vmul_n_u32 (uint32x2_t a, uint32_t b)
        int16x4_t b_ = (b);                                              \
        int16x8_t a_ = (a);                                              \
        int32x4_t result;                                                \
-       __asm-generic__ ("smull2 %0.4s, %1.8h, %2.h[%3]"                         \
+       __asm__ ("smull2 %0.4s, %1.8h, %2.h[%3]"                         \
                 : "=w"(result)                                          \
                 : "w"(a_), "x"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -8410,7 +8410,7 @@ vmul_n_u32 (uint32x2_t a, uint32_t b)
        int32x2_t b_ = (b);                                              \
        int32x4_t a_ = (a);                                              \
        int64x2_t result;                                                \
-       __asm-generic__ ("smull2 %0.2d, %1.4s, %2.s[%3]"                         \
+       __asm__ ("smull2 %0.2d, %1.4s, %2.s[%3]"                         \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -8423,7 +8423,7 @@ vmul_n_u32 (uint32x2_t a, uint32_t b)
        uint16x4_t b_ = (b);                                             \
        uint16x8_t a_ = (a);                                             \
        uint32x4_t result;                                               \
-       __asm-generic__ ("umull2 %0.4s, %1.8h, %2.h[%3]"                         \
+       __asm__ ("umull2 %0.4s, %1.8h, %2.h[%3]"                         \
                 : "=w"(result)                                          \
                 : "w"(a_), "x"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -8436,7 +8436,7 @@ vmul_n_u32 (uint32x2_t a, uint32_t b)
        uint32x2_t b_ = (b);                                             \
        uint32x4_t a_ = (a);                                             \
        uint64x2_t result;                                               \
-       __asm-generic__ ("umull2 %0.2d, %1.4s, %2.s[%3]"                         \
+       __asm__ ("umull2 %0.2d, %1.4s, %2.s[%3]"                         \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -8449,7 +8449,7 @@ vmul_n_u32 (uint32x2_t a, uint32_t b)
        int16x8_t b_ = (b);                                              \
        int16x8_t a_ = (a);                                              \
        int32x4_t result;                                                \
-       __asm-generic__ ("smull2 %0.4s, %1.8h, %2.h[%3]"                         \
+       __asm__ ("smull2 %0.4s, %1.8h, %2.h[%3]"                         \
                 : "=w"(result)                                          \
                 : "w"(a_), "x"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -8462,7 +8462,7 @@ vmul_n_u32 (uint32x2_t a, uint32_t b)
        int32x4_t b_ = (b);                                              \
        int32x4_t a_ = (a);                                              \
        int64x2_t result;                                                \
-       __asm-generic__ ("smull2 %0.2d, %1.4s, %2.s[%3]"                         \
+       __asm__ ("smull2 %0.2d, %1.4s, %2.s[%3]"                         \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -8475,7 +8475,7 @@ vmul_n_u32 (uint32x2_t a, uint32_t b)
        uint16x8_t b_ = (b);                                             \
        uint16x8_t a_ = (a);                                             \
        uint32x4_t result;                                               \
-       __asm-generic__ ("umull2 %0.4s, %1.8h, %2.h[%3]"                         \
+       __asm__ ("umull2 %0.4s, %1.8h, %2.h[%3]"                         \
                 : "=w"(result)                                          \
                 : "w"(a_), "x"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -8488,7 +8488,7 @@ vmul_n_u32 (uint32x2_t a, uint32_t b)
        uint32x4_t b_ = (b);                                             \
        uint32x4_t a_ = (a);                                             \
        uint64x2_t result;                                               \
-       __asm-generic__ ("umull2 %0.2d, %1.4s, %2.s[%3]"                         \
+       __asm__ ("umull2 %0.2d, %1.4s, %2.s[%3]"                         \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -8499,7 +8499,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vmull_high_n_s16 (int16x8_t a, int16_t b)
 {
   int32x4_t result;
-  __asm-generic__ ("smull2 %0.4s,%1.8h,%2.h[0]"
+  __asm__ ("smull2 %0.4s,%1.8h,%2.h[0]"
            : "=w"(result)
            : "w"(a), "x"(b)
            : /* No clobbers */);
@@ -8510,7 +8510,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vmull_high_n_s32 (int32x4_t a, int32_t b)
 {
   int64x2_t result;
-  __asm-generic__ ("smull2 %0.2d,%1.4s,%2.s[0]"
+  __asm__ ("smull2 %0.2d,%1.4s,%2.s[0]"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8521,7 +8521,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vmull_high_n_u16 (uint16x8_t a, uint16_t b)
 {
   uint32x4_t result;
-  __asm-generic__ ("umull2 %0.4s,%1.8h,%2.h[0]"
+  __asm__ ("umull2 %0.4s,%1.8h,%2.h[0]"
            : "=w"(result)
            : "w"(a), "x"(b)
            : /* No clobbers */);
@@ -8532,7 +8532,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vmull_high_n_u32 (uint32x4_t a, uint32_t b)
 {
   uint64x2_t result;
-  __asm-generic__ ("umull2 %0.2d,%1.4s,%2.s[0]"
+  __asm__ ("umull2 %0.2d,%1.4s,%2.s[0]"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8543,7 +8543,7 @@ __extension__ static __inline poly16x8_t __attribute__ ((__always_inline__))
 vmull_high_p8 (poly8x16_t a, poly8x16_t b)
 {
   poly16x8_t result;
-  __asm-generic__ ("pmull2 %0.8h,%1.16b,%2.16b"
+  __asm__ ("pmull2 %0.8h,%1.16b,%2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8554,7 +8554,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vmull_high_s8 (int8x16_t a, int8x16_t b)
 {
   int16x8_t result;
-  __asm-generic__ ("smull2 %0.8h,%1.16b,%2.16b"
+  __asm__ ("smull2 %0.8h,%1.16b,%2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8565,7 +8565,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vmull_high_s16 (int16x8_t a, int16x8_t b)
 {
   int32x4_t result;
-  __asm-generic__ ("smull2 %0.4s,%1.8h,%2.8h"
+  __asm__ ("smull2 %0.4s,%1.8h,%2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8576,7 +8576,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vmull_high_s32 (int32x4_t a, int32x4_t b)
 {
   int64x2_t result;
-  __asm-generic__ ("smull2 %0.2d,%1.4s,%2.4s"
+  __asm__ ("smull2 %0.2d,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8587,7 +8587,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vmull_high_u8 (uint8x16_t a, uint8x16_t b)
 {
   uint16x8_t result;
-  __asm-generic__ ("umull2 %0.8h,%1.16b,%2.16b"
+  __asm__ ("umull2 %0.8h,%1.16b,%2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8598,7 +8598,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vmull_high_u16 (uint16x8_t a, uint16x8_t b)
 {
   uint32x4_t result;
-  __asm-generic__ ("umull2 %0.4s,%1.8h,%2.8h"
+  __asm__ ("umull2 %0.4s,%1.8h,%2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8609,7 +8609,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vmull_high_u32 (uint32x4_t a, uint32x4_t b)
 {
   uint64x2_t result;
-  __asm-generic__ ("umull2 %0.2d,%1.4s,%2.4s"
+  __asm__ ("umull2 %0.2d,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8622,7 +8622,7 @@ vmull_high_u32 (uint32x4_t a, uint32x4_t b)
        int16x4_t b_ = (b);                                              \
        int16x4_t a_ = (a);                                              \
        int32x4_t result;                                                \
-       __asm-generic__ ("smull %0.4s,%1.4h,%2.h[%3]"                            \
+       __asm__ ("smull %0.4s,%1.4h,%2.h[%3]"                            \
                 : "=w"(result)                                          \
                 : "w"(a_), "x"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -8635,7 +8635,7 @@ vmull_high_u32 (uint32x4_t a, uint32x4_t b)
        int32x2_t b_ = (b);                                              \
        int32x2_t a_ = (a);                                              \
        int64x2_t result;                                                \
-       __asm-generic__ ("smull %0.2d,%1.2s,%2.s[%3]"                            \
+       __asm__ ("smull %0.2d,%1.2s,%2.s[%3]"                            \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -8648,7 +8648,7 @@ vmull_high_u32 (uint32x4_t a, uint32x4_t b)
        uint16x4_t b_ = (b);                                             \
        uint16x4_t a_ = (a);                                             \
        uint32x4_t result;                                               \
-       __asm-generic__ ("umull %0.4s,%1.4h,%2.h[%3]"                            \
+       __asm__ ("umull %0.4s,%1.4h,%2.h[%3]"                            \
                 : "=w"(result)                                          \
                 : "w"(a_), "x"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -8661,7 +8661,7 @@ vmull_high_u32 (uint32x4_t a, uint32x4_t b)
        uint32x2_t b_ = (b);                                             \
        uint32x2_t a_ = (a);                                             \
        uint64x2_t result;                                               \
-       __asm-generic__ ("umull %0.2d, %1.2s, %2.s[%3]"                          \
+       __asm__ ("umull %0.2d, %1.2s, %2.s[%3]"                          \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -8674,7 +8674,7 @@ vmull_high_u32 (uint32x4_t a, uint32x4_t b)
        int16x8_t b_ = (b);                                              \
        int16x4_t a_ = (a);                                              \
        int32x4_t result;                                                \
-       __asm-generic__ ("smull %0.4s, %1.4h, %2.h[%3]"                          \
+       __asm__ ("smull %0.4s, %1.4h, %2.h[%3]"                          \
                 : "=w"(result)                                          \
                 : "w"(a_), "x"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -8687,7 +8687,7 @@ vmull_high_u32 (uint32x4_t a, uint32x4_t b)
        int32x4_t b_ = (b);                                              \
        int32x2_t a_ = (a);                                              \
        int64x2_t result;                                                \
-       __asm-generic__ ("smull %0.2d, %1.2s, %2.s[%3]"                          \
+       __asm__ ("smull %0.2d, %1.2s, %2.s[%3]"                          \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -8700,7 +8700,7 @@ vmull_high_u32 (uint32x4_t a, uint32x4_t b)
        uint16x8_t b_ = (b);                                             \
        uint16x4_t a_ = (a);                                             \
        uint32x4_t result;                                               \
-       __asm-generic__ ("umull %0.4s, %1.4h, %2.h[%3]"                          \
+       __asm__ ("umull %0.4s, %1.4h, %2.h[%3]"                          \
                 : "=w"(result)                                          \
                 : "w"(a_), "x"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -8713,7 +8713,7 @@ vmull_high_u32 (uint32x4_t a, uint32x4_t b)
        uint32x4_t b_ = (b);                                             \
        uint32x2_t a_ = (a);                                             \
        uint64x2_t result;                                               \
-       __asm-generic__ ("umull %0.2d, %1.2s, %2.s[%3]"                          \
+       __asm__ ("umull %0.2d, %1.2s, %2.s[%3]"                          \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -8724,7 +8724,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vmull_n_s16 (int16x4_t a, int16_t b)
 {
   int32x4_t result;
-  __asm-generic__ ("smull %0.4s,%1.4h,%2.h[0]"
+  __asm__ ("smull %0.4s,%1.4h,%2.h[0]"
            : "=w"(result)
            : "w"(a), "x"(b)
            : /* No clobbers */);
@@ -8735,7 +8735,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vmull_n_s32 (int32x2_t a, int32_t b)
 {
   int64x2_t result;
-  __asm-generic__ ("smull %0.2d,%1.2s,%2.s[0]"
+  __asm__ ("smull %0.2d,%1.2s,%2.s[0]"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8746,7 +8746,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vmull_n_u16 (uint16x4_t a, uint16_t b)
 {
   uint32x4_t result;
-  __asm-generic__ ("umull %0.4s,%1.4h,%2.h[0]"
+  __asm__ ("umull %0.4s,%1.4h,%2.h[0]"
            : "=w"(result)
            : "w"(a), "x"(b)
            : /* No clobbers */);
@@ -8757,7 +8757,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vmull_n_u32 (uint32x2_t a, uint32_t b)
 {
   uint64x2_t result;
-  __asm-generic__ ("umull %0.2d,%1.2s,%2.s[0]"
+  __asm__ ("umull %0.2d,%1.2s,%2.s[0]"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8768,7 +8768,7 @@ __extension__ static __inline poly16x8_t __attribute__ ((__always_inline__))
 vmull_p8 (poly8x8_t a, poly8x8_t b)
 {
   poly16x8_t result;
-  __asm-generic__ ("pmull %0.8h, %1.8b, %2.8b"
+  __asm__ ("pmull %0.8h, %1.8b, %2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8779,7 +8779,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vmull_s8 (int8x8_t a, int8x8_t b)
 {
   int16x8_t result;
-  __asm-generic__ ("smull %0.8h, %1.8b, %2.8b"
+  __asm__ ("smull %0.8h, %1.8b, %2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8790,7 +8790,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vmull_s16 (int16x4_t a, int16x4_t b)
 {
   int32x4_t result;
-  __asm-generic__ ("smull %0.4s, %1.4h, %2.4h"
+  __asm__ ("smull %0.4s, %1.4h, %2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8801,7 +8801,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vmull_s32 (int32x2_t a, int32x2_t b)
 {
   int64x2_t result;
-  __asm-generic__ ("smull %0.2d, %1.2s, %2.2s"
+  __asm__ ("smull %0.2d, %1.2s, %2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8812,7 +8812,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vmull_u8 (uint8x8_t a, uint8x8_t b)
 {
   uint16x8_t result;
-  __asm-generic__ ("umull %0.8h, %1.8b, %2.8b"
+  __asm__ ("umull %0.8h, %1.8b, %2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8823,7 +8823,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vmull_u16 (uint16x4_t a, uint16x4_t b)
 {
   uint32x4_t result;
-  __asm-generic__ ("umull %0.4s, %1.4h, %2.4h"
+  __asm__ ("umull %0.4s, %1.4h, %2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8834,7 +8834,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vmull_u32 (uint32x2_t a, uint32x2_t b)
 {
   uint64x2_t result;
-  __asm-generic__ ("umull %0.2d, %1.2s, %2.2s"
+  __asm__ ("umull %0.2d, %1.2s, %2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8845,7 +8845,7 @@ __extension__ static __inline float32x4_t __attribute__ ((__always_inline__))
 vmulq_n_f32 (float32x4_t a, float32_t b)
 {
   float32x4_t result;
-  __asm-generic__ ("fmul %0.4s,%1.4s,%2.s[0]"
+  __asm__ ("fmul %0.4s,%1.4s,%2.s[0]"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8856,7 +8856,7 @@ __extension__ static __inline float64x2_t __attribute__ ((__always_inline__))
 vmulq_n_f64 (float64x2_t a, float64_t b)
 {
   float64x2_t result;
-  __asm-generic__ ("fmul %0.2d,%1.2d,%2.d[0]"
+  __asm__ ("fmul %0.2d,%1.2d,%2.d[0]"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8867,7 +8867,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vmulq_n_s16 (int16x8_t a, int16_t b)
 {
   int16x8_t result;
-  __asm-generic__ ("mul %0.8h,%1.8h,%2.h[0]"
+  __asm__ ("mul %0.8h,%1.8h,%2.h[0]"
            : "=w"(result)
            : "w"(a), "x"(b)
            : /* No clobbers */);
@@ -8878,7 +8878,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vmulq_n_s32 (int32x4_t a, int32_t b)
 {
   int32x4_t result;
-  __asm-generic__ ("mul %0.4s,%1.4s,%2.s[0]"
+  __asm__ ("mul %0.4s,%1.4s,%2.s[0]"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8889,7 +8889,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vmulq_n_u16 (uint16x8_t a, uint16_t b)
 {
   uint16x8_t result;
-  __asm-generic__ ("mul %0.8h,%1.8h,%2.h[0]"
+  __asm__ ("mul %0.8h,%1.8h,%2.h[0]"
            : "=w"(result)
            : "w"(a), "x"(b)
            : /* No clobbers */);
@@ -8900,7 +8900,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vmulq_n_u32 (uint32x4_t a, uint32_t b)
 {
   uint32x4_t result;
-  __asm-generic__ ("mul %0.4s,%1.4s,%2.s[0]"
+  __asm__ ("mul %0.4s,%1.4s,%2.s[0]"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8913,7 +8913,7 @@ vmulq_n_u32 (uint32x4_t a, uint32_t b)
        float32x4_t b_ = (b);                                            \
        float32_t a_ = (a);                                              \
        float32_t result;                                                \
-       __asm-generic__ ("fmul %s0,%s1,%2.s[%3]"                                 \
+       __asm__ ("fmul %s0,%s1,%2.s[%3]"                                 \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -8924,7 +8924,7 @@ __extension__ static __inline float32x2_t __attribute__ ((__always_inline__))
 vmulx_f32 (float32x2_t a, float32x2_t b)
 {
   float32x2_t result;
-  __asm-generic__ ("fmulx %0.2s,%1.2s,%2.2s"
+  __asm__ ("fmulx %0.2s,%1.2s,%2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8937,7 +8937,7 @@ vmulx_f32 (float32x2_t a, float32x2_t b)
        float32x4_t b_ = (b);                                            \
        float32x2_t a_ = (a);                                            \
        float32x2_t result;                                              \
-       __asm-generic__ ("fmulx %0.2s,%1.2s,%2.s[%3]"                            \
+       __asm__ ("fmulx %0.2s,%1.2s,%2.s[%3]"                            \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -8948,7 +8948,7 @@ __extension__ static __inline float64_t __attribute__ ((__always_inline__))
 vmulxd_f64 (float64_t a, float64_t b)
 {
   float64_t result;
-  __asm-generic__ ("fmulx %d0, %d1, %d2"
+  __asm__ ("fmulx %d0, %d1, %d2"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8959,7 +8959,7 @@ __extension__ static __inline float32x4_t __attribute__ ((__always_inline__))
 vmulxq_f32 (float32x4_t a, float32x4_t b)
 {
   float32x4_t result;
-  __asm-generic__ ("fmulx %0.4s,%1.4s,%2.4s"
+  __asm__ ("fmulx %0.4s,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8970,7 +8970,7 @@ __extension__ static __inline float64x2_t __attribute__ ((__always_inline__))
 vmulxq_f64 (float64x2_t a, float64x2_t b)
 {
   float64x2_t result;
-  __asm-generic__ ("fmulx %0.2d,%1.2d,%2.2d"
+  __asm__ ("fmulx %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -8983,7 +8983,7 @@ vmulxq_f64 (float64x2_t a, float64x2_t b)
        float32x4_t b_ = (b);                                            \
        float32x4_t a_ = (a);                                            \
        float32x4_t result;                                              \
-       __asm-generic__ ("fmulx %0.4s,%1.4s,%2.s[%3]"                            \
+       __asm__ ("fmulx %0.4s,%1.4s,%2.s[%3]"                            \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -8996,7 +8996,7 @@ vmulxq_f64 (float64x2_t a, float64x2_t b)
        float64x2_t b_ = (b);                                            \
        float64x2_t a_ = (a);                                            \
        float64x2_t result;                                              \
-       __asm-generic__ ("fmulx %0.2d,%1.2d,%2.d[%3]"                            \
+       __asm__ ("fmulx %0.2d,%1.2d,%2.d[%3]"                            \
                 : "=w"(result)                                          \
                 : "w"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -9007,7 +9007,7 @@ __extension__ static __inline float32_t __attribute__ ((__always_inline__))
 vmulxs_f32 (float32_t a, float32_t b)
 {
   float32_t result;
-  __asm-generic__ ("fmulx %s0, %s1, %s2"
+  __asm__ ("fmulx %s0, %s1, %s2"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9018,7 +9018,7 @@ __extension__ static __inline poly8x8_t __attribute__ ((__always_inline__))
 vmvn_p8 (poly8x8_t a)
 {
   poly8x8_t result;
-  __asm-generic__ ("mvn %0.8b,%1.8b"
+  __asm__ ("mvn %0.8b,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9029,7 +9029,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vmvn_s8 (int8x8_t a)
 {
   int8x8_t result;
-  __asm-generic__ ("mvn %0.8b,%1.8b"
+  __asm__ ("mvn %0.8b,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9040,7 +9040,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vmvn_s16 (int16x4_t a)
 {
   int16x4_t result;
-  __asm-generic__ ("mvn %0.8b,%1.8b"
+  __asm__ ("mvn %0.8b,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9051,7 +9051,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vmvn_s32 (int32x2_t a)
 {
   int32x2_t result;
-  __asm-generic__ ("mvn %0.8b,%1.8b"
+  __asm__ ("mvn %0.8b,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9062,7 +9062,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vmvn_u8 (uint8x8_t a)
 {
   uint8x8_t result;
-  __asm-generic__ ("mvn %0.8b,%1.8b"
+  __asm__ ("mvn %0.8b,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9073,7 +9073,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vmvn_u16 (uint16x4_t a)
 {
   uint16x4_t result;
-  __asm-generic__ ("mvn %0.8b,%1.8b"
+  __asm__ ("mvn %0.8b,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9084,7 +9084,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vmvn_u32 (uint32x2_t a)
 {
   uint32x2_t result;
-  __asm-generic__ ("mvn %0.8b,%1.8b"
+  __asm__ ("mvn %0.8b,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9095,7 +9095,7 @@ __extension__ static __inline poly8x16_t __attribute__ ((__always_inline__))
 vmvnq_p8 (poly8x16_t a)
 {
   poly8x16_t result;
-  __asm-generic__ ("mvn %0.16b,%1.16b"
+  __asm__ ("mvn %0.16b,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9106,7 +9106,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vmvnq_s8 (int8x16_t a)
 {
   int8x16_t result;
-  __asm-generic__ ("mvn %0.16b,%1.16b"
+  __asm__ ("mvn %0.16b,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9117,7 +9117,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vmvnq_s16 (int16x8_t a)
 {
   int16x8_t result;
-  __asm-generic__ ("mvn %0.16b,%1.16b"
+  __asm__ ("mvn %0.16b,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9128,7 +9128,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vmvnq_s32 (int32x4_t a)
 {
   int32x4_t result;
-  __asm-generic__ ("mvn %0.16b,%1.16b"
+  __asm__ ("mvn %0.16b,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9139,7 +9139,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vmvnq_u8 (uint8x16_t a)
 {
   uint8x16_t result;
-  __asm-generic__ ("mvn %0.16b,%1.16b"
+  __asm__ ("mvn %0.16b,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9150,7 +9150,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vmvnq_u16 (uint16x8_t a)
 {
   uint16x8_t result;
-  __asm-generic__ ("mvn %0.16b,%1.16b"
+  __asm__ ("mvn %0.16b,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9161,7 +9161,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vmvnq_u32 (uint32x4_t a)
 {
   uint32x4_t result;
-  __asm-generic__ ("mvn %0.16b,%1.16b"
+  __asm__ ("mvn %0.16b,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9173,7 +9173,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vpadal_s8 (int16x4_t a, int8x8_t b)
 {
   int16x4_t result;
-  __asm-generic__ ("sadalp %0.4h,%2.8b"
+  __asm__ ("sadalp %0.4h,%2.8b"
            : "=w"(result)
            : "0"(a), "w"(b)
            : /* No clobbers */);
@@ -9184,7 +9184,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vpadal_s16 (int32x2_t a, int16x4_t b)
 {
   int32x2_t result;
-  __asm-generic__ ("sadalp %0.2s,%2.4h"
+  __asm__ ("sadalp %0.2s,%2.4h"
            : "=w"(result)
            : "0"(a), "w"(b)
            : /* No clobbers */);
@@ -9195,7 +9195,7 @@ __extension__ static __inline int64x1_t __attribute__ ((__always_inline__))
 vpadal_s32 (int64x1_t a, int32x2_t b)
 {
   int64x1_t result;
-  __asm-generic__ ("sadalp %0.1d,%2.2s"
+  __asm__ ("sadalp %0.1d,%2.2s"
            : "=w"(result)
            : "0"(a), "w"(b)
            : /* No clobbers */);
@@ -9206,7 +9206,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vpadal_u8 (uint16x4_t a, uint8x8_t b)
 {
   uint16x4_t result;
-  __asm-generic__ ("uadalp %0.4h,%2.8b"
+  __asm__ ("uadalp %0.4h,%2.8b"
            : "=w"(result)
            : "0"(a), "w"(b)
            : /* No clobbers */);
@@ -9217,7 +9217,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vpadal_u16 (uint32x2_t a, uint16x4_t b)
 {
   uint32x2_t result;
-  __asm-generic__ ("uadalp %0.2s,%2.4h"
+  __asm__ ("uadalp %0.2s,%2.4h"
            : "=w"(result)
            : "0"(a), "w"(b)
            : /* No clobbers */);
@@ -9228,7 +9228,7 @@ __extension__ static __inline uint64x1_t __attribute__ ((__always_inline__))
 vpadal_u32 (uint64x1_t a, uint32x2_t b)
 {
   uint64x1_t result;
-  __asm-generic__ ("uadalp %0.1d,%2.2s"
+  __asm__ ("uadalp %0.1d,%2.2s"
            : "=w"(result)
            : "0"(a), "w"(b)
            : /* No clobbers */);
@@ -9239,7 +9239,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vpadalq_s8 (int16x8_t a, int8x16_t b)
 {
   int16x8_t result;
-  __asm-generic__ ("sadalp %0.8h,%2.16b"
+  __asm__ ("sadalp %0.8h,%2.16b"
            : "=w"(result)
            : "0"(a), "w"(b)
            : /* No clobbers */);
@@ -9250,7 +9250,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vpadalq_s16 (int32x4_t a, int16x8_t b)
 {
   int32x4_t result;
-  __asm-generic__ ("sadalp %0.4s,%2.8h"
+  __asm__ ("sadalp %0.4s,%2.8h"
            : "=w"(result)
            : "0"(a), "w"(b)
            : /* No clobbers */);
@@ -9261,7 +9261,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vpadalq_s32 (int64x2_t a, int32x4_t b)
 {
   int64x2_t result;
-  __asm-generic__ ("sadalp %0.2d,%2.4s"
+  __asm__ ("sadalp %0.2d,%2.4s"
            : "=w"(result)
            : "0"(a), "w"(b)
            : /* No clobbers */);
@@ -9272,7 +9272,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vpadalq_u8 (uint16x8_t a, uint8x16_t b)
 {
   uint16x8_t result;
-  __asm-generic__ ("uadalp %0.8h,%2.16b"
+  __asm__ ("uadalp %0.8h,%2.16b"
            : "=w"(result)
            : "0"(a), "w"(b)
            : /* No clobbers */);
@@ -9283,7 +9283,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vpadalq_u16 (uint32x4_t a, uint16x8_t b)
 {
   uint32x4_t result;
-  __asm-generic__ ("uadalp %0.4s,%2.8h"
+  __asm__ ("uadalp %0.4s,%2.8h"
            : "=w"(result)
            : "0"(a), "w"(b)
            : /* No clobbers */);
@@ -9294,7 +9294,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vpadalq_u32 (uint64x2_t a, uint32x4_t b)
 {
   uint64x2_t result;
-  __asm-generic__ ("uadalp %0.2d,%2.4s"
+  __asm__ ("uadalp %0.2d,%2.4s"
            : "=w"(result)
            : "0"(a), "w"(b)
            : /* No clobbers */);
@@ -9305,7 +9305,7 @@ __extension__ static __inline float32x2_t __attribute__ ((__always_inline__))
 vpadd_f32 (float32x2_t a, float32x2_t b)
 {
   float32x2_t result;
-  __asm-generic__ ("faddp %0.2s,%1.2s,%2.2s"
+  __asm__ ("faddp %0.2s,%1.2s,%2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9355,7 +9355,7 @@ __extension__ static __inline float64_t __attribute__ ((__always_inline__))
 vpaddd_f64 (float64x2_t a)
 {
   float64_t result;
-  __asm-generic__ ("faddp %d0,%1.2d"
+  __asm__ ("faddp %d0,%1.2d"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9366,7 +9366,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vpaddl_s8 (int8x8_t a)
 {
   int16x4_t result;
-  __asm-generic__ ("saddlp %0.4h,%1.8b"
+  __asm__ ("saddlp %0.4h,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9377,7 +9377,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vpaddl_s16 (int16x4_t a)
 {
   int32x2_t result;
-  __asm-generic__ ("saddlp %0.2s,%1.4h"
+  __asm__ ("saddlp %0.2s,%1.4h"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9388,7 +9388,7 @@ __extension__ static __inline int64x1_t __attribute__ ((__always_inline__))
 vpaddl_s32 (int32x2_t a)
 {
   int64x1_t result;
-  __asm-generic__ ("saddlp %0.1d,%1.2s"
+  __asm__ ("saddlp %0.1d,%1.2s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9399,7 +9399,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vpaddl_u8 (uint8x8_t a)
 {
   uint16x4_t result;
-  __asm-generic__ ("uaddlp %0.4h,%1.8b"
+  __asm__ ("uaddlp %0.4h,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9410,7 +9410,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vpaddl_u16 (uint16x4_t a)
 {
   uint32x2_t result;
-  __asm-generic__ ("uaddlp %0.2s,%1.4h"
+  __asm__ ("uaddlp %0.2s,%1.4h"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9421,7 +9421,7 @@ __extension__ static __inline uint64x1_t __attribute__ ((__always_inline__))
 vpaddl_u32 (uint32x2_t a)
 {
   uint64x1_t result;
-  __asm-generic__ ("uaddlp %0.1d,%1.2s"
+  __asm__ ("uaddlp %0.1d,%1.2s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9432,7 +9432,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vpaddlq_s8 (int8x16_t a)
 {
   int16x8_t result;
-  __asm-generic__ ("saddlp %0.8h,%1.16b"
+  __asm__ ("saddlp %0.8h,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9443,7 +9443,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vpaddlq_s16 (int16x8_t a)
 {
   int32x4_t result;
-  __asm-generic__ ("saddlp %0.4s,%1.8h"
+  __asm__ ("saddlp %0.4s,%1.8h"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9454,7 +9454,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vpaddlq_s32 (int32x4_t a)
 {
   int64x2_t result;
-  __asm-generic__ ("saddlp %0.2d,%1.4s"
+  __asm__ ("saddlp %0.2d,%1.4s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9465,7 +9465,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vpaddlq_u8 (uint8x16_t a)
 {
   uint16x8_t result;
-  __asm-generic__ ("uaddlp %0.8h,%1.16b"
+  __asm__ ("uaddlp %0.8h,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9476,7 +9476,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vpaddlq_u16 (uint16x8_t a)
 {
   uint32x4_t result;
-  __asm-generic__ ("uaddlp %0.4s,%1.8h"
+  __asm__ ("uaddlp %0.4s,%1.8h"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9487,7 +9487,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vpaddlq_u32 (uint32x4_t a)
 {
   uint64x2_t result;
-  __asm-generic__ ("uaddlp %0.2d,%1.4s"
+  __asm__ ("uaddlp %0.2d,%1.4s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9498,7 +9498,7 @@ __extension__ static __inline float32x4_t __attribute__ ((__always_inline__))
 vpaddq_f32 (float32x4_t a, float32x4_t b)
 {
   float32x4_t result;
-  __asm-generic__ ("faddp %0.4s,%1.4s,%2.4s"
+  __asm__ ("faddp %0.4s,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9509,7 +9509,7 @@ __extension__ static __inline float64x2_t __attribute__ ((__always_inline__))
 vpaddq_f64 (float64x2_t a, float64x2_t b)
 {
   float64x2_t result;
-  __asm-generic__ ("faddp %0.2d,%1.2d,%2.2d"
+  __asm__ ("faddp %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9520,7 +9520,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vpaddq_s8 (int8x16_t a, int8x16_t b)
 {
   int8x16_t result;
-  __asm-generic__ ("addp %0.16b,%1.16b,%2.16b"
+  __asm__ ("addp %0.16b,%1.16b,%2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9531,7 +9531,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vpaddq_s16 (int16x8_t a, int16x8_t b)
 {
   int16x8_t result;
-  __asm-generic__ ("addp %0.8h,%1.8h,%2.8h"
+  __asm__ ("addp %0.8h,%1.8h,%2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9542,7 +9542,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vpaddq_s32 (int32x4_t a, int32x4_t b)
 {
   int32x4_t result;
-  __asm-generic__ ("addp %0.4s,%1.4s,%2.4s"
+  __asm__ ("addp %0.4s,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9553,7 +9553,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vpaddq_s64 (int64x2_t a, int64x2_t b)
 {
   int64x2_t result;
-  __asm-generic__ ("addp %0.2d,%1.2d,%2.2d"
+  __asm__ ("addp %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9564,7 +9564,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vpaddq_u8 (uint8x16_t a, uint8x16_t b)
 {
   uint8x16_t result;
-  __asm-generic__ ("addp %0.16b,%1.16b,%2.16b"
+  __asm__ ("addp %0.16b,%1.16b,%2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9575,7 +9575,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vpaddq_u16 (uint16x8_t a, uint16x8_t b)
 {
   uint16x8_t result;
-  __asm-generic__ ("addp %0.8h,%1.8h,%2.8h"
+  __asm__ ("addp %0.8h,%1.8h,%2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9586,7 +9586,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vpaddq_u32 (uint32x4_t a, uint32x4_t b)
 {
   uint32x4_t result;
-  __asm-generic__ ("addp %0.4s,%1.4s,%2.4s"
+  __asm__ ("addp %0.4s,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9597,7 +9597,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vpaddq_u64 (uint64x2_t a, uint64x2_t b)
 {
   uint64x2_t result;
-  __asm-generic__ ("addp %0.2d,%1.2d,%2.2d"
+  __asm__ ("addp %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9608,7 +9608,7 @@ __extension__ static __inline float32_t __attribute__ ((__always_inline__))
 vpadds_f32 (float32x2_t a)
 {
   float32_t result;
-  __asm-generic__ ("faddp %s0,%1.2s"
+  __asm__ ("faddp %s0,%1.2s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9619,7 +9619,7 @@ __extension__ static __inline float32x2_t __attribute__ ((__always_inline__))
 vpmax_f32 (float32x2_t a, float32x2_t b)
 {
   float32x2_t result;
-  __asm-generic__ ("fmaxp %0.2s, %1.2s, %2.2s"
+  __asm__ ("fmaxp %0.2s, %1.2s, %2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9630,7 +9630,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vpmax_s8 (int8x8_t a, int8x8_t b)
 {
   int8x8_t result;
-  __asm-generic__ ("smaxp %0.8b, %1.8b, %2.8b"
+  __asm__ ("smaxp %0.8b, %1.8b, %2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9641,7 +9641,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vpmax_s16 (int16x4_t a, int16x4_t b)
 {
   int16x4_t result;
-  __asm-generic__ ("smaxp %0.4h, %1.4h, %2.4h"
+  __asm__ ("smaxp %0.4h, %1.4h, %2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9652,7 +9652,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vpmax_s32 (int32x2_t a, int32x2_t b)
 {
   int32x2_t result;
-  __asm-generic__ ("smaxp %0.2s, %1.2s, %2.2s"
+  __asm__ ("smaxp %0.2s, %1.2s, %2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9663,7 +9663,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vpmax_u8 (uint8x8_t a, uint8x8_t b)
 {
   uint8x8_t result;
-  __asm-generic__ ("umaxp %0.8b, %1.8b, %2.8b"
+  __asm__ ("umaxp %0.8b, %1.8b, %2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9674,7 +9674,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vpmax_u16 (uint16x4_t a, uint16x4_t b)
 {
   uint16x4_t result;
-  __asm-generic__ ("umaxp %0.4h, %1.4h, %2.4h"
+  __asm__ ("umaxp %0.4h, %1.4h, %2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9685,7 +9685,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vpmax_u32 (uint32x2_t a, uint32x2_t b)
 {
   uint32x2_t result;
-  __asm-generic__ ("umaxp %0.2s, %1.2s, %2.2s"
+  __asm__ ("umaxp %0.2s, %1.2s, %2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9696,7 +9696,7 @@ __extension__ static __inline float32x2_t __attribute__ ((__always_inline__))
 vpmaxnm_f32 (float32x2_t a, float32x2_t b)
 {
   float32x2_t result;
-  __asm-generic__ ("fmaxnmp %0.2s,%1.2s,%2.2s"
+  __asm__ ("fmaxnmp %0.2s,%1.2s,%2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9707,7 +9707,7 @@ __extension__ static __inline float32x4_t __attribute__ ((__always_inline__))
 vpmaxnmq_f32 (float32x4_t a, float32x4_t b)
 {
   float32x4_t result;
-  __asm-generic__ ("fmaxnmp %0.4s,%1.4s,%2.4s"
+  __asm__ ("fmaxnmp %0.4s,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9718,7 +9718,7 @@ __extension__ static __inline float64x2_t __attribute__ ((__always_inline__))
 vpmaxnmq_f64 (float64x2_t a, float64x2_t b)
 {
   float64x2_t result;
-  __asm-generic__ ("fmaxnmp %0.2d,%1.2d,%2.2d"
+  __asm__ ("fmaxnmp %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9729,7 +9729,7 @@ __extension__ static __inline float64_t __attribute__ ((__always_inline__))
 vpmaxnmqd_f64 (float64x2_t a)
 {
   float64_t result;
-  __asm-generic__ ("fmaxnmp %d0,%1.2d"
+  __asm__ ("fmaxnmp %d0,%1.2d"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9740,7 +9740,7 @@ __extension__ static __inline float32_t __attribute__ ((__always_inline__))
 vpmaxnms_f32 (float32x2_t a)
 {
   float32_t result;
-  __asm-generic__ ("fmaxnmp %s0,%1.2s"
+  __asm__ ("fmaxnmp %s0,%1.2s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9751,7 +9751,7 @@ __extension__ static __inline float32x4_t __attribute__ ((__always_inline__))
 vpmaxq_f32 (float32x4_t a, float32x4_t b)
 {
   float32x4_t result;
-  __asm-generic__ ("fmaxp %0.4s, %1.4s, %2.4s"
+  __asm__ ("fmaxp %0.4s, %1.4s, %2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9762,7 +9762,7 @@ __extension__ static __inline float64x2_t __attribute__ ((__always_inline__))
 vpmaxq_f64 (float64x2_t a, float64x2_t b)
 {
   float64x2_t result;
-  __asm-generic__ ("fmaxp %0.2d, %1.2d, %2.2d"
+  __asm__ ("fmaxp %0.2d, %1.2d, %2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9773,7 +9773,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vpmaxq_s8 (int8x16_t a, int8x16_t b)
 {
   int8x16_t result;
-  __asm-generic__ ("smaxp %0.16b, %1.16b, %2.16b"
+  __asm__ ("smaxp %0.16b, %1.16b, %2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9784,7 +9784,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vpmaxq_s16 (int16x8_t a, int16x8_t b)
 {
   int16x8_t result;
-  __asm-generic__ ("smaxp %0.8h, %1.8h, %2.8h"
+  __asm__ ("smaxp %0.8h, %1.8h, %2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9795,7 +9795,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vpmaxq_s32 (int32x4_t a, int32x4_t b)
 {
   int32x4_t result;
-  __asm-generic__ ("smaxp %0.4s, %1.4s, %2.4s"
+  __asm__ ("smaxp %0.4s, %1.4s, %2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9806,7 +9806,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vpmaxq_u8 (uint8x16_t a, uint8x16_t b)
 {
   uint8x16_t result;
-  __asm-generic__ ("umaxp %0.16b, %1.16b, %2.16b"
+  __asm__ ("umaxp %0.16b, %1.16b, %2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9817,7 +9817,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vpmaxq_u16 (uint16x8_t a, uint16x8_t b)
 {
   uint16x8_t result;
-  __asm-generic__ ("umaxp %0.8h, %1.8h, %2.8h"
+  __asm__ ("umaxp %0.8h, %1.8h, %2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9828,7 +9828,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vpmaxq_u32 (uint32x4_t a, uint32x4_t b)
 {
   uint32x4_t result;
-  __asm-generic__ ("umaxp %0.4s, %1.4s, %2.4s"
+  __asm__ ("umaxp %0.4s, %1.4s, %2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9839,7 +9839,7 @@ __extension__ static __inline float64_t __attribute__ ((__always_inline__))
 vpmaxqd_f64 (float64x2_t a)
 {
   float64_t result;
-  __asm-generic__ ("fmaxp %d0,%1.2d"
+  __asm__ ("fmaxp %d0,%1.2d"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9850,7 +9850,7 @@ __extension__ static __inline float32_t __attribute__ ((__always_inline__))
 vpmaxs_f32 (float32x2_t a)
 {
   float32_t result;
-  __asm-generic__ ("fmaxp %s0,%1.2s"
+  __asm__ ("fmaxp %s0,%1.2s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9861,7 +9861,7 @@ __extension__ static __inline float32x2_t __attribute__ ((__always_inline__))
 vpmin_f32 (float32x2_t a, float32x2_t b)
 {
   float32x2_t result;
-  __asm-generic__ ("fminp %0.2s, %1.2s, %2.2s"
+  __asm__ ("fminp %0.2s, %1.2s, %2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9872,7 +9872,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vpmin_s8 (int8x8_t a, int8x8_t b)
 {
   int8x8_t result;
-  __asm-generic__ ("sminp %0.8b, %1.8b, %2.8b"
+  __asm__ ("sminp %0.8b, %1.8b, %2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9883,7 +9883,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vpmin_s16 (int16x4_t a, int16x4_t b)
 {
   int16x4_t result;
-  __asm-generic__ ("sminp %0.4h, %1.4h, %2.4h"
+  __asm__ ("sminp %0.4h, %1.4h, %2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9894,7 +9894,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vpmin_s32 (int32x2_t a, int32x2_t b)
 {
   int32x2_t result;
-  __asm-generic__ ("sminp %0.2s, %1.2s, %2.2s"
+  __asm__ ("sminp %0.2s, %1.2s, %2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9905,7 +9905,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vpmin_u8 (uint8x8_t a, uint8x8_t b)
 {
   uint8x8_t result;
-  __asm-generic__ ("uminp %0.8b, %1.8b, %2.8b"
+  __asm__ ("uminp %0.8b, %1.8b, %2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9916,7 +9916,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vpmin_u16 (uint16x4_t a, uint16x4_t b)
 {
   uint16x4_t result;
-  __asm-generic__ ("uminp %0.4h, %1.4h, %2.4h"
+  __asm__ ("uminp %0.4h, %1.4h, %2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9927,7 +9927,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vpmin_u32 (uint32x2_t a, uint32x2_t b)
 {
   uint32x2_t result;
-  __asm-generic__ ("uminp %0.2s, %1.2s, %2.2s"
+  __asm__ ("uminp %0.2s, %1.2s, %2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9938,7 +9938,7 @@ __extension__ static __inline float32x2_t __attribute__ ((__always_inline__))
 vpminnm_f32 (float32x2_t a, float32x2_t b)
 {
   float32x2_t result;
-  __asm-generic__ ("fminnmp %0.2s,%1.2s,%2.2s"
+  __asm__ ("fminnmp %0.2s,%1.2s,%2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9949,7 +9949,7 @@ __extension__ static __inline float32x4_t __attribute__ ((__always_inline__))
 vpminnmq_f32 (float32x4_t a, float32x4_t b)
 {
   float32x4_t result;
-  __asm-generic__ ("fminnmp %0.4s,%1.4s,%2.4s"
+  __asm__ ("fminnmp %0.4s,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9960,7 +9960,7 @@ __extension__ static __inline float64x2_t __attribute__ ((__always_inline__))
 vpminnmq_f64 (float64x2_t a, float64x2_t b)
 {
   float64x2_t result;
-  __asm-generic__ ("fminnmp %0.2d,%1.2d,%2.2d"
+  __asm__ ("fminnmp %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -9971,7 +9971,7 @@ __extension__ static __inline float64_t __attribute__ ((__always_inline__))
 vpminnmqd_f64 (float64x2_t a)
 {
   float64_t result;
-  __asm-generic__ ("fminnmp %d0,%1.2d"
+  __asm__ ("fminnmp %d0,%1.2d"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9982,7 +9982,7 @@ __extension__ static __inline float32_t __attribute__ ((__always_inline__))
 vpminnms_f32 (float32x2_t a)
 {
   float32_t result;
-  __asm-generic__ ("fminnmp %s0,%1.2s"
+  __asm__ ("fminnmp %s0,%1.2s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -9993,7 +9993,7 @@ __extension__ static __inline float32x4_t __attribute__ ((__always_inline__))
 vpminq_f32 (float32x4_t a, float32x4_t b)
 {
   float32x4_t result;
-  __asm-generic__ ("fminp %0.4s, %1.4s, %2.4s"
+  __asm__ ("fminp %0.4s, %1.4s, %2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -10004,7 +10004,7 @@ __extension__ static __inline float64x2_t __attribute__ ((__always_inline__))
 vpminq_f64 (float64x2_t a, float64x2_t b)
 {
   float64x2_t result;
-  __asm-generic__ ("fminp %0.2d, %1.2d, %2.2d"
+  __asm__ ("fminp %0.2d, %1.2d, %2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -10015,7 +10015,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vpminq_s8 (int8x16_t a, int8x16_t b)
 {
   int8x16_t result;
-  __asm-generic__ ("sminp %0.16b, %1.16b, %2.16b"
+  __asm__ ("sminp %0.16b, %1.16b, %2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -10026,7 +10026,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vpminq_s16 (int16x8_t a, int16x8_t b)
 {
   int16x8_t result;
-  __asm-generic__ ("sminp %0.8h, %1.8h, %2.8h"
+  __asm__ ("sminp %0.8h, %1.8h, %2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -10037,7 +10037,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vpminq_s32 (int32x4_t a, int32x4_t b)
 {
   int32x4_t result;
-  __asm-generic__ ("sminp %0.4s, %1.4s, %2.4s"
+  __asm__ ("sminp %0.4s, %1.4s, %2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -10048,7 +10048,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vpminq_u8 (uint8x16_t a, uint8x16_t b)
 {
   uint8x16_t result;
-  __asm-generic__ ("uminp %0.16b, %1.16b, %2.16b"
+  __asm__ ("uminp %0.16b, %1.16b, %2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -10059,7 +10059,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vpminq_u16 (uint16x8_t a, uint16x8_t b)
 {
   uint16x8_t result;
-  __asm-generic__ ("uminp %0.8h, %1.8h, %2.8h"
+  __asm__ ("uminp %0.8h, %1.8h, %2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -10070,7 +10070,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vpminq_u32 (uint32x4_t a, uint32x4_t b)
 {
   uint32x4_t result;
-  __asm-generic__ ("uminp %0.4s, %1.4s, %2.4s"
+  __asm__ ("uminp %0.4s, %1.4s, %2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -10081,7 +10081,7 @@ __extension__ static __inline float64_t __attribute__ ((__always_inline__))
 vpminqd_f64 (float64x2_t a)
 {
   float64_t result;
-  __asm-generic__ ("fminp %d0,%1.2d"
+  __asm__ ("fminp %d0,%1.2d"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10092,7 +10092,7 @@ __extension__ static __inline float32_t __attribute__ ((__always_inline__))
 vpmins_f32 (float32x2_t a)
 {
   float32_t result;
-  __asm-generic__ ("fminp %s0,%1.2s"
+  __asm__ ("fminp %s0,%1.2s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10103,7 +10103,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vqdmulh_n_s16 (int16x4_t a, int16_t b)
 {
   int16x4_t result;
-  __asm-generic__ ("sqdmulh %0.4h,%1.4h,%2.h[0]"
+  __asm__ ("sqdmulh %0.4h,%1.4h,%2.h[0]"
            : "=w"(result)
            : "w"(a), "x"(b)
            : /* No clobbers */);
@@ -10114,7 +10114,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vqdmulh_n_s32 (int32x2_t a, int32_t b)
 {
   int32x2_t result;
-  __asm-generic__ ("sqdmulh %0.2s,%1.2s,%2.s[0]"
+  __asm__ ("sqdmulh %0.2s,%1.2s,%2.s[0]"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -10125,7 +10125,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vqdmulhq_n_s16 (int16x8_t a, int16_t b)
 {
   int16x8_t result;
-  __asm-generic__ ("sqdmulh %0.8h,%1.8h,%2.h[0]"
+  __asm__ ("sqdmulh %0.8h,%1.8h,%2.h[0]"
            : "=w"(result)
            : "w"(a), "x"(b)
            : /* No clobbers */);
@@ -10136,7 +10136,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vqdmulhq_n_s32 (int32x4_t a, int32_t b)
 {
   int32x4_t result;
-  __asm-generic__ ("sqdmulh %0.4s,%1.4s,%2.s[0]"
+  __asm__ ("sqdmulh %0.4s,%1.4s,%2.s[0]"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -10147,7 +10147,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vqmovn_high_s16 (int8x8_t a, int16x8_t b)
 {
   int8x16_t result = vcombine_s8 (a, vcreate_s8 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("sqxtn2 %0.16b, %1.8h"
+  __asm__ ("sqxtn2 %0.16b, %1.8h"
            : "+w"(result)
            : "w"(b)
            : /* No clobbers */);
@@ -10158,7 +10158,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vqmovn_high_s32 (int16x4_t a, int32x4_t b)
 {
   int16x8_t result = vcombine_s16 (a, vcreate_s16 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("sqxtn2 %0.8h, %1.4s"
+  __asm__ ("sqxtn2 %0.8h, %1.4s"
            : "+w"(result)
            : "w"(b)
            : /* No clobbers */);
@@ -10169,7 +10169,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vqmovn_high_s64 (int32x2_t a, int64x2_t b)
 {
   int32x4_t result = vcombine_s32 (a, vcreate_s32 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("sqxtn2 %0.4s, %1.2d"
+  __asm__ ("sqxtn2 %0.4s, %1.2d"
            : "+w"(result)
            : "w"(b)
            : /* No clobbers */);
@@ -10180,7 +10180,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vqmovn_high_u16 (uint8x8_t a, uint16x8_t b)
 {
   uint8x16_t result = vcombine_u8 (a, vcreate_u8 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("uqxtn2 %0.16b, %1.8h"
+  __asm__ ("uqxtn2 %0.16b, %1.8h"
            : "+w"(result)
            : "w"(b)
            : /* No clobbers */);
@@ -10191,7 +10191,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vqmovn_high_u32 (uint16x4_t a, uint32x4_t b)
 {
   uint16x8_t result = vcombine_u16 (a, vcreate_u16 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("uqxtn2 %0.8h, %1.4s"
+  __asm__ ("uqxtn2 %0.8h, %1.4s"
            : "+w"(result)
            : "w"(b)
            : /* No clobbers */);
@@ -10202,7 +10202,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vqmovn_high_u64 (uint32x2_t a, uint64x2_t b)
 {
   uint32x4_t result = vcombine_u32 (a, vcreate_u32 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("uqxtn2 %0.4s, %1.2d"
+  __asm__ ("uqxtn2 %0.4s, %1.2d"
            : "+w"(result)
            : "w"(b)
            : /* No clobbers */);
@@ -10213,7 +10213,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vqmovun_high_s16 (uint8x8_t a, int16x8_t b)
 {
   uint8x16_t result = vcombine_u8 (a, vcreate_u8 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("sqxtun2 %0.16b, %1.8h"
+  __asm__ ("sqxtun2 %0.16b, %1.8h"
            : "+w"(result)
            : "w"(b)
            : /* No clobbers */);
@@ -10224,7 +10224,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vqmovun_high_s32 (uint16x4_t a, int32x4_t b)
 {
   uint16x8_t result = vcombine_u16 (a, vcreate_u16 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("sqxtun2 %0.8h, %1.4s"
+  __asm__ ("sqxtun2 %0.8h, %1.4s"
            : "+w"(result)
            : "w"(b)
            : /* No clobbers */);
@@ -10235,7 +10235,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vqmovun_high_s64 (uint32x2_t a, int64x2_t b)
 {
   uint32x4_t result = vcombine_u32 (a, vcreate_u32 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("sqxtun2 %0.4s, %1.2d"
+  __asm__ ("sqxtun2 %0.4s, %1.2d"
            : "+w"(result)
            : "w"(b)
            : /* No clobbers */);
@@ -10246,7 +10246,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vqrdmulh_n_s16 (int16x4_t a, int16_t b)
 {
   int16x4_t result;
-  __asm-generic__ ("sqrdmulh %0.4h,%1.4h,%2.h[0]"
+  __asm__ ("sqrdmulh %0.4h,%1.4h,%2.h[0]"
            : "=w"(result)
            : "w"(a), "x"(b)
            : /* No clobbers */);
@@ -10257,7 +10257,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vqrdmulh_n_s32 (int32x2_t a, int32_t b)
 {
   int32x2_t result;
-  __asm-generic__ ("sqrdmulh %0.2s,%1.2s,%2.s[0]"
+  __asm__ ("sqrdmulh %0.2s,%1.2s,%2.s[0]"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -10268,7 +10268,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vqrdmulhq_n_s16 (int16x8_t a, int16_t b)
 {
   int16x8_t result;
-  __asm-generic__ ("sqrdmulh %0.8h,%1.8h,%2.h[0]"
+  __asm__ ("sqrdmulh %0.8h,%1.8h,%2.h[0]"
            : "=w"(result)
            : "w"(a), "x"(b)
            : /* No clobbers */);
@@ -10279,7 +10279,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vqrdmulhq_n_s32 (int32x4_t a, int32_t b)
 {
   int32x4_t result;
-  __asm-generic__ ("sqrdmulh %0.4s,%1.4s,%2.s[0]"
+  __asm__ ("sqrdmulh %0.4s,%1.4s,%2.s[0]"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -10294,7 +10294,7 @@ vqrdmulhq_n_s32 (int32x4_t a, int32_t b)
        int8x16_t result = vcombine_s8                                   \
                             (a_, vcreate_s8                             \
                                    (__AARCH64_UINT64_C (0x0)));         \
-       __asm-generic__ ("sqrshrn2 %0.16b, %1.8h, #%2"                           \
+       __asm__ ("sqrshrn2 %0.16b, %1.8h, #%2"                           \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -10309,7 +10309,7 @@ vqrdmulhq_n_s32 (int32x4_t a, int32_t b)
        int16x8_t result = vcombine_s16                                  \
                             (a_, vcreate_s16                            \
                                    (__AARCH64_UINT64_C (0x0)));         \
-       __asm-generic__ ("sqrshrn2 %0.8h, %1.4s, #%2"                            \
+       __asm__ ("sqrshrn2 %0.8h, %1.4s, #%2"                            \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -10324,7 +10324,7 @@ vqrdmulhq_n_s32 (int32x4_t a, int32_t b)
        int32x4_t result = vcombine_s32                                  \
                             (a_, vcreate_s32                            \
                                    (__AARCH64_UINT64_C (0x0)));         \
-       __asm-generic__ ("sqrshrn2 %0.4s, %1.2d, #%2"                            \
+       __asm__ ("sqrshrn2 %0.4s, %1.2d, #%2"                            \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -10339,7 +10339,7 @@ vqrdmulhq_n_s32 (int32x4_t a, int32_t b)
        uint8x16_t result = vcombine_u8                                  \
                              (a_, vcreate_u8                            \
                                     (__AARCH64_UINT64_C (0x0)));        \
-       __asm-generic__ ("uqrshrn2 %0.16b, %1.8h, #%2"                           \
+       __asm__ ("uqrshrn2 %0.16b, %1.8h, #%2"                           \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -10354,7 +10354,7 @@ vqrdmulhq_n_s32 (int32x4_t a, int32_t b)
        uint16x8_t result = vcombine_u16                                 \
                              (a_, vcreate_u16                           \
                                     (__AARCH64_UINT64_C (0x0)));        \
-       __asm-generic__ ("uqrshrn2 %0.8h, %1.4s, #%2"                            \
+       __asm__ ("uqrshrn2 %0.8h, %1.4s, #%2"                            \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -10369,7 +10369,7 @@ vqrdmulhq_n_s32 (int32x4_t a, int32_t b)
        uint32x4_t result = vcombine_u32                                 \
                              (a_, vcreate_u32                           \
                                     (__AARCH64_UINT64_C (0x0)));        \
-       __asm-generic__ ("uqrshrn2 %0.4s, %1.2d, #%2"                            \
+       __asm__ ("uqrshrn2 %0.4s, %1.2d, #%2"                            \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -10384,7 +10384,7 @@ vqrdmulhq_n_s32 (int32x4_t a, int32_t b)
        uint8x16_t result = vcombine_u8                                  \
                              (a_, vcreate_u8                            \
                                     (__AARCH64_UINT64_C (0x0)));        \
-       __asm-generic__ ("sqrshrun2 %0.16b, %1.8h, #%2"                          \
+       __asm__ ("sqrshrun2 %0.16b, %1.8h, #%2"                          \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -10399,7 +10399,7 @@ vqrdmulhq_n_s32 (int32x4_t a, int32_t b)
        uint16x8_t result = vcombine_u16                                 \
                              (a_, vcreate_u16                           \
                                     (__AARCH64_UINT64_C (0x0)));        \
-       __asm-generic__ ("sqrshrun2 %0.8h, %1.4s, #%2"                           \
+       __asm__ ("sqrshrun2 %0.8h, %1.4s, #%2"                           \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -10414,7 +10414,7 @@ vqrdmulhq_n_s32 (int32x4_t a, int32_t b)
        uint32x4_t result = vcombine_u32                                 \
                              (a_, vcreate_u32                           \
                                     (__AARCH64_UINT64_C (0x0)));        \
-       __asm-generic__ ("sqrshrun2 %0.4s, %1.2d, #%2"                           \
+       __asm__ ("sqrshrun2 %0.4s, %1.2d, #%2"                           \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -10429,7 +10429,7 @@ vqrdmulhq_n_s32 (int32x4_t a, int32_t b)
        int8x16_t result = vcombine_s8                                   \
                             (a_, vcreate_s8                             \
                                    (__AARCH64_UINT64_C (0x0)));         \
-       __asm-generic__ ("sqshrn2 %0.16b, %1.8h, #%2"                            \
+       __asm__ ("sqshrn2 %0.16b, %1.8h, #%2"                            \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -10444,7 +10444,7 @@ vqrdmulhq_n_s32 (int32x4_t a, int32_t b)
        int16x8_t result = vcombine_s16                                  \
                             (a_, vcreate_s16                            \
                                    (__AARCH64_UINT64_C (0x0)));         \
-       __asm-generic__ ("sqshrn2 %0.8h, %1.4s, #%2"                             \
+       __asm__ ("sqshrn2 %0.8h, %1.4s, #%2"                             \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -10459,7 +10459,7 @@ vqrdmulhq_n_s32 (int32x4_t a, int32_t b)
        int32x4_t result = vcombine_s32                                  \
                             (a_, vcreate_s32                            \
                                    (__AARCH64_UINT64_C (0x0)));         \
-       __asm-generic__ ("sqshrn2 %0.4s, %1.2d, #%2"                             \
+       __asm__ ("sqshrn2 %0.4s, %1.2d, #%2"                             \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -10474,7 +10474,7 @@ vqrdmulhq_n_s32 (int32x4_t a, int32_t b)
        uint8x16_t result = vcombine_u8                                  \
                              (a_, vcreate_u8                            \
                                     (__AARCH64_UINT64_C (0x0)));        \
-       __asm-generic__ ("uqshrn2 %0.16b, %1.8h, #%2"                            \
+       __asm__ ("uqshrn2 %0.16b, %1.8h, #%2"                            \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -10489,7 +10489,7 @@ vqrdmulhq_n_s32 (int32x4_t a, int32_t b)
        uint16x8_t result = vcombine_u16                                 \
                              (a_, vcreate_u16                           \
                                     (__AARCH64_UINT64_C (0x0)));        \
-       __asm-generic__ ("uqshrn2 %0.8h, %1.4s, #%2"                             \
+       __asm__ ("uqshrn2 %0.8h, %1.4s, #%2"                             \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -10504,7 +10504,7 @@ vqrdmulhq_n_s32 (int32x4_t a, int32_t b)
        uint32x4_t result = vcombine_u32                                 \
                              (a_, vcreate_u32                           \
                                     (__AARCH64_UINT64_C (0x0)));        \
-       __asm-generic__ ("uqshrn2 %0.4s, %1.2d, #%2"                             \
+       __asm__ ("uqshrn2 %0.4s, %1.2d, #%2"                             \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -10519,7 +10519,7 @@ vqrdmulhq_n_s32 (int32x4_t a, int32_t b)
        uint8x16_t result = vcombine_u8                                  \
                              (a_, vcreate_u8                            \
                                     (__AARCH64_UINT64_C (0x0)));        \
-       __asm-generic__ ("sqshrun2 %0.16b, %1.8h, #%2"                           \
+       __asm__ ("sqshrun2 %0.16b, %1.8h, #%2"                           \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -10534,7 +10534,7 @@ vqrdmulhq_n_s32 (int32x4_t a, int32_t b)
        uint16x8_t result = vcombine_u16                                 \
                              (a_, vcreate_u16                           \
                                     (__AARCH64_UINT64_C (0x0)));        \
-       __asm-generic__ ("sqshrun2 %0.8h, %1.4s, #%2"                            \
+       __asm__ ("sqshrun2 %0.8h, %1.4s, #%2"                            \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -10549,7 +10549,7 @@ vqrdmulhq_n_s32 (int32x4_t a, int32_t b)
        uint32x4_t result = vcombine_u32                                 \
                              (a_, vcreate_u32                           \
                                     (__AARCH64_UINT64_C (0x0)));        \
-       __asm-generic__ ("sqshrun2 %0.4s, %1.2d, #%2"                            \
+       __asm__ ("sqshrun2 %0.4s, %1.2d, #%2"                            \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -10560,7 +10560,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vrbit_s8 (int8x8_t a)
 {
   int8x8_t result;
-  __asm-generic__ ("rbit %0.8b,%1.8b"
+  __asm__ ("rbit %0.8b,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10571,7 +10571,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vrbit_u8 (uint8x8_t a)
 {
   uint8x8_t result;
-  __asm-generic__ ("rbit %0.8b,%1.8b"
+  __asm__ ("rbit %0.8b,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10582,7 +10582,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vrbitq_s8 (int8x16_t a)
 {
   int8x16_t result;
-  __asm-generic__ ("rbit %0.16b,%1.16b"
+  __asm__ ("rbit %0.16b,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10593,7 +10593,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vrbitq_u8 (uint8x16_t a)
 {
   uint8x16_t result;
-  __asm-generic__ ("rbit %0.16b,%1.16b"
+  __asm__ ("rbit %0.16b,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10604,7 +10604,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vrecpe_u32 (uint32x2_t a)
 {
   uint32x2_t result;
-  __asm-generic__ ("urecpe %0.2s,%1.2s"
+  __asm__ ("urecpe %0.2s,%1.2s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10615,7 +10615,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vrecpeq_u32 (uint32x4_t a)
 {
   uint32x4_t result;
-  __asm-generic__ ("urecpe %0.4s,%1.4s"
+  __asm__ ("urecpe %0.4s,%1.4s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10626,7 +10626,7 @@ __extension__ static __inline poly8x8_t __attribute__ ((__always_inline__))
 vrev16_p8 (poly8x8_t a)
 {
   poly8x8_t result;
-  __asm-generic__ ("rev16 %0.8b,%1.8b"
+  __asm__ ("rev16 %0.8b,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10637,7 +10637,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vrev16_s8 (int8x8_t a)
 {
   int8x8_t result;
-  __asm-generic__ ("rev16 %0.8b,%1.8b"
+  __asm__ ("rev16 %0.8b,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10648,7 +10648,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vrev16_u8 (uint8x8_t a)
 {
   uint8x8_t result;
-  __asm-generic__ ("rev16 %0.8b,%1.8b"
+  __asm__ ("rev16 %0.8b,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10659,7 +10659,7 @@ __extension__ static __inline poly8x16_t __attribute__ ((__always_inline__))
 vrev16q_p8 (poly8x16_t a)
 {
   poly8x16_t result;
-  __asm-generic__ ("rev16 %0.16b,%1.16b"
+  __asm__ ("rev16 %0.16b,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10670,7 +10670,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vrev16q_s8 (int8x16_t a)
 {
   int8x16_t result;
-  __asm-generic__ ("rev16 %0.16b,%1.16b"
+  __asm__ ("rev16 %0.16b,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10681,7 +10681,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vrev16q_u8 (uint8x16_t a)
 {
   uint8x16_t result;
-  __asm-generic__ ("rev16 %0.16b,%1.16b"
+  __asm__ ("rev16 %0.16b,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10692,7 +10692,7 @@ __extension__ static __inline poly8x8_t __attribute__ ((__always_inline__))
 vrev32_p8 (poly8x8_t a)
 {
   poly8x8_t result;
-  __asm-generic__ ("rev32 %0.8b,%1.8b"
+  __asm__ ("rev32 %0.8b,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10703,7 +10703,7 @@ __extension__ static __inline poly16x4_t __attribute__ ((__always_inline__))
 vrev32_p16 (poly16x4_t a)
 {
   poly16x4_t result;
-  __asm-generic__ ("rev32 %0.4h,%1.4h"
+  __asm__ ("rev32 %0.4h,%1.4h"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10714,7 +10714,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vrev32_s8 (int8x8_t a)
 {
   int8x8_t result;
-  __asm-generic__ ("rev32 %0.8b,%1.8b"
+  __asm__ ("rev32 %0.8b,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10725,7 +10725,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vrev32_s16 (int16x4_t a)
 {
   int16x4_t result;
-  __asm-generic__ ("rev32 %0.4h,%1.4h"
+  __asm__ ("rev32 %0.4h,%1.4h"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10736,7 +10736,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vrev32_u8 (uint8x8_t a)
 {
   uint8x8_t result;
-  __asm-generic__ ("rev32 %0.8b,%1.8b"
+  __asm__ ("rev32 %0.8b,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10747,7 +10747,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vrev32_u16 (uint16x4_t a)
 {
   uint16x4_t result;
-  __asm-generic__ ("rev32 %0.4h,%1.4h"
+  __asm__ ("rev32 %0.4h,%1.4h"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10758,7 +10758,7 @@ __extension__ static __inline poly8x16_t __attribute__ ((__always_inline__))
 vrev32q_p8 (poly8x16_t a)
 {
   poly8x16_t result;
-  __asm-generic__ ("rev32 %0.16b,%1.16b"
+  __asm__ ("rev32 %0.16b,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10769,7 +10769,7 @@ __extension__ static __inline poly16x8_t __attribute__ ((__always_inline__))
 vrev32q_p16 (poly16x8_t a)
 {
   poly16x8_t result;
-  __asm-generic__ ("rev32 %0.8h,%1.8h"
+  __asm__ ("rev32 %0.8h,%1.8h"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10780,7 +10780,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vrev32q_s8 (int8x16_t a)
 {
   int8x16_t result;
-  __asm-generic__ ("rev32 %0.16b,%1.16b"
+  __asm__ ("rev32 %0.16b,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10791,7 +10791,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vrev32q_s16 (int16x8_t a)
 {
   int16x8_t result;
-  __asm-generic__ ("rev32 %0.8h,%1.8h"
+  __asm__ ("rev32 %0.8h,%1.8h"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10802,7 +10802,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vrev32q_u8 (uint8x16_t a)
 {
   uint8x16_t result;
-  __asm-generic__ ("rev32 %0.16b,%1.16b"
+  __asm__ ("rev32 %0.16b,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10813,7 +10813,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vrev32q_u16 (uint16x8_t a)
 {
   uint16x8_t result;
-  __asm-generic__ ("rev32 %0.8h,%1.8h"
+  __asm__ ("rev32 %0.8h,%1.8h"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10824,7 +10824,7 @@ __extension__ static __inline float32x2_t __attribute__ ((__always_inline__))
 vrev64_f32 (float32x2_t a)
 {
   float32x2_t result;
-  __asm-generic__ ("rev64 %0.2s,%1.2s"
+  __asm__ ("rev64 %0.2s,%1.2s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10835,7 +10835,7 @@ __extension__ static __inline poly8x8_t __attribute__ ((__always_inline__))
 vrev64_p8 (poly8x8_t a)
 {
   poly8x8_t result;
-  __asm-generic__ ("rev64 %0.8b,%1.8b"
+  __asm__ ("rev64 %0.8b,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10846,7 +10846,7 @@ __extension__ static __inline poly16x4_t __attribute__ ((__always_inline__))
 vrev64_p16 (poly16x4_t a)
 {
   poly16x4_t result;
-  __asm-generic__ ("rev64 %0.4h,%1.4h"
+  __asm__ ("rev64 %0.4h,%1.4h"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10857,7 +10857,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vrev64_s8 (int8x8_t a)
 {
   int8x8_t result;
-  __asm-generic__ ("rev64 %0.8b,%1.8b"
+  __asm__ ("rev64 %0.8b,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10868,7 +10868,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vrev64_s16 (int16x4_t a)
 {
   int16x4_t result;
-  __asm-generic__ ("rev64 %0.4h,%1.4h"
+  __asm__ ("rev64 %0.4h,%1.4h"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10879,7 +10879,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vrev64_s32 (int32x2_t a)
 {
   int32x2_t result;
-  __asm-generic__ ("rev64 %0.2s,%1.2s"
+  __asm__ ("rev64 %0.2s,%1.2s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10890,7 +10890,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vrev64_u8 (uint8x8_t a)
 {
   uint8x8_t result;
-  __asm-generic__ ("rev64 %0.8b,%1.8b"
+  __asm__ ("rev64 %0.8b,%1.8b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10901,7 +10901,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vrev64_u16 (uint16x4_t a)
 {
   uint16x4_t result;
-  __asm-generic__ ("rev64 %0.4h,%1.4h"
+  __asm__ ("rev64 %0.4h,%1.4h"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10912,7 +10912,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vrev64_u32 (uint32x2_t a)
 {
   uint32x2_t result;
-  __asm-generic__ ("rev64 %0.2s,%1.2s"
+  __asm__ ("rev64 %0.2s,%1.2s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10923,7 +10923,7 @@ __extension__ static __inline float32x4_t __attribute__ ((__always_inline__))
 vrev64q_f32 (float32x4_t a)
 {
   float32x4_t result;
-  __asm-generic__ ("rev64 %0.4s,%1.4s"
+  __asm__ ("rev64 %0.4s,%1.4s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10934,7 +10934,7 @@ __extension__ static __inline poly8x16_t __attribute__ ((__always_inline__))
 vrev64q_p8 (poly8x16_t a)
 {
   poly8x16_t result;
-  __asm-generic__ ("rev64 %0.16b,%1.16b"
+  __asm__ ("rev64 %0.16b,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10945,7 +10945,7 @@ __extension__ static __inline poly16x8_t __attribute__ ((__always_inline__))
 vrev64q_p16 (poly16x8_t a)
 {
   poly16x8_t result;
-  __asm-generic__ ("rev64 %0.8h,%1.8h"
+  __asm__ ("rev64 %0.8h,%1.8h"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10956,7 +10956,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vrev64q_s8 (int8x16_t a)
 {
   int8x16_t result;
-  __asm-generic__ ("rev64 %0.16b,%1.16b"
+  __asm__ ("rev64 %0.16b,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10967,7 +10967,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vrev64q_s16 (int16x8_t a)
 {
   int16x8_t result;
-  __asm-generic__ ("rev64 %0.8h,%1.8h"
+  __asm__ ("rev64 %0.8h,%1.8h"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10978,7 +10978,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vrev64q_s32 (int32x4_t a)
 {
   int32x4_t result;
-  __asm-generic__ ("rev64 %0.4s,%1.4s"
+  __asm__ ("rev64 %0.4s,%1.4s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -10989,7 +10989,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vrev64q_u8 (uint8x16_t a)
 {
   uint8x16_t result;
-  __asm-generic__ ("rev64 %0.16b,%1.16b"
+  __asm__ ("rev64 %0.16b,%1.16b"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -11000,7 +11000,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vrev64q_u16 (uint16x8_t a)
 {
   uint16x8_t result;
-  __asm-generic__ ("rev64 %0.8h,%1.8h"
+  __asm__ ("rev64 %0.8h,%1.8h"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -11011,7 +11011,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vrev64q_u32 (uint32x4_t a)
 {
   uint32x4_t result;
-  __asm-generic__ ("rev64 %0.4s,%1.4s"
+  __asm__ ("rev64 %0.4s,%1.4s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -11026,7 +11026,7 @@ vrev64q_u32 (uint32x4_t a)
        int8x16_t result = vcombine_s8                                   \
                             (a_, vcreate_s8                             \
                                    (__AARCH64_UINT64_C (0x0)));         \
-       __asm-generic__ ("rshrn2 %0.16b,%1.8h,#%2"                               \
+       __asm__ ("rshrn2 %0.16b,%1.8h,#%2"                               \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -11041,7 +11041,7 @@ vrev64q_u32 (uint32x4_t a)
        int16x8_t result = vcombine_s16                                  \
                             (a_, vcreate_s16                            \
                                    (__AARCH64_UINT64_C (0x0)));         \
-       __asm-generic__ ("rshrn2 %0.8h,%1.4s,#%2"                                \
+       __asm__ ("rshrn2 %0.8h,%1.4s,#%2"                                \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -11056,7 +11056,7 @@ vrev64q_u32 (uint32x4_t a)
        int32x4_t result = vcombine_s32                                  \
                             (a_, vcreate_s32                            \
                                    (__AARCH64_UINT64_C (0x0)));         \
-       __asm-generic__ ("rshrn2 %0.4s,%1.2d,#%2"                                \
+       __asm__ ("rshrn2 %0.4s,%1.2d,#%2"                                \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -11071,7 +11071,7 @@ vrev64q_u32 (uint32x4_t a)
        uint8x16_t result = vcombine_u8                                  \
                             (a_, vcreate_u8                             \
                                    (__AARCH64_UINT64_C (0x0)));         \
-       __asm-generic__ ("rshrn2 %0.16b,%1.8h,#%2"                               \
+       __asm__ ("rshrn2 %0.16b,%1.8h,#%2"                               \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -11086,7 +11086,7 @@ vrev64q_u32 (uint32x4_t a)
        uint16x8_t result = vcombine_u16                                 \
                             (a_, vcreate_u16                            \
                                    (__AARCH64_UINT64_C (0x0)));         \
-       __asm-generic__ ("rshrn2 %0.8h,%1.4s,#%2"                                \
+       __asm__ ("rshrn2 %0.8h,%1.4s,#%2"                                \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -11101,7 +11101,7 @@ vrev64q_u32 (uint32x4_t a)
        uint32x4_t result = vcombine_u32                                 \
                             (a_, vcreate_u32                            \
                                    (__AARCH64_UINT64_C (0x0)));         \
-       __asm-generic__ ("rshrn2 %0.4s,%1.2d,#%2"                                \
+       __asm__ ("rshrn2 %0.4s,%1.2d,#%2"                                \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -11113,7 +11113,7 @@ vrev64q_u32 (uint32x4_t a)
     ({                                                                  \
        int16x8_t a_ = (a);                                              \
        int8x8_t result;                                                 \
-       __asm-generic__ ("rshrn %0.8b,%1.8h,%2"                                  \
+       __asm__ ("rshrn %0.8b,%1.8h,%2"                                  \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -11125,7 +11125,7 @@ vrev64q_u32 (uint32x4_t a)
     ({                                                                  \
        int32x4_t a_ = (a);                                              \
        int16x4_t result;                                                \
-       __asm-generic__ ("rshrn %0.4h,%1.4s,%2"                                  \
+       __asm__ ("rshrn %0.4h,%1.4s,%2"                                  \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -11137,7 +11137,7 @@ vrev64q_u32 (uint32x4_t a)
     ({                                                                  \
        int64x2_t a_ = (a);                                              \
        int32x2_t result;                                                \
-       __asm-generic__ ("rshrn %0.2s,%1.2d,%2"                                  \
+       __asm__ ("rshrn %0.2s,%1.2d,%2"                                  \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -11149,7 +11149,7 @@ vrev64q_u32 (uint32x4_t a)
     ({                                                                  \
        uint16x8_t a_ = (a);                                             \
        uint8x8_t result;                                                \
-       __asm-generic__ ("rshrn %0.8b,%1.8h,%2"                                  \
+       __asm__ ("rshrn %0.8b,%1.8h,%2"                                  \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -11161,7 +11161,7 @@ vrev64q_u32 (uint32x4_t a)
     ({                                                                  \
        uint32x4_t a_ = (a);                                             \
        uint16x4_t result;                                               \
-       __asm-generic__ ("rshrn %0.4h,%1.4s,%2"                                  \
+       __asm__ ("rshrn %0.4h,%1.4s,%2"                                  \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -11173,7 +11173,7 @@ vrev64q_u32 (uint32x4_t a)
     ({                                                                  \
        uint64x2_t a_ = (a);                                             \
        uint32x2_t result;                                               \
-       __asm-generic__ ("rshrn %0.2s,%1.2d,%2"                                  \
+       __asm__ ("rshrn %0.2s,%1.2d,%2"                                  \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -11184,7 +11184,7 @@ __extension__ static __inline float32x2_t __attribute__ ((__always_inline__))
 vrsqrte_f32 (float32x2_t a)
 {
   float32x2_t result;
-  __asm-generic__ ("frsqrte %0.2s,%1.2s"
+  __asm__ ("frsqrte %0.2s,%1.2s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -11195,7 +11195,7 @@ __extension__ static __inline float64x1_t __attribute__ ((__always_inline__))
 vrsqrte_f64 (float64x1_t a)
 {
   float64x1_t result;
-  __asm-generic__ ("frsqrte %d0,%d1"
+  __asm__ ("frsqrte %d0,%d1"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -11206,7 +11206,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vrsqrte_u32 (uint32x2_t a)
 {
   uint32x2_t result;
-  __asm-generic__ ("ursqrte %0.2s,%1.2s"
+  __asm__ ("ursqrte %0.2s,%1.2s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -11217,7 +11217,7 @@ __extension__ static __inline float64_t __attribute__ ((__always_inline__))
 vrsqrted_f64 (float64_t a)
 {
   float64_t result;
-  __asm-generic__ ("frsqrte %d0,%d1"
+  __asm__ ("frsqrte %d0,%d1"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -11228,7 +11228,7 @@ __extension__ static __inline float32x4_t __attribute__ ((__always_inline__))
 vrsqrteq_f32 (float32x4_t a)
 {
   float32x4_t result;
-  __asm-generic__ ("frsqrte %0.4s,%1.4s"
+  __asm__ ("frsqrte %0.4s,%1.4s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -11239,7 +11239,7 @@ __extension__ static __inline float64x2_t __attribute__ ((__always_inline__))
 vrsqrteq_f64 (float64x2_t a)
 {
   float64x2_t result;
-  __asm-generic__ ("frsqrte %0.2d,%1.2d"
+  __asm__ ("frsqrte %0.2d,%1.2d"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -11250,7 +11250,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vrsqrteq_u32 (uint32x4_t a)
 {
   uint32x4_t result;
-  __asm-generic__ ("ursqrte %0.4s,%1.4s"
+  __asm__ ("ursqrte %0.4s,%1.4s"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -11261,7 +11261,7 @@ __extension__ static __inline float32_t __attribute__ ((__always_inline__))
 vrsqrtes_f32 (float32_t a)
 {
   float32_t result;
-  __asm-generic__ ("frsqrte %s0,%s1"
+  __asm__ ("frsqrte %s0,%s1"
            : "=w"(result)
            : "w"(a)
            : /* No clobbers */);
@@ -11272,7 +11272,7 @@ __extension__ static __inline float32x2_t __attribute__ ((__always_inline__))
 vrsqrts_f32 (float32x2_t a, float32x2_t b)
 {
   float32x2_t result;
-  __asm-generic__ ("frsqrts %0.2s,%1.2s,%2.2s"
+  __asm__ ("frsqrts %0.2s,%1.2s,%2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -11283,7 +11283,7 @@ __extension__ static __inline float64_t __attribute__ ((__always_inline__))
 vrsqrtsd_f64 (float64_t a, float64_t b)
 {
   float64_t result;
-  __asm-generic__ ("frsqrts %d0,%d1,%d2"
+  __asm__ ("frsqrts %d0,%d1,%d2"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -11294,7 +11294,7 @@ __extension__ static __inline float32x4_t __attribute__ ((__always_inline__))
 vrsqrtsq_f32 (float32x4_t a, float32x4_t b)
 {
   float32x4_t result;
-  __asm-generic__ ("frsqrts %0.4s,%1.4s,%2.4s"
+  __asm__ ("frsqrts %0.4s,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -11305,7 +11305,7 @@ __extension__ static __inline float64x2_t __attribute__ ((__always_inline__))
 vrsqrtsq_f64 (float64x2_t a, float64x2_t b)
 {
   float64x2_t result;
-  __asm-generic__ ("frsqrts %0.2d,%1.2d,%2.2d"
+  __asm__ ("frsqrts %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -11316,7 +11316,7 @@ __extension__ static __inline float32_t __attribute__ ((__always_inline__))
 vrsqrtss_f32 (float32_t a, float32_t b)
 {
   float32_t result;
-  __asm-generic__ ("frsqrts %s0,%s1,%s2"
+  __asm__ ("frsqrts %s0,%s1,%s2"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -11327,7 +11327,7 @@ __extension__ static __inline float64x2_t __attribute__ ((__always_inline__))
 vrsrtsq_f64 (float64x2_t a, float64x2_t b)
 {
   float64x2_t result;
-  __asm-generic__ ("frsqrts %0.2d,%1.2d,%2.2d"
+  __asm__ ("frsqrts %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -11338,7 +11338,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vrsubhn_high_s16 (int8x8_t a, int16x8_t b, int16x8_t c)
 {
   int8x16_t result = vcombine_s8 (a, vcreate_s8 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("rsubhn2 %0.16b, %1.8h, %2.8h"
+  __asm__ ("rsubhn2 %0.16b, %1.8h, %2.8h"
            : "+w"(result)
            : "w"(b), "w"(c)
            : /* No clobbers */);
@@ -11349,7 +11349,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vrsubhn_high_s32 (int16x4_t a, int32x4_t b, int32x4_t c)
 {
   int16x8_t result = vcombine_s16 (a, vcreate_s16 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("rsubhn2 %0.8h, %1.4s, %2.4s"
+  __asm__ ("rsubhn2 %0.8h, %1.4s, %2.4s"
            : "+w"(result)
            : "w"(b), "w"(c)
            : /* No clobbers */);
@@ -11360,7 +11360,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vrsubhn_high_s64 (int32x2_t a, int64x2_t b, int64x2_t c)
 {
   int32x4_t result = vcombine_s32 (a, vcreate_s32 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("rsubhn2 %0.4s, %1.2d, %2.2d"
+  __asm__ ("rsubhn2 %0.4s, %1.2d, %2.2d"
            : "+w"(result)
            : "w"(b), "w"(c)
            : /* No clobbers */);
@@ -11371,7 +11371,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vrsubhn_high_u16 (uint8x8_t a, uint16x8_t b, uint16x8_t c)
 {
   uint8x16_t result = vcombine_u8 (a, vcreate_u8 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("rsubhn2 %0.16b, %1.8h, %2.8h"
+  __asm__ ("rsubhn2 %0.16b, %1.8h, %2.8h"
            : "+w"(result)
            : "w"(b), "w"(c)
            : /* No clobbers */);
@@ -11382,7 +11382,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vrsubhn_high_u32 (uint16x4_t a, uint32x4_t b, uint32x4_t c)
 {
   uint16x8_t result = vcombine_u16 (a, vcreate_u16 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("rsubhn2 %0.8h, %1.4s, %2.4s"
+  __asm__ ("rsubhn2 %0.8h, %1.4s, %2.4s"
            : "+w"(result)
            : "w"(b), "w"(c)
            : /* No clobbers */);
@@ -11393,7 +11393,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vrsubhn_high_u64 (uint32x2_t a, uint64x2_t b, uint64x2_t c)
 {
   uint32x4_t result = vcombine_u32 (a, vcreate_u32 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("rsubhn2 %0.4s, %1.2d, %2.2d"
+  __asm__ ("rsubhn2 %0.4s, %1.2d, %2.2d"
            : "+w"(result)
            : "w"(b), "w"(c)
            : /* No clobbers */);
@@ -11404,7 +11404,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vrsubhn_s16 (int16x8_t a, int16x8_t b)
 {
   int8x8_t result;
-  __asm-generic__ ("rsubhn %0.8b, %1.8h, %2.8h"
+  __asm__ ("rsubhn %0.8b, %1.8h, %2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -11415,7 +11415,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vrsubhn_s32 (int32x4_t a, int32x4_t b)
 {
   int16x4_t result;
-  __asm-generic__ ("rsubhn %0.4h, %1.4s, %2.4s"
+  __asm__ ("rsubhn %0.4h, %1.4s, %2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -11426,7 +11426,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vrsubhn_s64 (int64x2_t a, int64x2_t b)
 {
   int32x2_t result;
-  __asm-generic__ ("rsubhn %0.2s, %1.2d, %2.2d"
+  __asm__ ("rsubhn %0.2s, %1.2d, %2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -11437,7 +11437,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vrsubhn_u16 (uint16x8_t a, uint16x8_t b)
 {
   uint8x8_t result;
-  __asm-generic__ ("rsubhn %0.8b, %1.8h, %2.8h"
+  __asm__ ("rsubhn %0.8b, %1.8h, %2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -11448,7 +11448,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vrsubhn_u32 (uint32x4_t a, uint32x4_t b)
 {
   uint16x4_t result;
-  __asm-generic__ ("rsubhn %0.4h, %1.4s, %2.4s"
+  __asm__ ("rsubhn %0.4h, %1.4s, %2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -11459,7 +11459,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
 {
   uint32x2_t result;
-  __asm-generic__ ("rsubhn %0.2s, %1.2d, %2.2d"
+  __asm__ ("rsubhn %0.2s, %1.2d, %2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -11472,7 +11472,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        float32x2_t b_ = (b);                                            \
        float32_t a_ = (a);                                              \
        float32x2_t result;                                              \
-       __asm-generic__ ("ins %0.s[%3], %w1"                                     \
+       __asm__ ("ins %0.s[%3], %w1"                                     \
                 : "=w"(result)                                          \
                 : "r"(a_), "0"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11485,7 +11485,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        float64x1_t b_ = (b);                                            \
        float64_t a_ = (a);                                              \
        float64x1_t result;                                              \
-       __asm-generic__ ("ins %0.d[%3], %x1"                                     \
+       __asm__ ("ins %0.d[%3], %x1"                                     \
                 : "=w"(result)                                          \
                 : "r"(a_), "0"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11498,7 +11498,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        poly8x8_t b_ = (b);                                              \
        poly8_t a_ = (a);                                                \
        poly8x8_t result;                                                \
-       __asm-generic__ ("ins %0.b[%3], %w1"                                     \
+       __asm__ ("ins %0.b[%3], %w1"                                     \
                 : "=w"(result)                                          \
                 : "r"(a_), "0"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11511,7 +11511,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        poly16x4_t b_ = (b);                                             \
        poly16_t a_ = (a);                                               \
        poly16x4_t result;                                               \
-       __asm-generic__ ("ins %0.h[%3], %w1"                                     \
+       __asm__ ("ins %0.h[%3], %w1"                                     \
                 : "=w"(result)                                          \
                 : "r"(a_), "0"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11524,7 +11524,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        int8x8_t b_ = (b);                                               \
        int8_t a_ = (a);                                                 \
        int8x8_t result;                                                 \
-       __asm-generic__ ("ins %0.b[%3], %w1"                                     \
+       __asm__ ("ins %0.b[%3], %w1"                                     \
                 : "=w"(result)                                          \
                 : "r"(a_), "0"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11537,7 +11537,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        int16x4_t b_ = (b);                                              \
        int16_t a_ = (a);                                                \
        int16x4_t result;                                                \
-       __asm-generic__ ("ins %0.h[%3], %w1"                                     \
+       __asm__ ("ins %0.h[%3], %w1"                                     \
                 : "=w"(result)                                          \
                 : "r"(a_), "0"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11550,7 +11550,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        int32x2_t b_ = (b);                                              \
        int32_t a_ = (a);                                                \
        int32x2_t result;                                                \
-       __asm-generic__ ("ins %0.s[%3], %w1"                                     \
+       __asm__ ("ins %0.s[%3], %w1"                                     \
                 : "=w"(result)                                          \
                 : "r"(a_), "0"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11563,7 +11563,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        int64x1_t b_ = (b);                                              \
        int64_t a_ = (a);                                                \
        int64x1_t result;                                                \
-       __asm-generic__ ("ins %0.d[%3], %x1"                                     \
+       __asm__ ("ins %0.d[%3], %x1"                                     \
                 : "=w"(result)                                          \
                 : "r"(a_), "0"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11576,7 +11576,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        uint8x8_t b_ = (b);                                              \
        uint8_t a_ = (a);                                                \
        uint8x8_t result;                                                \
-       __asm-generic__ ("ins %0.b[%3], %w1"                                     \
+       __asm__ ("ins %0.b[%3], %w1"                                     \
                 : "=w"(result)                                          \
                 : "r"(a_), "0"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11589,7 +11589,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        uint16x4_t b_ = (b);                                             \
        uint16_t a_ = (a);                                               \
        uint16x4_t result;                                               \
-       __asm-generic__ ("ins %0.h[%3], %w1"                                     \
+       __asm__ ("ins %0.h[%3], %w1"                                     \
                 : "=w"(result)                                          \
                 : "r"(a_), "0"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11602,7 +11602,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        uint32x2_t b_ = (b);                                             \
        uint32_t a_ = (a);                                               \
        uint32x2_t result;                                               \
-       __asm-generic__ ("ins %0.s[%3], %w1"                                     \
+       __asm__ ("ins %0.s[%3], %w1"                                     \
                 : "=w"(result)                                          \
                 : "r"(a_), "0"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11615,7 +11615,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        uint64x1_t b_ = (b);                                             \
        uint64_t a_ = (a);                                               \
        uint64x1_t result;                                               \
-       __asm-generic__ ("ins %0.d[%3], %x1"                                     \
+       __asm__ ("ins %0.d[%3], %x1"                                     \
                 : "=w"(result)                                          \
                 : "r"(a_), "0"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11628,7 +11628,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        float32x4_t b_ = (b);                                            \
        float32_t a_ = (a);                                              \
        float32x4_t result;                                              \
-       __asm-generic__ ("ins %0.s[%3], %w1"                                     \
+       __asm__ ("ins %0.s[%3], %w1"                                     \
                 : "=w"(result)                                          \
                 : "r"(a_), "0"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11641,7 +11641,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        float64x2_t b_ = (b);                                            \
        float64_t a_ = (a);                                              \
        float64x2_t result;                                              \
-       __asm-generic__ ("ins %0.d[%3], %x1"                                     \
+       __asm__ ("ins %0.d[%3], %x1"                                     \
                 : "=w"(result)                                          \
                 : "r"(a_), "0"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11654,7 +11654,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        poly8x16_t b_ = (b);                                             \
        poly8_t a_ = (a);                                                \
        poly8x16_t result;                                               \
-       __asm-generic__ ("ins %0.b[%3], %w1"                                     \
+       __asm__ ("ins %0.b[%3], %w1"                                     \
                 : "=w"(result)                                          \
                 : "r"(a_), "0"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11667,7 +11667,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        poly16x8_t b_ = (b);                                             \
        poly16_t a_ = (a);                                               \
        poly16x8_t result;                                               \
-       __asm-generic__ ("ins %0.h[%3], %w1"                                     \
+       __asm__ ("ins %0.h[%3], %w1"                                     \
                 : "=w"(result)                                          \
                 : "r"(a_), "0"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11680,7 +11680,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        int8x16_t b_ = (b);                                              \
        int8_t a_ = (a);                                                 \
        int8x16_t result;                                                \
-       __asm-generic__ ("ins %0.b[%3], %w1"                                     \
+       __asm__ ("ins %0.b[%3], %w1"                                     \
                 : "=w"(result)                                          \
                 : "r"(a_), "0"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11693,7 +11693,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        int16x8_t b_ = (b);                                              \
        int16_t a_ = (a);                                                \
        int16x8_t result;                                                \
-       __asm-generic__ ("ins %0.h[%3], %w1"                                     \
+       __asm__ ("ins %0.h[%3], %w1"                                     \
                 : "=w"(result)                                          \
                 : "r"(a_), "0"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11706,7 +11706,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        int32x4_t b_ = (b);                                              \
        int32_t a_ = (a);                                                \
        int32x4_t result;                                                \
-       __asm-generic__ ("ins %0.s[%3], %w1"                                     \
+       __asm__ ("ins %0.s[%3], %w1"                                     \
                 : "=w"(result)                                          \
                 : "r"(a_), "0"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11719,7 +11719,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        int64x2_t b_ = (b);                                              \
        int64_t a_ = (a);                                                \
        int64x2_t result;                                                \
-       __asm-generic__ ("ins %0.d[%3], %x1"                                     \
+       __asm__ ("ins %0.d[%3], %x1"                                     \
                 : "=w"(result)                                          \
                 : "r"(a_), "0"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11732,7 +11732,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        uint8x16_t b_ = (b);                                             \
        uint8_t a_ = (a);                                                \
        uint8x16_t result;                                               \
-       __asm-generic__ ("ins %0.b[%3], %w1"                                     \
+       __asm__ ("ins %0.b[%3], %w1"                                     \
                 : "=w"(result)                                          \
                 : "r"(a_), "0"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11745,7 +11745,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        uint16x8_t b_ = (b);                                             \
        uint16_t a_ = (a);                                               \
        uint16x8_t result;                                               \
-       __asm-generic__ ("ins %0.h[%3], %w1"                                     \
+       __asm__ ("ins %0.h[%3], %w1"                                     \
                 : "=w"(result)                                          \
                 : "r"(a_), "0"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11758,7 +11758,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        uint32x4_t b_ = (b);                                             \
        uint32_t a_ = (a);                                               \
        uint32x4_t result;                                               \
-       __asm-generic__ ("ins %0.s[%3], %w1"                                     \
+       __asm__ ("ins %0.s[%3], %w1"                                     \
                 : "=w"(result)                                          \
                 : "r"(a_), "0"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11771,7 +11771,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        uint64x2_t b_ = (b);                                             \
        uint64_t a_ = (a);                                               \
        uint64x2_t result;                                               \
-       __asm-generic__ ("ins %0.d[%3], %x1"                                     \
+       __asm__ ("ins %0.d[%3], %x1"                                     \
                 : "=w"(result)                                          \
                 : "r"(a_), "0"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11786,7 +11786,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        int8x16_t result = vcombine_s8                                   \
                             (a_, vcreate_s8                             \
                                    (__AARCH64_UINT64_C (0x0)));         \
-       __asm-generic__ ("shrn2 %0.16b,%1.8h,#%2"                                \
+       __asm__ ("shrn2 %0.16b,%1.8h,#%2"                                \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -11801,7 +11801,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        int16x8_t result = vcombine_s16                                  \
                             (a_, vcreate_s16                            \
                                    (__AARCH64_UINT64_C (0x0)));         \
-       __asm-generic__ ("shrn2 %0.8h,%1.4s,#%2"                                 \
+       __asm__ ("shrn2 %0.8h,%1.4s,#%2"                                 \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -11816,7 +11816,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        int32x4_t result = vcombine_s32                                  \
                             (a_, vcreate_s32                            \
                                    (__AARCH64_UINT64_C (0x0)));         \
-       __asm-generic__ ("shrn2 %0.4s,%1.2d,#%2"                                 \
+       __asm__ ("shrn2 %0.4s,%1.2d,#%2"                                 \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -11831,7 +11831,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        uint8x16_t result = vcombine_u8                                  \
                             (a_, vcreate_u8                             \
                                    (__AARCH64_UINT64_C (0x0)));         \
-       __asm-generic__ ("shrn2 %0.16b,%1.8h,#%2"                                \
+       __asm__ ("shrn2 %0.16b,%1.8h,#%2"                                \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -11846,7 +11846,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        uint16x8_t result = vcombine_u16                                 \
                             (a_, vcreate_u16                            \
                                    (__AARCH64_UINT64_C (0x0)));         \
-       __asm-generic__ ("shrn2 %0.8h,%1.4s,#%2"                                 \
+       __asm__ ("shrn2 %0.8h,%1.4s,#%2"                                 \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -11861,7 +11861,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        uint32x4_t result = vcombine_u32                                 \
                             (a_, vcreate_u32                            \
                                    (__AARCH64_UINT64_C (0x0)));         \
-       __asm-generic__ ("shrn2 %0.4s,%1.2d,#%2"                                 \
+       __asm__ ("shrn2 %0.4s,%1.2d,#%2"                                 \
                 : "+w"(result)                                          \
                 : "w"(b_), "i"(c)                                       \
                 : /* No clobbers */);                                   \
@@ -11873,7 +11873,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        int16x8_t a_ = (a);                                              \
        int8x8_t result;                                                 \
-       __asm-generic__ ("shrn %0.8b,%1.8h,%2"                                   \
+       __asm__ ("shrn %0.8b,%1.8h,%2"                                   \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -11885,7 +11885,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        int32x4_t a_ = (a);                                              \
        int16x4_t result;                                                \
-       __asm-generic__ ("shrn %0.4h,%1.4s,%2"                                   \
+       __asm__ ("shrn %0.4h,%1.4s,%2"                                   \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -11897,7 +11897,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        int64x2_t a_ = (a);                                              \
        int32x2_t result;                                                \
-       __asm-generic__ ("shrn %0.2s,%1.2d,%2"                                   \
+       __asm__ ("shrn %0.2s,%1.2d,%2"                                   \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -11909,7 +11909,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        uint16x8_t a_ = (a);                                             \
        uint8x8_t result;                                                \
-       __asm-generic__ ("shrn %0.8b,%1.8h,%2"                                   \
+       __asm__ ("shrn %0.8b,%1.8h,%2"                                   \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -11921,7 +11921,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        uint32x4_t a_ = (a);                                             \
        uint16x4_t result;                                               \
-       __asm-generic__ ("shrn %0.4h,%1.4s,%2"                                   \
+       __asm__ ("shrn %0.4h,%1.4s,%2"                                   \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -11933,7 +11933,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        uint64x2_t a_ = (a);                                             \
        uint32x2_t result;                                               \
-       __asm-generic__ ("shrn %0.2s,%1.2d,%2"                                   \
+       __asm__ ("shrn %0.2s,%1.2d,%2"                                   \
                 : "=w"(result)                                          \
                 : "w"(a_), "i"(b)                                       \
                 : /* No clobbers */);                                   \
@@ -11946,7 +11946,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        poly8x8_t b_ = (b);                                              \
        poly8x8_t a_ = (a);                                              \
        poly8x8_t result;                                                \
-       __asm-generic__ ("sli %0.8b,%2.8b,%3"                                    \
+       __asm__ ("sli %0.8b,%2.8b,%3"                                    \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11959,7 +11959,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        poly16x4_t b_ = (b);                                             \
        poly16x4_t a_ = (a);                                             \
        poly16x4_t result;                                               \
-       __asm-generic__ ("sli %0.4h,%2.4h,%3"                                    \
+       __asm__ ("sli %0.4h,%2.4h,%3"                                    \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11972,7 +11972,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        poly8x16_t b_ = (b);                                             \
        poly8x16_t a_ = (a);                                             \
        poly8x16_t result;                                               \
-       __asm-generic__ ("sli %0.16b,%2.16b,%3"                                  \
+       __asm__ ("sli %0.16b,%2.16b,%3"                                  \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11985,7 +11985,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        poly16x8_t b_ = (b);                                             \
        poly16x8_t a_ = (a);                                             \
        poly16x8_t result;                                               \
-       __asm-generic__ ("sli %0.8h,%2.8h,%3"                                    \
+       __asm__ ("sli %0.8h,%2.8h,%3"                                    \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -11998,7 +11998,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        poly8x8_t b_ = (b);                                              \
        poly8x8_t a_ = (a);                                              \
        poly8x8_t result;                                                \
-       __asm-generic__ ("sri %0.8b,%2.8b,%3"                                    \
+       __asm__ ("sri %0.8b,%2.8b,%3"                                    \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -12011,7 +12011,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        poly16x4_t b_ = (b);                                             \
        poly16x4_t a_ = (a);                                             \
        poly16x4_t result;                                               \
-       __asm-generic__ ("sri %0.4h,%2.4h,%3"                                    \
+       __asm__ ("sri %0.4h,%2.4h,%3"                                    \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -12024,7 +12024,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        poly8x16_t b_ = (b);                                             \
        poly8x16_t a_ = (a);                                             \
        poly8x16_t result;                                               \
-       __asm-generic__ ("sri %0.16b,%2.16b,%3"                                  \
+       __asm__ ("sri %0.16b,%2.16b,%3"                                  \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -12037,7 +12037,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
        poly16x8_t b_ = (b);                                             \
        poly16x8_t a_ = (a);                                             \
        poly16x8_t result;                                               \
-       __asm-generic__ ("sri %0.8h,%2.8h,%3"                                    \
+       __asm__ ("sri %0.8h,%2.8h,%3"                                    \
                 : "=w"(result)                                          \
                 : "0"(a_), "w"(b_), "i"(c)                              \
                 : /* No clobbers */);                                   \
@@ -12049,7 +12049,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        float32x2_t b_ = (b);                                            \
        float32_t * a_ = (a);                                            \
-       __asm-generic__ ("st1 {%1.s}[%2],[%0]"                                   \
+       __asm__ ("st1 {%1.s}[%2],[%0]"                                   \
                 :                                                       \
                 : "r"(a_), "w"(b_), "i"(c)                              \
                 : "memory");                                            \
@@ -12060,7 +12060,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        float64x1_t b_ = (b);                                            \
        float64_t * a_ = (a);                                            \
-       __asm-generic__ ("st1 {%1.d}[%2],[%0]"                                   \
+       __asm__ ("st1 {%1.d}[%2],[%0]"                                   \
                 :                                                       \
                 : "r"(a_), "w"(b_), "i"(c)                              \
                 : "memory");                                            \
@@ -12071,7 +12071,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        poly8x8_t b_ = (b);                                              \
        poly8_t * a_ = (a);                                              \
-       __asm-generic__ ("st1 {%1.b}[%2],[%0]"                                   \
+       __asm__ ("st1 {%1.b}[%2],[%0]"                                   \
                 :                                                       \
                 : "r"(a_), "w"(b_), "i"(c)                              \
                 : "memory");                                            \
@@ -12082,7 +12082,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        poly16x4_t b_ = (b);                                             \
        poly16_t * a_ = (a);                                             \
-       __asm-generic__ ("st1 {%1.h}[%2],[%0]"                                   \
+       __asm__ ("st1 {%1.h}[%2],[%0]"                                   \
                 :                                                       \
                 : "r"(a_), "w"(b_), "i"(c)                              \
                 : "memory");                                            \
@@ -12093,7 +12093,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        int8x8_t b_ = (b);                                               \
        int8_t * a_ = (a);                                               \
-       __asm-generic__ ("st1 {%1.b}[%2],[%0]"                                   \
+       __asm__ ("st1 {%1.b}[%2],[%0]"                                   \
                 :                                                       \
                 : "r"(a_), "w"(b_), "i"(c)                              \
                 : "memory");                                            \
@@ -12104,7 +12104,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        int16x4_t b_ = (b);                                              \
        int16_t * a_ = (a);                                              \
-       __asm-generic__ ("st1 {%1.h}[%2],[%0]"                                   \
+       __asm__ ("st1 {%1.h}[%2],[%0]"                                   \
                 :                                                       \
                 : "r"(a_), "w"(b_), "i"(c)                              \
                 : "memory");                                            \
@@ -12115,7 +12115,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        int32x2_t b_ = (b);                                              \
        int32_t * a_ = (a);                                              \
-       __asm-generic__ ("st1 {%1.s}[%2],[%0]"                                   \
+       __asm__ ("st1 {%1.s}[%2],[%0]"                                   \
                 :                                                       \
                 : "r"(a_), "w"(b_), "i"(c)                              \
                 : "memory");                                            \
@@ -12126,7 +12126,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        int64x1_t b_ = (b);                                              \
        int64_t * a_ = (a);                                              \
-       __asm-generic__ ("st1 {%1.d}[%2],[%0]"                                   \
+       __asm__ ("st1 {%1.d}[%2],[%0]"                                   \
                 :                                                       \
                 : "r"(a_), "w"(b_), "i"(c)                              \
                 : "memory");                                            \
@@ -12137,7 +12137,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        uint8x8_t b_ = (b);                                              \
        uint8_t * a_ = (a);                                              \
-       __asm-generic__ ("st1 {%1.b}[%2],[%0]"                                   \
+       __asm__ ("st1 {%1.b}[%2],[%0]"                                   \
                 :                                                       \
                 : "r"(a_), "w"(b_), "i"(c)                              \
                 : "memory");                                            \
@@ -12148,7 +12148,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        uint16x4_t b_ = (b);                                             \
        uint16_t * a_ = (a);                                             \
-       __asm-generic__ ("st1 {%1.h}[%2],[%0]"                                   \
+       __asm__ ("st1 {%1.h}[%2],[%0]"                                   \
                 :                                                       \
                 : "r"(a_), "w"(b_), "i"(c)                              \
                 : "memory");                                            \
@@ -12159,7 +12159,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        uint32x2_t b_ = (b);                                             \
        uint32_t * a_ = (a);                                             \
-       __asm-generic__ ("st1 {%1.s}[%2],[%0]"                                   \
+       __asm__ ("st1 {%1.s}[%2],[%0]"                                   \
                 :                                                       \
                 : "r"(a_), "w"(b_), "i"(c)                              \
                 : "memory");                                            \
@@ -12170,7 +12170,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        uint64x1_t b_ = (b);                                             \
        uint64_t * a_ = (a);                                             \
-       __asm-generic__ ("st1 {%1.d}[%2],[%0]"                                   \
+       __asm__ ("st1 {%1.d}[%2],[%0]"                                   \
                 :                                                       \
                 : "r"(a_), "w"(b_), "i"(c)                              \
                 : "memory");                                            \
@@ -12182,7 +12182,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        float32x4_t b_ = (b);                                            \
        float32_t * a_ = (a);                                            \
-       __asm-generic__ ("st1 {%1.s}[%2],[%0]"                                   \
+       __asm__ ("st1 {%1.s}[%2],[%0]"                                   \
                 :                                                       \
                 : "r"(a_), "w"(b_), "i"(c)                              \
                 : "memory");                                            \
@@ -12193,7 +12193,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        float64x2_t b_ = (b);                                            \
        float64_t * a_ = (a);                                            \
-       __asm-generic__ ("st1 {%1.d}[%2],[%0]"                                   \
+       __asm__ ("st1 {%1.d}[%2],[%0]"                                   \
                 :                                                       \
                 : "r"(a_), "w"(b_), "i"(c)                              \
                 : "memory");                                            \
@@ -12204,7 +12204,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        poly8x16_t b_ = (b);                                             \
        poly8_t * a_ = (a);                                              \
-       __asm-generic__ ("st1 {%1.b}[%2],[%0]"                                   \
+       __asm__ ("st1 {%1.b}[%2],[%0]"                                   \
                 :                                                       \
                 : "r"(a_), "w"(b_), "i"(c)                              \
                 : "memory");                                            \
@@ -12215,7 +12215,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        poly16x8_t b_ = (b);                                             \
        poly16_t * a_ = (a);                                             \
-       __asm-generic__ ("st1 {%1.h}[%2],[%0]"                                   \
+       __asm__ ("st1 {%1.h}[%2],[%0]"                                   \
                 :                                                       \
                 : "r"(a_), "w"(b_), "i"(c)                              \
                 : "memory");                                            \
@@ -12226,7 +12226,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        int8x16_t b_ = (b);                                              \
        int8_t * a_ = (a);                                               \
-       __asm-generic__ ("st1 {%1.b}[%2],[%0]"                                   \
+       __asm__ ("st1 {%1.b}[%2],[%0]"                                   \
                 :                                                       \
                 : "r"(a_), "w"(b_), "i"(c)                              \
                 : "memory");                                            \
@@ -12237,7 +12237,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        int16x8_t b_ = (b);                                              \
        int16_t * a_ = (a);                                              \
-       __asm-generic__ ("st1 {%1.h}[%2],[%0]"                                   \
+       __asm__ ("st1 {%1.h}[%2],[%0]"                                   \
                 :                                                       \
                 : "r"(a_), "w"(b_), "i"(c)                              \
                 : "memory");                                            \
@@ -12248,7 +12248,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        int32x4_t b_ = (b);                                              \
        int32_t * a_ = (a);                                              \
-       __asm-generic__ ("st1 {%1.s}[%2],[%0]"                                   \
+       __asm__ ("st1 {%1.s}[%2],[%0]"                                   \
                 :                                                       \
                 : "r"(a_), "w"(b_), "i"(c)                              \
                 : "memory");                                            \
@@ -12259,7 +12259,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        int64x2_t b_ = (b);                                              \
        int64_t * a_ = (a);                                              \
-       __asm-generic__ ("st1 {%1.d}[%2],[%0]"                                   \
+       __asm__ ("st1 {%1.d}[%2],[%0]"                                   \
                 :                                                       \
                 : "r"(a_), "w"(b_), "i"(c)                              \
                 : "memory");                                            \
@@ -12270,7 +12270,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        uint8x16_t b_ = (b);                                             \
        uint8_t * a_ = (a);                                              \
-       __asm-generic__ ("st1 {%1.b}[%2],[%0]"                                   \
+       __asm__ ("st1 {%1.b}[%2],[%0]"                                   \
                 :                                                       \
                 : "r"(a_), "w"(b_), "i"(c)                              \
                 : "memory");                                            \
@@ -12281,7 +12281,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        uint16x8_t b_ = (b);                                             \
        uint16_t * a_ = (a);                                             \
-       __asm-generic__ ("st1 {%1.h}[%2],[%0]"                                   \
+       __asm__ ("st1 {%1.h}[%2],[%0]"                                   \
                 :                                                       \
                 : "r"(a_), "w"(b_), "i"(c)                              \
                 : "memory");                                            \
@@ -12292,7 +12292,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        uint32x4_t b_ = (b);                                             \
        uint32_t * a_ = (a);                                             \
-       __asm-generic__ ("st1 {%1.s}[%2],[%0]"                                   \
+       __asm__ ("st1 {%1.s}[%2],[%0]"                                   \
                 :                                                       \
                 : "r"(a_), "w"(b_), "i"(c)                              \
                 : "memory");                                            \
@@ -12303,7 +12303,7 @@ vrsubhn_u64 (uint64x2_t a, uint64x2_t b)
     ({                                                                  \
        uint64x2_t b_ = (b);                                             \
        uint64_t * a_ = (a);                                             \
-       __asm-generic__ ("st1 {%1.d}[%2],[%0]"                                   \
+       __asm__ ("st1 {%1.d}[%2],[%0]"                                   \
                 :                                                       \
                 : "r"(a_), "w"(b_), "i"(c)                              \
                 : "memory");                                            \
@@ -12313,7 +12313,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vsubhn_high_s16 (int8x8_t a, int16x8_t b, int16x8_t c)
 {
   int8x16_t result = vcombine_s8 (a, vcreate_s8 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("subhn2 %0.16b, %1.8h, %2.8h"
+  __asm__ ("subhn2 %0.16b, %1.8h, %2.8h"
            : "+w"(result)
            : "w"(b), "w"(c)
            : /* No clobbers */);
@@ -12324,7 +12324,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vsubhn_high_s32 (int16x4_t a, int32x4_t b, int32x4_t c)
 {
   int16x8_t result = vcombine_s16 (a, vcreate_s16 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("subhn2 %0.8h, %1.4s, %2.4s"
+  __asm__ ("subhn2 %0.8h, %1.4s, %2.4s"
            : "+w"(result)
            : "w"(b), "w"(c)
            : /* No clobbers */);
@@ -12335,7 +12335,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vsubhn_high_s64 (int32x2_t a, int64x2_t b, int64x2_t c)
 {
   int32x4_t result = vcombine_s32 (a, vcreate_s32 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("subhn2 %0.4s, %1.2d, %2.2d"
+  __asm__ ("subhn2 %0.4s, %1.2d, %2.2d"
            : "+w"(result)
            : "w"(b), "w"(c)
            : /* No clobbers */);
@@ -12346,7 +12346,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vsubhn_high_u16 (uint8x8_t a, uint16x8_t b, uint16x8_t c)
 {
   uint8x16_t result = vcombine_u8 (a, vcreate_u8 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("subhn2 %0.16b, %1.8h, %2.8h"
+  __asm__ ("subhn2 %0.16b, %1.8h, %2.8h"
            : "+w"(result)
            : "w"(b), "w"(c)
            : /* No clobbers */);
@@ -12357,7 +12357,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vsubhn_high_u32 (uint16x4_t a, uint32x4_t b, uint32x4_t c)
 {
   uint16x8_t result = vcombine_u16 (a, vcreate_u16 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("subhn2 %0.8h, %1.4s, %2.4s"
+  __asm__ ("subhn2 %0.8h, %1.4s, %2.4s"
            : "+w"(result)
            : "w"(b), "w"(c)
            : /* No clobbers */);
@@ -12368,7 +12368,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vsubhn_high_u64 (uint32x2_t a, uint64x2_t b, uint64x2_t c)
 {
   uint32x4_t result = vcombine_u32 (a, vcreate_u32 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("subhn2 %0.4s, %1.2d, %2.2d"
+  __asm__ ("subhn2 %0.4s, %1.2d, %2.2d"
            : "+w"(result)
            : "w"(b), "w"(c)
            : /* No clobbers */);
@@ -12379,7 +12379,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vsubhn_s16 (int16x8_t a, int16x8_t b)
 {
   int8x8_t result;
-  __asm-generic__ ("subhn %0.8b, %1.8h, %2.8h"
+  __asm__ ("subhn %0.8b, %1.8h, %2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12390,7 +12390,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vsubhn_s32 (int32x4_t a, int32x4_t b)
 {
   int16x4_t result;
-  __asm-generic__ ("subhn %0.4h, %1.4s, %2.4s"
+  __asm__ ("subhn %0.4h, %1.4s, %2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12401,7 +12401,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vsubhn_s64 (int64x2_t a, int64x2_t b)
 {
   int32x2_t result;
-  __asm-generic__ ("subhn %0.2s, %1.2d, %2.2d"
+  __asm__ ("subhn %0.2s, %1.2d, %2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12412,7 +12412,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vsubhn_u16 (uint16x8_t a, uint16x8_t b)
 {
   uint8x8_t result;
-  __asm-generic__ ("subhn %0.8b, %1.8h, %2.8h"
+  __asm__ ("subhn %0.8b, %1.8h, %2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12423,7 +12423,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vsubhn_u32 (uint32x4_t a, uint32x4_t b)
 {
   uint16x4_t result;
-  __asm-generic__ ("subhn %0.4h, %1.4s, %2.4s"
+  __asm__ ("subhn %0.4h, %1.4s, %2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12434,7 +12434,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vsubhn_u64 (uint64x2_t a, uint64x2_t b)
 {
   uint32x2_t result;
-  __asm-generic__ ("subhn %0.2s, %1.2d, %2.2d"
+  __asm__ ("subhn %0.2s, %1.2d, %2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12445,7 +12445,7 @@ __extension__ static __inline float32x2_t __attribute__ ((__always_inline__))
 vtrn1_f32 (float32x2_t a, float32x2_t b)
 {
   float32x2_t result;
-  __asm-generic__ ("trn1 %0.2s,%1.2s,%2.2s"
+  __asm__ ("trn1 %0.2s,%1.2s,%2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12456,7 +12456,7 @@ __extension__ static __inline poly8x8_t __attribute__ ((__always_inline__))
 vtrn1_p8 (poly8x8_t a, poly8x8_t b)
 {
   poly8x8_t result;
-  __asm-generic__ ("trn1 %0.8b,%1.8b,%2.8b"
+  __asm__ ("trn1 %0.8b,%1.8b,%2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12467,7 +12467,7 @@ __extension__ static __inline poly16x4_t __attribute__ ((__always_inline__))
 vtrn1_p16 (poly16x4_t a, poly16x4_t b)
 {
   poly16x4_t result;
-  __asm-generic__ ("trn1 %0.4h,%1.4h,%2.4h"
+  __asm__ ("trn1 %0.4h,%1.4h,%2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12478,7 +12478,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vtrn1_s8 (int8x8_t a, int8x8_t b)
 {
   int8x8_t result;
-  __asm-generic__ ("trn1 %0.8b,%1.8b,%2.8b"
+  __asm__ ("trn1 %0.8b,%1.8b,%2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12489,7 +12489,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vtrn1_s16 (int16x4_t a, int16x4_t b)
 {
   int16x4_t result;
-  __asm-generic__ ("trn1 %0.4h,%1.4h,%2.4h"
+  __asm__ ("trn1 %0.4h,%1.4h,%2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12500,7 +12500,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vtrn1_s32 (int32x2_t a, int32x2_t b)
 {
   int32x2_t result;
-  __asm-generic__ ("trn1 %0.2s,%1.2s,%2.2s"
+  __asm__ ("trn1 %0.2s,%1.2s,%2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12511,7 +12511,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vtrn1_u8 (uint8x8_t a, uint8x8_t b)
 {
   uint8x8_t result;
-  __asm-generic__ ("trn1 %0.8b,%1.8b,%2.8b"
+  __asm__ ("trn1 %0.8b,%1.8b,%2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12522,7 +12522,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vtrn1_u16 (uint16x4_t a, uint16x4_t b)
 {
   uint16x4_t result;
-  __asm-generic__ ("trn1 %0.4h,%1.4h,%2.4h"
+  __asm__ ("trn1 %0.4h,%1.4h,%2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12533,7 +12533,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vtrn1_u32 (uint32x2_t a, uint32x2_t b)
 {
   uint32x2_t result;
-  __asm-generic__ ("trn1 %0.2s,%1.2s,%2.2s"
+  __asm__ ("trn1 %0.2s,%1.2s,%2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12544,7 +12544,7 @@ __extension__ static __inline float32x4_t __attribute__ ((__always_inline__))
 vtrn1q_f32 (float32x4_t a, float32x4_t b)
 {
   float32x4_t result;
-  __asm-generic__ ("trn1 %0.4s,%1.4s,%2.4s"
+  __asm__ ("trn1 %0.4s,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12555,7 +12555,7 @@ __extension__ static __inline float64x2_t __attribute__ ((__always_inline__))
 vtrn1q_f64 (float64x2_t a, float64x2_t b)
 {
   float64x2_t result;
-  __asm-generic__ ("trn1 %0.2d,%1.2d,%2.2d"
+  __asm__ ("trn1 %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12566,7 +12566,7 @@ __extension__ static __inline poly8x16_t __attribute__ ((__always_inline__))
 vtrn1q_p8 (poly8x16_t a, poly8x16_t b)
 {
   poly8x16_t result;
-  __asm-generic__ ("trn1 %0.16b,%1.16b,%2.16b"
+  __asm__ ("trn1 %0.16b,%1.16b,%2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12577,7 +12577,7 @@ __extension__ static __inline poly16x8_t __attribute__ ((__always_inline__))
 vtrn1q_p16 (poly16x8_t a, poly16x8_t b)
 {
   poly16x8_t result;
-  __asm-generic__ ("trn1 %0.8h,%1.8h,%2.8h"
+  __asm__ ("trn1 %0.8h,%1.8h,%2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12588,7 +12588,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vtrn1q_s8 (int8x16_t a, int8x16_t b)
 {
   int8x16_t result;
-  __asm-generic__ ("trn1 %0.16b,%1.16b,%2.16b"
+  __asm__ ("trn1 %0.16b,%1.16b,%2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12599,7 +12599,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vtrn1q_s16 (int16x8_t a, int16x8_t b)
 {
   int16x8_t result;
-  __asm-generic__ ("trn1 %0.8h,%1.8h,%2.8h"
+  __asm__ ("trn1 %0.8h,%1.8h,%2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12610,7 +12610,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vtrn1q_s32 (int32x4_t a, int32x4_t b)
 {
   int32x4_t result;
-  __asm-generic__ ("trn1 %0.4s,%1.4s,%2.4s"
+  __asm__ ("trn1 %0.4s,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12621,7 +12621,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vtrn1q_s64 (int64x2_t a, int64x2_t b)
 {
   int64x2_t result;
-  __asm-generic__ ("trn1 %0.2d,%1.2d,%2.2d"
+  __asm__ ("trn1 %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12632,7 +12632,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vtrn1q_u8 (uint8x16_t a, uint8x16_t b)
 {
   uint8x16_t result;
-  __asm-generic__ ("trn1 %0.16b,%1.16b,%2.16b"
+  __asm__ ("trn1 %0.16b,%1.16b,%2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12643,7 +12643,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vtrn1q_u16 (uint16x8_t a, uint16x8_t b)
 {
   uint16x8_t result;
-  __asm-generic__ ("trn1 %0.8h,%1.8h,%2.8h"
+  __asm__ ("trn1 %0.8h,%1.8h,%2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12654,7 +12654,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vtrn1q_u32 (uint32x4_t a, uint32x4_t b)
 {
   uint32x4_t result;
-  __asm-generic__ ("trn1 %0.4s,%1.4s,%2.4s"
+  __asm__ ("trn1 %0.4s,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12665,7 +12665,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vtrn1q_u64 (uint64x2_t a, uint64x2_t b)
 {
   uint64x2_t result;
-  __asm-generic__ ("trn1 %0.2d,%1.2d,%2.2d"
+  __asm__ ("trn1 %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12676,7 +12676,7 @@ __extension__ static __inline float32x2_t __attribute__ ((__always_inline__))
 vtrn2_f32 (float32x2_t a, float32x2_t b)
 {
   float32x2_t result;
-  __asm-generic__ ("trn2 %0.2s,%1.2s,%2.2s"
+  __asm__ ("trn2 %0.2s,%1.2s,%2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12687,7 +12687,7 @@ __extension__ static __inline poly8x8_t __attribute__ ((__always_inline__))
 vtrn2_p8 (poly8x8_t a, poly8x8_t b)
 {
   poly8x8_t result;
-  __asm-generic__ ("trn2 %0.8b,%1.8b,%2.8b"
+  __asm__ ("trn2 %0.8b,%1.8b,%2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12698,7 +12698,7 @@ __extension__ static __inline poly16x4_t __attribute__ ((__always_inline__))
 vtrn2_p16 (poly16x4_t a, poly16x4_t b)
 {
   poly16x4_t result;
-  __asm-generic__ ("trn2 %0.4h,%1.4h,%2.4h"
+  __asm__ ("trn2 %0.4h,%1.4h,%2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12709,7 +12709,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vtrn2_s8 (int8x8_t a, int8x8_t b)
 {
   int8x8_t result;
-  __asm-generic__ ("trn2 %0.8b,%1.8b,%2.8b"
+  __asm__ ("trn2 %0.8b,%1.8b,%2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12720,7 +12720,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vtrn2_s16 (int16x4_t a, int16x4_t b)
 {
   int16x4_t result;
-  __asm-generic__ ("trn2 %0.4h,%1.4h,%2.4h"
+  __asm__ ("trn2 %0.4h,%1.4h,%2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12731,7 +12731,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vtrn2_s32 (int32x2_t a, int32x2_t b)
 {
   int32x2_t result;
-  __asm-generic__ ("trn2 %0.2s,%1.2s,%2.2s"
+  __asm__ ("trn2 %0.2s,%1.2s,%2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12742,7 +12742,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vtrn2_u8 (uint8x8_t a, uint8x8_t b)
 {
   uint8x8_t result;
-  __asm-generic__ ("trn2 %0.8b,%1.8b,%2.8b"
+  __asm__ ("trn2 %0.8b,%1.8b,%2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12753,7 +12753,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vtrn2_u16 (uint16x4_t a, uint16x4_t b)
 {
   uint16x4_t result;
-  __asm-generic__ ("trn2 %0.4h,%1.4h,%2.4h"
+  __asm__ ("trn2 %0.4h,%1.4h,%2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12764,7 +12764,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vtrn2_u32 (uint32x2_t a, uint32x2_t b)
 {
   uint32x2_t result;
-  __asm-generic__ ("trn2 %0.2s,%1.2s,%2.2s"
+  __asm__ ("trn2 %0.2s,%1.2s,%2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12775,7 +12775,7 @@ __extension__ static __inline float32x4_t __attribute__ ((__always_inline__))
 vtrn2q_f32 (float32x4_t a, float32x4_t b)
 {
   float32x4_t result;
-  __asm-generic__ ("trn2 %0.4s,%1.4s,%2.4s"
+  __asm__ ("trn2 %0.4s,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12786,7 +12786,7 @@ __extension__ static __inline float64x2_t __attribute__ ((__always_inline__))
 vtrn2q_f64 (float64x2_t a, float64x2_t b)
 {
   float64x2_t result;
-  __asm-generic__ ("trn2 %0.2d,%1.2d,%2.2d"
+  __asm__ ("trn2 %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12797,7 +12797,7 @@ __extension__ static __inline poly8x16_t __attribute__ ((__always_inline__))
 vtrn2q_p8 (poly8x16_t a, poly8x16_t b)
 {
   poly8x16_t result;
-  __asm-generic__ ("trn2 %0.16b,%1.16b,%2.16b"
+  __asm__ ("trn2 %0.16b,%1.16b,%2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12808,7 +12808,7 @@ __extension__ static __inline poly16x8_t __attribute__ ((__always_inline__))
 vtrn2q_p16 (poly16x8_t a, poly16x8_t b)
 {
   poly16x8_t result;
-  __asm-generic__ ("trn2 %0.8h,%1.8h,%2.8h"
+  __asm__ ("trn2 %0.8h,%1.8h,%2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12819,7 +12819,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vtrn2q_s8 (int8x16_t a, int8x16_t b)
 {
   int8x16_t result;
-  __asm-generic__ ("trn2 %0.16b,%1.16b,%2.16b"
+  __asm__ ("trn2 %0.16b,%1.16b,%2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12830,7 +12830,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vtrn2q_s16 (int16x8_t a, int16x8_t b)
 {
   int16x8_t result;
-  __asm-generic__ ("trn2 %0.8h,%1.8h,%2.8h"
+  __asm__ ("trn2 %0.8h,%1.8h,%2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12841,7 +12841,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vtrn2q_s32 (int32x4_t a, int32x4_t b)
 {
   int32x4_t result;
-  __asm-generic__ ("trn2 %0.4s,%1.4s,%2.4s"
+  __asm__ ("trn2 %0.4s,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12852,7 +12852,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vtrn2q_s64 (int64x2_t a, int64x2_t b)
 {
   int64x2_t result;
-  __asm-generic__ ("trn2 %0.2d,%1.2d,%2.2d"
+  __asm__ ("trn2 %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12863,7 +12863,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vtrn2q_u8 (uint8x16_t a, uint8x16_t b)
 {
   uint8x16_t result;
-  __asm-generic__ ("trn2 %0.16b,%1.16b,%2.16b"
+  __asm__ ("trn2 %0.16b,%1.16b,%2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12874,7 +12874,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vtrn2q_u16 (uint16x8_t a, uint16x8_t b)
 {
   uint16x8_t result;
-  __asm-generic__ ("trn2 %0.8h,%1.8h,%2.8h"
+  __asm__ ("trn2 %0.8h,%1.8h,%2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12885,7 +12885,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vtrn2q_u32 (uint32x4_t a, uint32x4_t b)
 {
   uint32x4_t result;
-  __asm-generic__ ("trn2 %0.4s,%1.4s,%2.4s"
+  __asm__ ("trn2 %0.4s,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12896,7 +12896,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vtrn2q_u64 (uint64x2_t a, uint64x2_t b)
 {
   uint64x2_t result;
-  __asm-generic__ ("trn2 %0.2d,%1.2d,%2.2d"
+  __asm__ ("trn2 %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12907,7 +12907,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vtst_p8 (poly8x8_t a, poly8x8_t b)
 {
   uint8x8_t result;
-  __asm-generic__ ("cmtst %0.8b, %1.8b, %2.8b"
+  __asm__ ("cmtst %0.8b, %1.8b, %2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12918,7 +12918,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vtst_p16 (poly16x4_t a, poly16x4_t b)
 {
   uint16x4_t result;
-  __asm-generic__ ("cmtst %0.4h, %1.4h, %2.4h"
+  __asm__ ("cmtst %0.4h, %1.4h, %2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12929,7 +12929,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vtstq_p8 (poly8x16_t a, poly8x16_t b)
 {
   uint8x16_t result;
-  __asm-generic__ ("cmtst %0.16b, %1.16b, %2.16b"
+  __asm__ ("cmtst %0.16b, %1.16b, %2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12940,7 +12940,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vtstq_p16 (poly16x8_t a, poly16x8_t b)
 {
   uint16x8_t result;
-  __asm-generic__ ("cmtst %0.8h, %1.8h, %2.8h"
+  __asm__ ("cmtst %0.8h, %1.8h, %2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12950,7 +12950,7 @@ __extension__ static __inline float32x2_t __attribute__ ((__always_inline__))
 vuzp1_f32 (float32x2_t a, float32x2_t b)
 {
   float32x2_t result;
-  __asm-generic__ ("uzp1 %0.2s,%1.2s,%2.2s"
+  __asm__ ("uzp1 %0.2s,%1.2s,%2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12961,7 +12961,7 @@ __extension__ static __inline poly8x8_t __attribute__ ((__always_inline__))
 vuzp1_p8 (poly8x8_t a, poly8x8_t b)
 {
   poly8x8_t result;
-  __asm-generic__ ("uzp1 %0.8b,%1.8b,%2.8b"
+  __asm__ ("uzp1 %0.8b,%1.8b,%2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12972,7 +12972,7 @@ __extension__ static __inline poly16x4_t __attribute__ ((__always_inline__))
 vuzp1_p16 (poly16x4_t a, poly16x4_t b)
 {
   poly16x4_t result;
-  __asm-generic__ ("uzp1 %0.4h,%1.4h,%2.4h"
+  __asm__ ("uzp1 %0.4h,%1.4h,%2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12983,7 +12983,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vuzp1_s8 (int8x8_t a, int8x8_t b)
 {
   int8x8_t result;
-  __asm-generic__ ("uzp1 %0.8b,%1.8b,%2.8b"
+  __asm__ ("uzp1 %0.8b,%1.8b,%2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -12994,7 +12994,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vuzp1_s16 (int16x4_t a, int16x4_t b)
 {
   int16x4_t result;
-  __asm-generic__ ("uzp1 %0.4h,%1.4h,%2.4h"
+  __asm__ ("uzp1 %0.4h,%1.4h,%2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13005,7 +13005,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vuzp1_s32 (int32x2_t a, int32x2_t b)
 {
   int32x2_t result;
-  __asm-generic__ ("uzp1 %0.2s,%1.2s,%2.2s"
+  __asm__ ("uzp1 %0.2s,%1.2s,%2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13016,7 +13016,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vuzp1_u8 (uint8x8_t a, uint8x8_t b)
 {
   uint8x8_t result;
-  __asm-generic__ ("uzp1 %0.8b,%1.8b,%2.8b"
+  __asm__ ("uzp1 %0.8b,%1.8b,%2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13027,7 +13027,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vuzp1_u16 (uint16x4_t a, uint16x4_t b)
 {
   uint16x4_t result;
-  __asm-generic__ ("uzp1 %0.4h,%1.4h,%2.4h"
+  __asm__ ("uzp1 %0.4h,%1.4h,%2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13038,7 +13038,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vuzp1_u32 (uint32x2_t a, uint32x2_t b)
 {
   uint32x2_t result;
-  __asm-generic__ ("uzp1 %0.2s,%1.2s,%2.2s"
+  __asm__ ("uzp1 %0.2s,%1.2s,%2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13049,7 +13049,7 @@ __extension__ static __inline float32x4_t __attribute__ ((__always_inline__))
 vuzp1q_f32 (float32x4_t a, float32x4_t b)
 {
   float32x4_t result;
-  __asm-generic__ ("uzp1 %0.4s,%1.4s,%2.4s"
+  __asm__ ("uzp1 %0.4s,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13060,7 +13060,7 @@ __extension__ static __inline float64x2_t __attribute__ ((__always_inline__))
 vuzp1q_f64 (float64x2_t a, float64x2_t b)
 {
   float64x2_t result;
-  __asm-generic__ ("uzp1 %0.2d,%1.2d,%2.2d"
+  __asm__ ("uzp1 %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13071,7 +13071,7 @@ __extension__ static __inline poly8x16_t __attribute__ ((__always_inline__))
 vuzp1q_p8 (poly8x16_t a, poly8x16_t b)
 {
   poly8x16_t result;
-  __asm-generic__ ("uzp1 %0.16b,%1.16b,%2.16b"
+  __asm__ ("uzp1 %0.16b,%1.16b,%2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13082,7 +13082,7 @@ __extension__ static __inline poly16x8_t __attribute__ ((__always_inline__))
 vuzp1q_p16 (poly16x8_t a, poly16x8_t b)
 {
   poly16x8_t result;
-  __asm-generic__ ("uzp1 %0.8h,%1.8h,%2.8h"
+  __asm__ ("uzp1 %0.8h,%1.8h,%2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13093,7 +13093,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vuzp1q_s8 (int8x16_t a, int8x16_t b)
 {
   int8x16_t result;
-  __asm-generic__ ("uzp1 %0.16b,%1.16b,%2.16b"
+  __asm__ ("uzp1 %0.16b,%1.16b,%2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13104,7 +13104,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vuzp1q_s16 (int16x8_t a, int16x8_t b)
 {
   int16x8_t result;
-  __asm-generic__ ("uzp1 %0.8h,%1.8h,%2.8h"
+  __asm__ ("uzp1 %0.8h,%1.8h,%2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13115,7 +13115,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vuzp1q_s32 (int32x4_t a, int32x4_t b)
 {
   int32x4_t result;
-  __asm-generic__ ("uzp1 %0.4s,%1.4s,%2.4s"
+  __asm__ ("uzp1 %0.4s,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13126,7 +13126,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vuzp1q_s64 (int64x2_t a, int64x2_t b)
 {
   int64x2_t result;
-  __asm-generic__ ("uzp1 %0.2d,%1.2d,%2.2d"
+  __asm__ ("uzp1 %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13137,7 +13137,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vuzp1q_u8 (uint8x16_t a, uint8x16_t b)
 {
   uint8x16_t result;
-  __asm-generic__ ("uzp1 %0.16b,%1.16b,%2.16b"
+  __asm__ ("uzp1 %0.16b,%1.16b,%2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13148,7 +13148,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vuzp1q_u16 (uint16x8_t a, uint16x8_t b)
 {
   uint16x8_t result;
-  __asm-generic__ ("uzp1 %0.8h,%1.8h,%2.8h"
+  __asm__ ("uzp1 %0.8h,%1.8h,%2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13159,7 +13159,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vuzp1q_u32 (uint32x4_t a, uint32x4_t b)
 {
   uint32x4_t result;
-  __asm-generic__ ("uzp1 %0.4s,%1.4s,%2.4s"
+  __asm__ ("uzp1 %0.4s,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13170,7 +13170,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vuzp1q_u64 (uint64x2_t a, uint64x2_t b)
 {
   uint64x2_t result;
-  __asm-generic__ ("uzp1 %0.2d,%1.2d,%2.2d"
+  __asm__ ("uzp1 %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13181,7 +13181,7 @@ __extension__ static __inline float32x2_t __attribute__ ((__always_inline__))
 vuzp2_f32 (float32x2_t a, float32x2_t b)
 {
   float32x2_t result;
-  __asm-generic__ ("uzp2 %0.2s,%1.2s,%2.2s"
+  __asm__ ("uzp2 %0.2s,%1.2s,%2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13192,7 +13192,7 @@ __extension__ static __inline poly8x8_t __attribute__ ((__always_inline__))
 vuzp2_p8 (poly8x8_t a, poly8x8_t b)
 {
   poly8x8_t result;
-  __asm-generic__ ("uzp2 %0.8b,%1.8b,%2.8b"
+  __asm__ ("uzp2 %0.8b,%1.8b,%2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13203,7 +13203,7 @@ __extension__ static __inline poly16x4_t __attribute__ ((__always_inline__))
 vuzp2_p16 (poly16x4_t a, poly16x4_t b)
 {
   poly16x4_t result;
-  __asm-generic__ ("uzp2 %0.4h,%1.4h,%2.4h"
+  __asm__ ("uzp2 %0.4h,%1.4h,%2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13214,7 +13214,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vuzp2_s8 (int8x8_t a, int8x8_t b)
 {
   int8x8_t result;
-  __asm-generic__ ("uzp2 %0.8b,%1.8b,%2.8b"
+  __asm__ ("uzp2 %0.8b,%1.8b,%2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13225,7 +13225,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vuzp2_s16 (int16x4_t a, int16x4_t b)
 {
   int16x4_t result;
-  __asm-generic__ ("uzp2 %0.4h,%1.4h,%2.4h"
+  __asm__ ("uzp2 %0.4h,%1.4h,%2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13236,7 +13236,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vuzp2_s32 (int32x2_t a, int32x2_t b)
 {
   int32x2_t result;
-  __asm-generic__ ("uzp2 %0.2s,%1.2s,%2.2s"
+  __asm__ ("uzp2 %0.2s,%1.2s,%2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13247,7 +13247,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vuzp2_u8 (uint8x8_t a, uint8x8_t b)
 {
   uint8x8_t result;
-  __asm-generic__ ("uzp2 %0.8b,%1.8b,%2.8b"
+  __asm__ ("uzp2 %0.8b,%1.8b,%2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13258,7 +13258,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vuzp2_u16 (uint16x4_t a, uint16x4_t b)
 {
   uint16x4_t result;
-  __asm-generic__ ("uzp2 %0.4h,%1.4h,%2.4h"
+  __asm__ ("uzp2 %0.4h,%1.4h,%2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13269,7 +13269,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vuzp2_u32 (uint32x2_t a, uint32x2_t b)
 {
   uint32x2_t result;
-  __asm-generic__ ("uzp2 %0.2s,%1.2s,%2.2s"
+  __asm__ ("uzp2 %0.2s,%1.2s,%2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13280,7 +13280,7 @@ __extension__ static __inline float32x4_t __attribute__ ((__always_inline__))
 vuzp2q_f32 (float32x4_t a, float32x4_t b)
 {
   float32x4_t result;
-  __asm-generic__ ("uzp2 %0.4s,%1.4s,%2.4s"
+  __asm__ ("uzp2 %0.4s,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13291,7 +13291,7 @@ __extension__ static __inline float64x2_t __attribute__ ((__always_inline__))
 vuzp2q_f64 (float64x2_t a, float64x2_t b)
 {
   float64x2_t result;
-  __asm-generic__ ("uzp2 %0.2d,%1.2d,%2.2d"
+  __asm__ ("uzp2 %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13302,7 +13302,7 @@ __extension__ static __inline poly8x16_t __attribute__ ((__always_inline__))
 vuzp2q_p8 (poly8x16_t a, poly8x16_t b)
 {
   poly8x16_t result;
-  __asm-generic__ ("uzp2 %0.16b,%1.16b,%2.16b"
+  __asm__ ("uzp2 %0.16b,%1.16b,%2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13313,7 +13313,7 @@ __extension__ static __inline poly16x8_t __attribute__ ((__always_inline__))
 vuzp2q_p16 (poly16x8_t a, poly16x8_t b)
 {
   poly16x8_t result;
-  __asm-generic__ ("uzp2 %0.8h,%1.8h,%2.8h"
+  __asm__ ("uzp2 %0.8h,%1.8h,%2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13324,7 +13324,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vuzp2q_s8 (int8x16_t a, int8x16_t b)
 {
   int8x16_t result;
-  __asm-generic__ ("uzp2 %0.16b,%1.16b,%2.16b"
+  __asm__ ("uzp2 %0.16b,%1.16b,%2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13335,7 +13335,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vuzp2q_s16 (int16x8_t a, int16x8_t b)
 {
   int16x8_t result;
-  __asm-generic__ ("uzp2 %0.8h,%1.8h,%2.8h"
+  __asm__ ("uzp2 %0.8h,%1.8h,%2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13346,7 +13346,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vuzp2q_s32 (int32x4_t a, int32x4_t b)
 {
   int32x4_t result;
-  __asm-generic__ ("uzp2 %0.4s,%1.4s,%2.4s"
+  __asm__ ("uzp2 %0.4s,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13357,7 +13357,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vuzp2q_s64 (int64x2_t a, int64x2_t b)
 {
   int64x2_t result;
-  __asm-generic__ ("uzp2 %0.2d,%1.2d,%2.2d"
+  __asm__ ("uzp2 %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13368,7 +13368,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vuzp2q_u8 (uint8x16_t a, uint8x16_t b)
 {
   uint8x16_t result;
-  __asm-generic__ ("uzp2 %0.16b,%1.16b,%2.16b"
+  __asm__ ("uzp2 %0.16b,%1.16b,%2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13379,7 +13379,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vuzp2q_u16 (uint16x8_t a, uint16x8_t b)
 {
   uint16x8_t result;
-  __asm-generic__ ("uzp2 %0.8h,%1.8h,%2.8h"
+  __asm__ ("uzp2 %0.8h,%1.8h,%2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13390,7 +13390,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vuzp2q_u32 (uint32x4_t a, uint32x4_t b)
 {
   uint32x4_t result;
-  __asm-generic__ ("uzp2 %0.4s,%1.4s,%2.4s"
+  __asm__ ("uzp2 %0.4s,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13401,7 +13401,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vuzp2q_u64 (uint64x2_t a, uint64x2_t b)
 {
   uint64x2_t result;
-  __asm-generic__ ("uzp2 %0.2d,%1.2d,%2.2d"
+  __asm__ ("uzp2 %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13412,7 +13412,7 @@ __extension__ static __inline float32x2_t __attribute__ ((__always_inline__))
 vzip1_f32 (float32x2_t a, float32x2_t b)
 {
   float32x2_t result;
-  __asm-generic__ ("zip1 %0.2s,%1.2s,%2.2s"
+  __asm__ ("zip1 %0.2s,%1.2s,%2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13423,7 +13423,7 @@ __extension__ static __inline poly8x8_t __attribute__ ((__always_inline__))
 vzip1_p8 (poly8x8_t a, poly8x8_t b)
 {
   poly8x8_t result;
-  __asm-generic__ ("zip1 %0.8b,%1.8b,%2.8b"
+  __asm__ ("zip1 %0.8b,%1.8b,%2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13434,7 +13434,7 @@ __extension__ static __inline poly16x4_t __attribute__ ((__always_inline__))
 vzip1_p16 (poly16x4_t a, poly16x4_t b)
 {
   poly16x4_t result;
-  __asm-generic__ ("zip1 %0.4h,%1.4h,%2.4h"
+  __asm__ ("zip1 %0.4h,%1.4h,%2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13445,7 +13445,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vzip1_s8 (int8x8_t a, int8x8_t b)
 {
   int8x8_t result;
-  __asm-generic__ ("zip1 %0.8b,%1.8b,%2.8b"
+  __asm__ ("zip1 %0.8b,%1.8b,%2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13456,7 +13456,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vzip1_s16 (int16x4_t a, int16x4_t b)
 {
   int16x4_t result;
-  __asm-generic__ ("zip1 %0.4h,%1.4h,%2.4h"
+  __asm__ ("zip1 %0.4h,%1.4h,%2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13467,7 +13467,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vzip1_s32 (int32x2_t a, int32x2_t b)
 {
   int32x2_t result;
-  __asm-generic__ ("zip1 %0.2s,%1.2s,%2.2s"
+  __asm__ ("zip1 %0.2s,%1.2s,%2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13478,7 +13478,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vzip1_u8 (uint8x8_t a, uint8x8_t b)
 {
   uint8x8_t result;
-  __asm-generic__ ("zip1 %0.8b,%1.8b,%2.8b"
+  __asm__ ("zip1 %0.8b,%1.8b,%2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13489,7 +13489,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vzip1_u16 (uint16x4_t a, uint16x4_t b)
 {
   uint16x4_t result;
-  __asm-generic__ ("zip1 %0.4h,%1.4h,%2.4h"
+  __asm__ ("zip1 %0.4h,%1.4h,%2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13500,7 +13500,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vzip1_u32 (uint32x2_t a, uint32x2_t b)
 {
   uint32x2_t result;
-  __asm-generic__ ("zip1 %0.2s,%1.2s,%2.2s"
+  __asm__ ("zip1 %0.2s,%1.2s,%2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13511,7 +13511,7 @@ __extension__ static __inline float32x4_t __attribute__ ((__always_inline__))
 vzip1q_f32 (float32x4_t a, float32x4_t b)
 {
   float32x4_t result;
-  __asm-generic__ ("zip1 %0.4s,%1.4s,%2.4s"
+  __asm__ ("zip1 %0.4s,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13522,7 +13522,7 @@ __extension__ static __inline float64x2_t __attribute__ ((__always_inline__))
 vzip1q_f64 (float64x2_t a, float64x2_t b)
 {
   float64x2_t result;
-  __asm-generic__ ("zip1 %0.2d,%1.2d,%2.2d"
+  __asm__ ("zip1 %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13533,7 +13533,7 @@ __extension__ static __inline poly8x16_t __attribute__ ((__always_inline__))
 vzip1q_p8 (poly8x16_t a, poly8x16_t b)
 {
   poly8x16_t result;
-  __asm-generic__ ("zip1 %0.16b,%1.16b,%2.16b"
+  __asm__ ("zip1 %0.16b,%1.16b,%2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13544,7 +13544,7 @@ __extension__ static __inline poly16x8_t __attribute__ ((__always_inline__))
 vzip1q_p16 (poly16x8_t a, poly16x8_t b)
 {
   poly16x8_t result;
-  __asm-generic__ ("zip1 %0.8h,%1.8h,%2.8h"
+  __asm__ ("zip1 %0.8h,%1.8h,%2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13555,7 +13555,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vzip1q_s8 (int8x16_t a, int8x16_t b)
 {
   int8x16_t result;
-  __asm-generic__ ("zip1 %0.16b,%1.16b,%2.16b"
+  __asm__ ("zip1 %0.16b,%1.16b,%2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13566,7 +13566,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vzip1q_s16 (int16x8_t a, int16x8_t b)
 {
   int16x8_t result;
-  __asm-generic__ ("zip1 %0.8h,%1.8h,%2.8h"
+  __asm__ ("zip1 %0.8h,%1.8h,%2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13577,7 +13577,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vzip1q_s32 (int32x4_t a, int32x4_t b)
 {
   int32x4_t result;
-  __asm-generic__ ("zip1 %0.4s,%1.4s,%2.4s"
+  __asm__ ("zip1 %0.4s,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13588,7 +13588,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vzip1q_s64 (int64x2_t a, int64x2_t b)
 {
   int64x2_t result;
-  __asm-generic__ ("zip1 %0.2d,%1.2d,%2.2d"
+  __asm__ ("zip1 %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13599,7 +13599,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vzip1q_u8 (uint8x16_t a, uint8x16_t b)
 {
   uint8x16_t result;
-  __asm-generic__ ("zip1 %0.16b,%1.16b,%2.16b"
+  __asm__ ("zip1 %0.16b,%1.16b,%2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13610,7 +13610,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vzip1q_u16 (uint16x8_t a, uint16x8_t b)
 {
   uint16x8_t result;
-  __asm-generic__ ("zip1 %0.8h,%1.8h,%2.8h"
+  __asm__ ("zip1 %0.8h,%1.8h,%2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13621,7 +13621,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vzip1q_u32 (uint32x4_t a, uint32x4_t b)
 {
   uint32x4_t result;
-  __asm-generic__ ("zip1 %0.4s,%1.4s,%2.4s"
+  __asm__ ("zip1 %0.4s,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13632,7 +13632,7 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vzip1q_u64 (uint64x2_t a, uint64x2_t b)
 {
   uint64x2_t result;
-  __asm-generic__ ("zip1 %0.2d,%1.2d,%2.2d"
+  __asm__ ("zip1 %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13643,7 +13643,7 @@ __extension__ static __inline float32x2_t __attribute__ ((__always_inline__))
 vzip2_f32 (float32x2_t a, float32x2_t b)
 {
   float32x2_t result;
-  __asm-generic__ ("zip2 %0.2s,%1.2s,%2.2s"
+  __asm__ ("zip2 %0.2s,%1.2s,%2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13654,7 +13654,7 @@ __extension__ static __inline poly8x8_t __attribute__ ((__always_inline__))
 vzip2_p8 (poly8x8_t a, poly8x8_t b)
 {
   poly8x8_t result;
-  __asm-generic__ ("zip2 %0.8b,%1.8b,%2.8b"
+  __asm__ ("zip2 %0.8b,%1.8b,%2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13665,7 +13665,7 @@ __extension__ static __inline poly16x4_t __attribute__ ((__always_inline__))
 vzip2_p16 (poly16x4_t a, poly16x4_t b)
 {
   poly16x4_t result;
-  __asm-generic__ ("zip2 %0.4h,%1.4h,%2.4h"
+  __asm__ ("zip2 %0.4h,%1.4h,%2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13676,7 +13676,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vzip2_s8 (int8x8_t a, int8x8_t b)
 {
   int8x8_t result;
-  __asm-generic__ ("zip2 %0.8b,%1.8b,%2.8b"
+  __asm__ ("zip2 %0.8b,%1.8b,%2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13687,7 +13687,7 @@ __extension__ static __inline int16x4_t __attribute__ ((__always_inline__))
 vzip2_s16 (int16x4_t a, int16x4_t b)
 {
   int16x4_t result;
-  __asm-generic__ ("zip2 %0.4h,%1.4h,%2.4h"
+  __asm__ ("zip2 %0.4h,%1.4h,%2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13698,7 +13698,7 @@ __extension__ static __inline int32x2_t __attribute__ ((__always_inline__))
 vzip2_s32 (int32x2_t a, int32x2_t b)
 {
   int32x2_t result;
-  __asm-generic__ ("zip2 %0.2s,%1.2s,%2.2s"
+  __asm__ ("zip2 %0.2s,%1.2s,%2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13709,7 +13709,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vzip2_u8 (uint8x8_t a, uint8x8_t b)
 {
   uint8x8_t result;
-  __asm-generic__ ("zip2 %0.8b,%1.8b,%2.8b"
+  __asm__ ("zip2 %0.8b,%1.8b,%2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13720,7 +13720,7 @@ __extension__ static __inline uint16x4_t __attribute__ ((__always_inline__))
 vzip2_u16 (uint16x4_t a, uint16x4_t b)
 {
   uint16x4_t result;
-  __asm-generic__ ("zip2 %0.4h,%1.4h,%2.4h"
+  __asm__ ("zip2 %0.4h,%1.4h,%2.4h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13731,7 +13731,7 @@ __extension__ static __inline uint32x2_t __attribute__ ((__always_inline__))
 vzip2_u32 (uint32x2_t a, uint32x2_t b)
 {
   uint32x2_t result;
-  __asm-generic__ ("zip2 %0.2s,%1.2s,%2.2s"
+  __asm__ ("zip2 %0.2s,%1.2s,%2.2s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13742,7 +13742,7 @@ __extension__ static __inline float32x4_t __attribute__ ((__always_inline__))
 vzip2q_f32 (float32x4_t a, float32x4_t b)
 {
   float32x4_t result;
-  __asm-generic__ ("zip2 %0.4s,%1.4s,%2.4s"
+  __asm__ ("zip2 %0.4s,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13753,7 +13753,7 @@ __extension__ static __inline float64x2_t __attribute__ ((__always_inline__))
 vzip2q_f64 (float64x2_t a, float64x2_t b)
 {
   float64x2_t result;
-  __asm-generic__ ("zip2 %0.2d,%1.2d,%2.2d"
+  __asm__ ("zip2 %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13764,7 +13764,7 @@ __extension__ static __inline poly8x16_t __attribute__ ((__always_inline__))
 vzip2q_p8 (poly8x16_t a, poly8x16_t b)
 {
   poly8x16_t result;
-  __asm-generic__ ("zip2 %0.16b,%1.16b,%2.16b"
+  __asm__ ("zip2 %0.16b,%1.16b,%2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13775,7 +13775,7 @@ __extension__ static __inline poly16x8_t __attribute__ ((__always_inline__))
 vzip2q_p16 (poly16x8_t a, poly16x8_t b)
 {
   poly16x8_t result;
-  __asm-generic__ ("zip2 %0.8h,%1.8h,%2.8h"
+  __asm__ ("zip2 %0.8h,%1.8h,%2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13786,7 +13786,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vzip2q_s8 (int8x16_t a, int8x16_t b)
 {
   int8x16_t result;
-  __asm-generic__ ("zip2 %0.16b,%1.16b,%2.16b"
+  __asm__ ("zip2 %0.16b,%1.16b,%2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13797,7 +13797,7 @@ __extension__ static __inline int16x8_t __attribute__ ((__always_inline__))
 vzip2q_s16 (int16x8_t a, int16x8_t b)
 {
   int16x8_t result;
-  __asm-generic__ ("zip2 %0.8h,%1.8h,%2.8h"
+  __asm__ ("zip2 %0.8h,%1.8h,%2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13808,7 +13808,7 @@ __extension__ static __inline int32x4_t __attribute__ ((__always_inline__))
 vzip2q_s32 (int32x4_t a, int32x4_t b)
 {
   int32x4_t result;
-  __asm-generic__ ("zip2 %0.4s,%1.4s,%2.4s"
+  __asm__ ("zip2 %0.4s,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13819,7 +13819,7 @@ __extension__ static __inline int64x2_t __attribute__ ((__always_inline__))
 vzip2q_s64 (int64x2_t a, int64x2_t b)
 {
   int64x2_t result;
-  __asm-generic__ ("zip2 %0.2d,%1.2d,%2.2d"
+  __asm__ ("zip2 %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13830,7 +13830,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vzip2q_u8 (uint8x16_t a, uint8x16_t b)
 {
   uint8x16_t result;
-  __asm-generic__ ("zip2 %0.16b,%1.16b,%2.16b"
+  __asm__ ("zip2 %0.16b,%1.16b,%2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13841,7 +13841,7 @@ __extension__ static __inline uint16x8_t __attribute__ ((__always_inline__))
 vzip2q_u16 (uint16x8_t a, uint16x8_t b)
 {
   uint16x8_t result;
-  __asm-generic__ ("zip2 %0.8h,%1.8h,%2.8h"
+  __asm__ ("zip2 %0.8h,%1.8h,%2.8h"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13852,7 +13852,7 @@ __extension__ static __inline uint32x4_t __attribute__ ((__always_inline__))
 vzip2q_u32 (uint32x4_t a, uint32x4_t b)
 {
   uint32x4_t result;
-  __asm-generic__ ("zip2 %0.4s,%1.4s,%2.4s"
+  __asm__ ("zip2 %0.4s,%1.4s,%2.4s"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -13863,16 +13863,16 @@ __extension__ static __inline uint64x2_t __attribute__ ((__always_inline__))
 vzip2q_u64 (uint64x2_t a, uint64x2_t b)
 {
   uint64x2_t result;
-  __asm-generic__ ("zip2 %0.2d,%1.2d,%2.2d"
+  __asm__ ("zip2 %0.2d,%1.2d,%2.2d"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
   return result;
 }
 
-/* End of temporary inline asm-generic implementations.  */
+/* End of temporary inline asm implementations.  */
 
-/* Start of temporary inline asm-generic for vldn, vstn and friends.  */
+/* Start of temporary inline asm for vldn, vstn and friends.  */
 
 /* Create struct element types for duplicating loads.
 
@@ -13960,7 +13960,7 @@ __STRUCTN (float, 64, 4)
   vld2 ## Q ## _dup_ ## funcsuffix (const ptrtype *ptr)			\
   {									\
     rettype result;							\
-    __asm-generic__ ("ld2r {v16." #regsuffix ", v17." #regsuffix "}, %1\n\t"	\
+    __asm__ ("ld2r {v16." #regsuffix ", v17." #regsuffix "}, %1\n\t"	\
 	     "st1 {v16." #regsuffix ", v17." #regsuffix "}, %0\n\t"	\
 	     : "=Q"(result)						\
 	     : "Q"(*(const structtype *)ptr)				\
@@ -14001,7 +14001,7 @@ __LD2R_FUNC (uint64x2x2_t, uint64x2_t, uint64_t, 2d, u64, q)
 				     rettype b, const int c)		\
   {									\
     rettype result;							\
-    __asm-generic__ ("ld1 {v16." #regsuffix ", v17." #regsuffix "}, %1\n\t"	\
+    __asm__ ("ld1 {v16." #regsuffix ", v17." #regsuffix "}, %1\n\t"	\
 	     "ld2 {v16." #lnsuffix ", v17." #lnsuffix "}[%3], %2\n\t"	\
 	     "st1 {v16." #regsuffix ", v17." #regsuffix "}, %0\n\t"	\
 	     : "=Q"(result)						\
@@ -14042,7 +14042,7 @@ __LD2_LANE_FUNC (uint64x2x2_t, uint64_t, 2d, d, u64, q)
   vld3 ## Q ## _dup_ ## funcsuffix (const ptrtype *ptr)			\
   {									\
     rettype result;							\
-    __asm-generic__ ("ld3r {v16." #regsuffix " - v18." #regsuffix "}, %1\n\t"	\
+    __asm__ ("ld3r {v16." #regsuffix " - v18." #regsuffix "}, %1\n\t"	\
 	     "st1 {v16." #regsuffix " - v18." #regsuffix "}, %0\n\t"	\
 	     : "=Q"(result)						\
 	     : "Q"(*(const structtype *)ptr)				\
@@ -14083,7 +14083,7 @@ __LD3R_FUNC (uint64x2x3_t, uint64x3_t, uint64_t, 2d, u64, q)
 				     rettype b, const int c)		\
   {									\
     rettype result;							\
-    __asm-generic__ ("ld1 {v16." #regsuffix " - v18." #regsuffix "}, %1\n\t"	\
+    __asm__ ("ld1 {v16." #regsuffix " - v18." #regsuffix "}, %1\n\t"	\
 	     "ld3 {v16." #lnsuffix " - v18." #lnsuffix "}[%3], %2\n\t"	\
 	     "st1 {v16." #regsuffix " - v18." #regsuffix "}, %0\n\t"	\
 	     : "=Q"(result)						\
@@ -14124,7 +14124,7 @@ __LD3_LANE_FUNC (uint64x2x3_t, uint64_t, 2d, d, u64, q)
   vld4 ## Q ## _dup_ ## funcsuffix (const ptrtype *ptr)			\
   {									\
     rettype result;							\
-    __asm-generic__ ("ld4r {v16." #regsuffix " - v19." #regsuffix "}, %1\n\t"	\
+    __asm__ ("ld4r {v16." #regsuffix " - v19." #regsuffix "}, %1\n\t"	\
 	     "st1 {v16." #regsuffix " - v19." #regsuffix "}, %0\n\t"	\
 	     : "=Q"(result)						\
 	     : "Q"(*(const structtype *)ptr)				\
@@ -14165,7 +14165,7 @@ __LD4R_FUNC (uint64x2x4_t, uint64x4_t, uint64_t, 2d, u64, q)
 				     rettype b, const int c)		\
   {									\
     rettype result;							\
-    __asm-generic__ ("ld1 {v16." #regsuffix " - v19." #regsuffix "}, %1\n\t"	\
+    __asm__ ("ld1 {v16." #regsuffix " - v19." #regsuffix "}, %1\n\t"	\
 	     "ld4 {v16." #lnsuffix " - v19." #lnsuffix "}[%3], %2\n\t"	\
 	     "st1 {v16." #regsuffix " - v19." #regsuffix "}, %0\n\t"	\
 	     : "=Q"(result)						\
@@ -14209,7 +14209,7 @@ __LD4_LANE_FUNC (uint64x2x4_t, uint64_t, 2d, d, u64, q)
   {									\
     __ST2_LANE_STRUCTURE_##intype *__p =				\
 				(__ST2_LANE_STRUCTURE_##intype *)ptr;	\
-    __asm-generic__ ("ld1 {v16." #regsuffix ", v17." #regsuffix "}, %1\n\t"	\
+    __asm__ ("ld1 {v16." #regsuffix ", v17." #regsuffix "}, %1\n\t"	\
 	     "st2 {v16." #lnsuffix ", v17." #lnsuffix "}[%2], %0\n\t"	\
 	     : "=Q"(*__p)						\
 	     : "Q"(b), "i"(c)						\
@@ -14251,7 +14251,7 @@ __ST2_LANE_FUNC (uint64x2x2_t, uint64_t, 2d, d, u64, q)
   {									\
     __ST3_LANE_STRUCTURE_##intype *__p =				\
 				(__ST3_LANE_STRUCTURE_##intype *)ptr;	\
-    __asm-generic__ ("ld1 {v16." #regsuffix " - v18." #regsuffix "}, %1\n\t"	\
+    __asm__ ("ld1 {v16." #regsuffix " - v18." #regsuffix "}, %1\n\t"	\
 	     "st3 {v16." #lnsuffix " - v18." #lnsuffix "}[%2], %0\n\t"	\
 	     : "=Q"(*__p)						\
 	     : "Q"(b), "i"(c)						\
@@ -14293,7 +14293,7 @@ __ST3_LANE_FUNC (uint64x2x3_t, uint64_t, 2d, d, u64, q)
   {									\
     __ST4_LANE_STRUCTURE_##intype *__p =				\
 				(__ST4_LANE_STRUCTURE_##intype *)ptr;	\
-    __asm-generic__ ("ld1 {v16." #regsuffix " - v19." #regsuffix "}, %1\n\t"	\
+    __asm__ ("ld1 {v16." #regsuffix " - v19." #regsuffix "}, %1\n\t"	\
 	     "st4 {v16." #lnsuffix " - v19." #lnsuffix "}[%2], %0\n\t"	\
 	     : "=Q"(*__p)						\
 	     : "Q"(b), "i"(c)						\
@@ -14329,7 +14329,7 @@ __extension__ static __inline int64_t __attribute__ ((__always_inline__))
 vaddlv_s32 (int32x2_t a)
 {
   int64_t result;
-  __asm-generic__ ("saddlp %0.1d, %1.2s" : "=w"(result) : "w"(a) : );
+  __asm__ ("saddlp %0.1d, %1.2s" : "=w"(result) : "w"(a) : );
   return result;
 }
 
@@ -14337,7 +14337,7 @@ __extension__ static __inline uint64_t __attribute__ ((__always_inline__))
 vaddlv_u32 (uint32x2_t a)
 {
   uint64_t result;
-  __asm-generic__ ("uaddlp %0.1d, %1.2s" : "=w"(result) : "w"(a) : );
+  __asm__ ("uaddlp %0.1d, %1.2s" : "=w"(result) : "w"(a) : );
   return result;
 }
 
@@ -14401,7 +14401,7 @@ __extension__ static __inline poly8x8_t __attribute__ ((__always_inline__))
 vqtbl1_p8 (poly8x16_t a, uint8x8_t b)
 {
   poly8x8_t result;
-  __asm-generic__ ("tbl %0.8b, {%1.16b}, %2.8b"
+  __asm__ ("tbl %0.8b, {%1.16b}, %2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -14412,7 +14412,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vqtbl1_s8 (int8x16_t a, uint8x8_t b)
 {
   int8x8_t result;
-  __asm-generic__ ("tbl %0.8b, {%1.16b}, %2.8b"
+  __asm__ ("tbl %0.8b, {%1.16b}, %2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -14423,7 +14423,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vqtbl1_u8 (uint8x16_t a, uint8x8_t b)
 {
   uint8x8_t result;
-  __asm-generic__ ("tbl %0.8b, {%1.16b}, %2.8b"
+  __asm__ ("tbl %0.8b, {%1.16b}, %2.8b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -14434,7 +14434,7 @@ __extension__ static __inline poly8x16_t __attribute__ ((__always_inline__))
 vqtbl1q_p8 (poly8x16_t a, uint8x16_t b)
 {
   poly8x16_t result;
-  __asm-generic__ ("tbl %0.16b, {%1.16b}, %2.16b"
+  __asm__ ("tbl %0.16b, {%1.16b}, %2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -14445,7 +14445,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vqtbl1q_s8 (int8x16_t a, uint8x16_t b)
 {
   int8x16_t result;
-  __asm-generic__ ("tbl %0.16b, {%1.16b}, %2.16b"
+  __asm__ ("tbl %0.16b, {%1.16b}, %2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -14456,7 +14456,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vqtbl1q_u8 (uint8x16_t a, uint8x16_t b)
 {
   uint8x16_t result;
-  __asm-generic__ ("tbl %0.16b, {%1.16b}, %2.16b"
+  __asm__ ("tbl %0.16b, {%1.16b}, %2.16b"
            : "=w"(result)
            : "w"(a), "w"(b)
            : /* No clobbers */);
@@ -14467,7 +14467,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vqtbl2_s8 (int8x16x2_t tab, uint8x8_t idx)
 {
   int8x8_t result;
-  __asm-generic__ ("ld1 {v16.16b, v17.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b, v17.16b}, %1\n\t"
 	   "tbl %0.8b, {v16.16b, v17.16b}, %2.8b\n\t"
 	   :"=w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14479,7 +14479,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vqtbl2_u8 (uint8x16x2_t tab, uint8x8_t idx)
 {
   uint8x8_t result;
-  __asm-generic__ ("ld1 {v16.16b, v17.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b, v17.16b}, %1\n\t"
 	   "tbl %0.8b, {v16.16b, v17.16b}, %2.8b\n\t"
 	   :"=w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14491,7 +14491,7 @@ __extension__ static __inline poly8x8_t __attribute__ ((__always_inline__))
 vqtbl2_p8 (poly8x16x2_t tab, uint8x8_t idx)
 {
   poly8x8_t result;
-  __asm-generic__ ("ld1 {v16.16b, v17.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b, v17.16b}, %1\n\t"
 	   "tbl %0.8b, {v16.16b, v17.16b}, %2.8b\n\t"
 	   :"=w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14503,7 +14503,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vqtbl2q_s8 (int8x16x2_t tab, uint8x16_t idx)
 {
   int8x16_t result;
-  __asm-generic__ ("ld1 {v16.16b, v17.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b, v17.16b}, %1\n\t"
 	   "tbl %0.16b, {v16.16b, v17.16b}, %2.16b\n\t"
 	   :"=w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14515,7 +14515,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vqtbl2q_u8 (uint8x16x2_t tab, uint8x16_t idx)
 {
   uint8x16_t result;
-  __asm-generic__ ("ld1 {v16.16b, v17.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b, v17.16b}, %1\n\t"
 	   "tbl %0.16b, {v16.16b, v17.16b}, %2.16b\n\t"
 	   :"=w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14527,7 +14527,7 @@ __extension__ static __inline poly8x16_t __attribute__ ((__always_inline__))
 vqtbl2q_p8 (poly8x16x2_t tab, uint8x16_t idx)
 {
   poly8x16_t result;
-  __asm-generic__ ("ld1 {v16.16b, v17.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b, v17.16b}, %1\n\t"
 	   "tbl %0.16b, {v16.16b, v17.16b}, %2.16b\n\t"
 	   :"=w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14539,7 +14539,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vqtbl3_s8 (int8x16x3_t tab, uint8x8_t idx)
 {
   int8x8_t result;
-  __asm-generic__ ("ld1 {v16.16b - v18.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v18.16b}, %1\n\t"
 	   "tbl %0.8b, {v16.16b - v18.16b}, %2.8b\n\t"
 	   :"=w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14551,7 +14551,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vqtbl3_u8 (uint8x16x3_t tab, uint8x8_t idx)
 {
   uint8x8_t result;
-  __asm-generic__ ("ld1 {v16.16b - v18.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v18.16b}, %1\n\t"
 	   "tbl %0.8b, {v16.16b - v18.16b}, %2.8b\n\t"
 	   :"=w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14563,7 +14563,7 @@ __extension__ static __inline poly8x8_t __attribute__ ((__always_inline__))
 vqtbl3_p8 (poly8x16x3_t tab, uint8x8_t idx)
 {
   poly8x8_t result;
-  __asm-generic__ ("ld1 {v16.16b - v18.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v18.16b}, %1\n\t"
 	   "tbl %0.8b, {v16.16b - v18.16b}, %2.8b\n\t"
 	   :"=w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14575,7 +14575,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vqtbl3q_s8 (int8x16x3_t tab, uint8x16_t idx)
 {
   int8x16_t result;
-  __asm-generic__ ("ld1 {v16.16b - v18.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v18.16b}, %1\n\t"
 	   "tbl %0.16b, {v16.16b - v18.16b}, %2.16b\n\t"
 	   :"=w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14587,7 +14587,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vqtbl3q_u8 (uint8x16x3_t tab, uint8x16_t idx)
 {
   uint8x16_t result;
-  __asm-generic__ ("ld1 {v16.16b - v18.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v18.16b}, %1\n\t"
 	   "tbl %0.16b, {v16.16b - v18.16b}, %2.16b\n\t"
 	   :"=w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14599,7 +14599,7 @@ __extension__ static __inline poly8x16_t __attribute__ ((__always_inline__))
 vqtbl3q_p8 (poly8x16x3_t tab, uint8x16_t idx)
 {
   poly8x16_t result;
-  __asm-generic__ ("ld1 {v16.16b - v18.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v18.16b}, %1\n\t"
 	   "tbl %0.16b, {v16.16b - v18.16b}, %2.16b\n\t"
 	   :"=w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14611,7 +14611,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vqtbl4_s8 (int8x16x4_t tab, uint8x8_t idx)
 {
   int8x8_t result;
-  __asm-generic__ ("ld1 {v16.16b - v19.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v19.16b}, %1\n\t"
 	   "tbl %0.8b, {v16.16b - v19.16b}, %2.8b\n\t"
 	   :"=w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14623,7 +14623,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vqtbl4_u8 (uint8x16x4_t tab, uint8x8_t idx)
 {
   uint8x8_t result;
-  __asm-generic__ ("ld1 {v16.16b - v19.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v19.16b}, %1\n\t"
 	   "tbl %0.8b, {v16.16b - v19.16b}, %2.8b\n\t"
 	   :"=w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14635,7 +14635,7 @@ __extension__ static __inline poly8x8_t __attribute__ ((__always_inline__))
 vqtbl4_p8 (poly8x16x4_t tab, uint8x8_t idx)
 {
   poly8x8_t result;
-  __asm-generic__ ("ld1 {v16.16b - v19.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v19.16b}, %1\n\t"
 	   "tbl %0.8b, {v16.16b - v19.16b}, %2.8b\n\t"
 	   :"=w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14648,7 +14648,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vqtbl4q_s8 (int8x16x4_t tab, uint8x16_t idx)
 {
   int8x16_t result;
-  __asm-generic__ ("ld1 {v16.16b - v19.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v19.16b}, %1\n\t"
 	   "tbl %0.16b, {v16.16b - v19.16b}, %2.16b\n\t"
 	   :"=w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14660,7 +14660,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vqtbl4q_u8 (uint8x16x4_t tab, uint8x16_t idx)
 {
   uint8x16_t result;
-  __asm-generic__ ("ld1 {v16.16b - v19.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v19.16b}, %1\n\t"
 	   "tbl %0.16b, {v16.16b - v19.16b}, %2.16b\n\t"
 	   :"=w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14672,7 +14672,7 @@ __extension__ static __inline poly8x16_t __attribute__ ((__always_inline__))
 vqtbl4q_p8 (poly8x16x4_t tab, uint8x16_t idx)
 {
   poly8x16_t result;
-  __asm-generic__ ("ld1 {v16.16b - v19.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v19.16b}, %1\n\t"
 	   "tbl %0.16b, {v16.16b - v19.16b}, %2.16b\n\t"
 	   :"=w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14685,7 +14685,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vqtbx1_s8 (int8x8_t r, int8x16_t tab, uint8x8_t idx)
 {
   int8x8_t result = r;
-  __asm-generic__ ("tbx %0.8b,{%1.16b},%2.8b"
+  __asm__ ("tbx %0.8b,{%1.16b},%2.8b"
            : "+w"(result)
            : "w"(tab), "w"(idx)
            : /* No clobbers */);
@@ -14696,7 +14696,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vqtbx1_u8 (uint8x8_t r, uint8x16_t tab, uint8x8_t idx)
 {
   uint8x8_t result = r;
-  __asm-generic__ ("tbx %0.8b,{%1.16b},%2.8b"
+  __asm__ ("tbx %0.8b,{%1.16b},%2.8b"
            : "+w"(result)
            : "w"(tab), "w"(idx)
            : /* No clobbers */);
@@ -14707,7 +14707,7 @@ __extension__ static __inline poly8x8_t __attribute__ ((__always_inline__))
 vqtbx1_p8 (poly8x8_t r, poly8x16_t tab, uint8x8_t idx)
 {
   poly8x8_t result = r;
-  __asm-generic__ ("tbx %0.8b,{%1.16b},%2.8b"
+  __asm__ ("tbx %0.8b,{%1.16b},%2.8b"
            : "+w"(result)
            : "w"(tab), "w"(idx)
            : /* No clobbers */);
@@ -14718,7 +14718,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vqtbx1q_s8 (int8x16_t r, int8x16_t tab, uint8x16_t idx)
 {
   int8x16_t result = r;
-  __asm-generic__ ("tbx %0.16b,{%1.16b},%2.16b"
+  __asm__ ("tbx %0.16b,{%1.16b},%2.16b"
            : "+w"(result)
            : "w"(tab), "w"(idx)
            : /* No clobbers */);
@@ -14729,7 +14729,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vqtbx1q_u8 (uint8x16_t r, uint8x16_t tab, uint8x16_t idx)
 {
   uint8x16_t result = r;
-  __asm-generic__ ("tbx %0.16b,{%1.16b},%2.16b"
+  __asm__ ("tbx %0.16b,{%1.16b},%2.16b"
            : "+w"(result)
            : "w"(tab), "w"(idx)
            : /* No clobbers */);
@@ -14740,7 +14740,7 @@ __extension__ static __inline poly8x16_t __attribute__ ((__always_inline__))
 vqtbx1q_p8 (poly8x16_t r, poly8x16_t tab, uint8x16_t idx)
 {
   poly8x16_t result = r;
-  __asm-generic__ ("tbx %0.16b,{%1.16b},%2.16b"
+  __asm__ ("tbx %0.16b,{%1.16b},%2.16b"
            : "+w"(result)
            : "w"(tab), "w"(idx)
            : /* No clobbers */);
@@ -14751,7 +14751,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vqtbx2_s8 (int8x8_t r, int8x16x2_t tab, uint8x8_t idx)
 {
   int8x8_t result = r;
-  __asm-generic__ ("ld1 {v16.16b, v17.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b, v17.16b}, %1\n\t"
 	   "tbx %0.8b, {v16.16b, v17.16b}, %2.8b\n\t"
 	   :"+w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14763,7 +14763,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vqtbx2_u8 (uint8x8_t r, uint8x16x2_t tab, uint8x8_t idx)
 {
   uint8x8_t result = r;
-  __asm-generic__ ("ld1 {v16.16b, v17.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b, v17.16b}, %1\n\t"
 	   "tbx %0.8b, {v16.16b, v17.16b}, %2.8b\n\t"
 	   :"+w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14775,7 +14775,7 @@ __extension__ static __inline poly8x8_t __attribute__ ((__always_inline__))
 vqtbx2_p8 (poly8x8_t r, poly8x16x2_t tab, uint8x8_t idx)
 {
   poly8x8_t result = r;
-  __asm-generic__ ("ld1 {v16.16b, v17.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b, v17.16b}, %1\n\t"
 	   "tbx %0.8b, {v16.16b, v17.16b}, %2.8b\n\t"
 	   :"+w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14788,7 +14788,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vqtbx2q_s8 (int8x16_t r, int8x16x2_t tab, uint8x16_t idx)
 {
   int8x16_t result = r;
-  __asm-generic__ ("ld1 {v16.16b, v17.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b, v17.16b}, %1\n\t"
 	   "tbx %0.16b, {v16.16b, v17.16b}, %2.16b\n\t"
 	   :"+w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14800,7 +14800,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vqtbx2q_u8 (uint8x16_t r, uint8x16x2_t tab, uint8x16_t idx)
 {
   uint8x16_t result = r;
-  __asm-generic__ ("ld1 {v16.16b, v17.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b, v17.16b}, %1\n\t"
 	   "tbx %0.16b, {v16.16b, v17.16b}, %2.16b\n\t"
 	   :"+w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14812,7 +14812,7 @@ __extension__ static __inline poly8x16_t __attribute__ ((__always_inline__))
 vqtbx2q_p8 (poly8x16_t r, poly8x16x2_t tab, uint8x16_t idx)
 {
   poly8x16_t result = r;
-  __asm-generic__ ("ld1 {v16.16b, v17.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b, v17.16b}, %1\n\t"
 	   "tbx %0.16b, {v16.16b, v17.16b}, %2.16b\n\t"
 	   :"+w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14825,7 +14825,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vqtbx3_s8 (int8x8_t r, int8x16x3_t tab, uint8x8_t idx)
 {
   int8x8_t result = r;
-  __asm-generic__ ("ld1 {v16.16b - v18.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v18.16b}, %1\n\t"
 	   "tbx %0.8b, {v16.16b - v18.16b}, %2.8b\n\t"
 	   :"+w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14837,7 +14837,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vqtbx3_u8 (uint8x8_t r, uint8x16x3_t tab, uint8x8_t idx)
 {
   uint8x8_t result = r;
-  __asm-generic__ ("ld1 {v16.16b - v18.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v18.16b}, %1\n\t"
 	   "tbx %0.8b, {v16.16b - v18.16b}, %2.8b\n\t"
 	   :"+w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14849,7 +14849,7 @@ __extension__ static __inline poly8x8_t __attribute__ ((__always_inline__))
 vqtbx3_p8 (poly8x8_t r, poly8x16x3_t tab, uint8x8_t idx)
 {
   poly8x8_t result = r;
-  __asm-generic__ ("ld1 {v16.16b - v18.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v18.16b}, %1\n\t"
 	   "tbx %0.8b, {v16.16b - v18.16b}, %2.8b\n\t"
 	   :"+w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14862,7 +14862,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vqtbx3q_s8 (int8x16_t r, int8x16x3_t tab, uint8x16_t idx)
 {
   int8x16_t result = r;
-  __asm-generic__ ("ld1 {v16.16b - v18.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v18.16b}, %1\n\t"
 	   "tbx %0.16b, {v16.16b - v18.16b}, %2.16b\n\t"
 	   :"+w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14874,7 +14874,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vqtbx3q_u8 (uint8x16_t r, uint8x16x3_t tab, uint8x16_t idx)
 {
   uint8x16_t result = r;
-  __asm-generic__ ("ld1 {v16.16b - v18.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v18.16b}, %1\n\t"
 	   "tbx %0.16b, {v16.16b - v18.16b}, %2.16b\n\t"
 	   :"+w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14886,7 +14886,7 @@ __extension__ static __inline poly8x16_t __attribute__ ((__always_inline__))
 vqtbx3q_p8 (poly8x16_t r, poly8x16x3_t tab, uint8x16_t idx)
 {
   poly8x16_t result = r;
-  __asm-generic__ ("ld1 {v16.16b - v18.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v18.16b}, %1\n\t"
 	   "tbx %0.16b, {v16.16b - v18.16b}, %2.16b\n\t"
 	   :"+w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14899,7 +14899,7 @@ __extension__ static __inline int8x8_t __attribute__ ((__always_inline__))
 vqtbx4_s8 (int8x8_t r, int8x16x4_t tab, uint8x8_t idx)
 {
   int8x8_t result = r;
-  __asm-generic__ ("ld1 {v16.16b - v19.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v19.16b}, %1\n\t"
 	   "tbx %0.8b, {v16.16b - v19.16b}, %2.8b\n\t"
 	   :"+w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14911,7 +14911,7 @@ __extension__ static __inline uint8x8_t __attribute__ ((__always_inline__))
 vqtbx4_u8 (uint8x8_t r, uint8x16x4_t tab, uint8x8_t idx)
 {
   uint8x8_t result = r;
-  __asm-generic__ ("ld1 {v16.16b - v19.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v19.16b}, %1\n\t"
 	   "tbx %0.8b, {v16.16b - v19.16b}, %2.8b\n\t"
 	   :"+w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14923,7 +14923,7 @@ __extension__ static __inline poly8x8_t __attribute__ ((__always_inline__))
 vqtbx4_p8 (poly8x8_t r, poly8x16x4_t tab, uint8x8_t idx)
 {
   poly8x8_t result = r;
-  __asm-generic__ ("ld1 {v16.16b - v19.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v19.16b}, %1\n\t"
 	   "tbx %0.8b, {v16.16b - v19.16b}, %2.8b\n\t"
 	   :"+w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14936,7 +14936,7 @@ __extension__ static __inline int8x16_t __attribute__ ((__always_inline__))
 vqtbx4q_s8 (int8x16_t r, int8x16x4_t tab, uint8x16_t idx)
 {
   int8x16_t result = r;
-  __asm-generic__ ("ld1 {v16.16b - v19.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v19.16b}, %1\n\t"
 	   "tbx %0.16b, {v16.16b - v19.16b}, %2.16b\n\t"
 	   :"+w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14948,7 +14948,7 @@ __extension__ static __inline uint8x16_t __attribute__ ((__always_inline__))
 vqtbx4q_u8 (uint8x16_t r, uint8x16x4_t tab, uint8x16_t idx)
 {
   uint8x16_t result = r;
-  __asm-generic__ ("ld1 {v16.16b - v19.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v19.16b}, %1\n\t"
 	   "tbx %0.16b, {v16.16b - v19.16b}, %2.16b\n\t"
 	   :"+w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14960,7 +14960,7 @@ __extension__ static __inline poly8x16_t __attribute__ ((__always_inline__))
 vqtbx4q_p8 (poly8x16_t r, poly8x16x4_t tab, uint8x16_t idx)
 {
   poly8x16_t result = r;
-  __asm-generic__ ("ld1 {v16.16b - v19.16b}, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v19.16b}, %1\n\t"
 	   "tbx %0.16b, {v16.16b - v19.16b}, %2.16b\n\t"
 	   :"+w"(result)
 	   :"Q"(tab),"w"(idx)
@@ -14975,7 +14975,7 @@ vtbl1_s8 (int8x8_t tab, int8x8_t idx)
 {
   int8x8_t result;
   int8x16_t temp = vcombine_s8 (tab, vcreate_s8 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("tbl %0.8b, {%1.16b}, %2.8b"
+  __asm__ ("tbl %0.8b, {%1.16b}, %2.8b"
            : "=w"(result)
            : "w"(temp), "w"(idx)
            : /* No clobbers */);
@@ -14987,7 +14987,7 @@ vtbl1_u8 (uint8x8_t tab, uint8x8_t idx)
 {
   uint8x8_t result;
   uint8x16_t temp = vcombine_u8 (tab, vcreate_u8 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("tbl %0.8b, {%1.16b}, %2.8b"
+  __asm__ ("tbl %0.8b, {%1.16b}, %2.8b"
            : "=w"(result)
            : "w"(temp), "w"(idx)
            : /* No clobbers */);
@@ -14999,7 +14999,7 @@ vtbl1_p8 (poly8x8_t tab, uint8x8_t idx)
 {
   poly8x8_t result;
   poly8x16_t temp = vcombine_p8 (tab, vcreate_p8 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("tbl %0.8b, {%1.16b}, %2.8b"
+  __asm__ ("tbl %0.8b, {%1.16b}, %2.8b"
            : "=w"(result)
            : "w"(temp), "w"(idx)
            : /* No clobbers */);
@@ -15011,7 +15011,7 @@ vtbl2_s8 (int8x8x2_t tab, int8x8_t idx)
 {
   int8x8_t result;
   int8x16_t temp = vcombine_s8 (tab.val[0], tab.val[1]);
-  __asm-generic__ ("tbl %0.8b, {%1.16b}, %2.8b"
+  __asm__ ("tbl %0.8b, {%1.16b}, %2.8b"
            : "=w"(result)
            : "w"(temp), "w"(idx)
            : /* No clobbers */);
@@ -15023,7 +15023,7 @@ vtbl2_u8 (uint8x8x2_t tab, uint8x8_t idx)
 {
   uint8x8_t result;
   uint8x16_t temp = vcombine_u8 (tab.val[0], tab.val[1]);
-  __asm-generic__ ("tbl %0.8b, {%1.16b}, %2.8b"
+  __asm__ ("tbl %0.8b, {%1.16b}, %2.8b"
            : "=w"(result)
            : "w"(temp), "w"(idx)
            : /* No clobbers */);
@@ -15035,7 +15035,7 @@ vtbl2_p8 (poly8x8x2_t tab, uint8x8_t idx)
 {
   poly8x8_t result;
   poly8x16_t temp = vcombine_p8 (tab.val[0], tab.val[1]);
-  __asm-generic__ ("tbl %0.8b, {%1.16b}, %2.8b"
+  __asm__ ("tbl %0.8b, {%1.16b}, %2.8b"
            : "=w"(result)
            : "w"(temp), "w"(idx)
            : /* No clobbers */);
@@ -15049,7 +15049,7 @@ vtbl3_s8 (int8x8x3_t tab, int8x8_t idx)
   int8x16x2_t temp;
   temp.val[0] = vcombine_s8 (tab.val[0], tab.val[1]);
   temp.val[1] = vcombine_s8 (tab.val[2], vcreate_s8 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("ld1 {v16.16b - v17.16b }, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v17.16b }, %1\n\t"
 	   "tbl %0.8b, {v16.16b - v17.16b}, %2.8b\n\t"
            : "=w"(result)
            : "Q"(temp), "w"(idx)
@@ -15064,7 +15064,7 @@ vtbl3_u8 (uint8x8x3_t tab, uint8x8_t idx)
   uint8x16x2_t temp;
   temp.val[0] = vcombine_u8 (tab.val[0], tab.val[1]);
   temp.val[1] = vcombine_u8 (tab.val[2], vcreate_u8 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("ld1 {v16.16b - v17.16b }, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v17.16b }, %1\n\t"
 	   "tbl %0.8b, {v16.16b - v17.16b}, %2.8b\n\t"
            : "=w"(result)
            : "Q"(temp), "w"(idx)
@@ -15079,7 +15079,7 @@ vtbl3_p8 (poly8x8x3_t tab, uint8x8_t idx)
   poly8x16x2_t temp;
   temp.val[0] = vcombine_p8 (tab.val[0], tab.val[1]);
   temp.val[1] = vcombine_p8 (tab.val[2], vcreate_p8 (__AARCH64_UINT64_C (0x0)));
-  __asm-generic__ ("ld1 {v16.16b - v17.16b }, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v17.16b }, %1\n\t"
 	   "tbl %0.8b, {v16.16b - v17.16b}, %2.8b\n\t"
            : "=w"(result)
            : "Q"(temp), "w"(idx)
@@ -15094,7 +15094,7 @@ vtbl4_s8 (int8x8x4_t tab, int8x8_t idx)
   int8x16x2_t temp;
   temp.val[0] = vcombine_s8 (tab.val[0], tab.val[1]);
   temp.val[1] = vcombine_s8 (tab.val[2], tab.val[3]);
-  __asm-generic__ ("ld1 {v16.16b - v17.16b }, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v17.16b }, %1\n\t"
 	   "tbl %0.8b, {v16.16b - v17.16b}, %2.8b\n\t"
            : "=w"(result)
            : "Q"(temp), "w"(idx)
@@ -15109,7 +15109,7 @@ vtbl4_u8 (uint8x8x4_t tab, uint8x8_t idx)
   uint8x16x2_t temp;
   temp.val[0] = vcombine_u8 (tab.val[0], tab.val[1]);
   temp.val[1] = vcombine_u8 (tab.val[2], tab.val[3]);
-  __asm-generic__ ("ld1 {v16.16b - v17.16b }, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v17.16b }, %1\n\t"
 	   "tbl %0.8b, {v16.16b - v17.16b}, %2.8b\n\t"
            : "=w"(result)
            : "Q"(temp), "w"(idx)
@@ -15124,7 +15124,7 @@ vtbl4_p8 (poly8x8x4_t tab, uint8x8_t idx)
   poly8x16x2_t temp;
   temp.val[0] = vcombine_p8 (tab.val[0], tab.val[1]);
   temp.val[1] = vcombine_p8 (tab.val[2], tab.val[3]);
-  __asm-generic__ ("ld1 {v16.16b - v17.16b }, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v17.16b }, %1\n\t"
 	   "tbl %0.8b, {v16.16b - v17.16b}, %2.8b\n\t"
            : "=w"(result)
            : "Q"(temp), "w"(idx)
@@ -15137,7 +15137,7 @@ vtbx2_s8 (int8x8_t r, int8x8x2_t tab, int8x8_t idx)
 {
   int8x8_t result = r;
   int8x16_t temp = vcombine_s8 (tab.val[0], tab.val[1]);
-  __asm-generic__ ("tbx %0.8b, {%1.16b}, %2.8b"
+  __asm__ ("tbx %0.8b, {%1.16b}, %2.8b"
            : "+w"(result)
            : "w"(temp), "w"(idx)
            : /* No clobbers */);
@@ -15149,7 +15149,7 @@ vtbx2_u8 (uint8x8_t r, uint8x8x2_t tab, uint8x8_t idx)
 {
   uint8x8_t result = r;
   uint8x16_t temp = vcombine_u8 (tab.val[0], tab.val[1]);
-  __asm-generic__ ("tbx %0.8b, {%1.16b}, %2.8b"
+  __asm__ ("tbx %0.8b, {%1.16b}, %2.8b"
            : "+w"(result)
            : "w"(temp), "w"(idx)
            : /* No clobbers */);
@@ -15161,7 +15161,7 @@ vtbx2_p8 (poly8x8_t r, poly8x8x2_t tab, uint8x8_t idx)
 {
   poly8x8_t result = r;
   poly8x16_t temp = vcombine_p8 (tab.val[0], tab.val[1]);
-  __asm-generic__ ("tbx %0.8b, {%1.16b}, %2.8b"
+  __asm__ ("tbx %0.8b, {%1.16b}, %2.8b"
            : "+w"(result)
            : "w"(temp), "w"(idx)
            : /* No clobbers */);
@@ -15175,7 +15175,7 @@ vtbx4_s8 (int8x8_t r, int8x8x4_t tab, int8x8_t idx)
   int8x16x2_t temp;
   temp.val[0] = vcombine_s8 (tab.val[0], tab.val[1]);
   temp.val[1] = vcombine_s8 (tab.val[2], tab.val[3]);
-  __asm-generic__ ("ld1 {v16.16b - v17.16b }, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v17.16b }, %1\n\t"
 	   "tbx %0.8b, {v16.16b - v17.16b}, %2.8b\n\t"
            : "+w"(result)
            : "Q"(temp), "w"(idx)
@@ -15190,7 +15190,7 @@ vtbx4_u8 (uint8x8_t r, uint8x8x4_t tab, uint8x8_t idx)
   uint8x16x2_t temp;
   temp.val[0] = vcombine_u8 (tab.val[0], tab.val[1]);
   temp.val[1] = vcombine_u8 (tab.val[2], tab.val[3]);
-  __asm-generic__ ("ld1 {v16.16b - v17.16b }, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v17.16b }, %1\n\t"
 	   "tbx %0.8b, {v16.16b - v17.16b}, %2.8b\n\t"
            : "+w"(result)
            : "Q"(temp), "w"(idx)
@@ -15205,7 +15205,7 @@ vtbx4_p8 (poly8x8_t r, poly8x8x4_t tab, uint8x8_t idx)
   poly8x16x2_t temp;
   temp.val[0] = vcombine_p8 (tab.val[0], tab.val[1]);
   temp.val[1] = vcombine_p8 (tab.val[2], tab.val[3]);
-  __asm-generic__ ("ld1 {v16.16b - v17.16b }, %1\n\t"
+  __asm__ ("ld1 {v16.16b - v17.16b }, %1\n\t"
 	   "tbx %0.8b, {v16.16b - v17.16b}, %2.8b\n\t"
            : "+w"(result)
            : "Q"(temp), "w"(idx)
@@ -15213,7 +15213,7 @@ vtbx4_p8 (poly8x8_t r, poly8x8x4_t tab, uint8x8_t idx)
   return result;
 }
 
-/* End of temporary inline asm-generic.  */
+/* End of temporary inline asm.  */
 
 /* Start of optimal implementations in approved order.  */
 
